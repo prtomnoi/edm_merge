@@ -54,10 +54,11 @@ class AccountController extends Controller
                 'password' => 'required|string',
             ]);
             $data['password'] = bcrypt($data['password']);
-            User::create($data);
+            $set = User::create($data);
             DB::commit();
             return redirect()->route("$this->folder.index")->with('success', "$this->namePage created successfully!");
         } catch (\Exception $e) {
+            // dd($e);
             DB::rollBack();
             return redirect()->route("$this->folder.index")->with('error', 'Error');
         }
