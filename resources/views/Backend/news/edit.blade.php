@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'New Management')
 
@@ -10,7 +10,7 @@
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Add News </h5>
-               
+
                         <form action="{{ route('news.update',$news->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
@@ -34,7 +34,7 @@
                                   </select>
                                  </div>
                               </div>
-                           
+
                             <div class="form-group mb-2">
                                 <label for="">Title</label>
                                 <input type="text" class="form-control" name="title" placeholder="Title" value="{{@$news->title}}">
@@ -84,12 +84,12 @@
                              <div class="form-check form-switch my-4">
                                <input class="form-check-input" type="checkbox" {{ $news->top == 1 ? 'checked' : '' }} role="switch" name="top" id="flexSwitchCheckDefault">
                                <label class="form-check-label" for="flexSwitchCheckDefault">Top Recent</label>
-                             </div>       
+                             </div>
                              <div class="form-check form-switch my-4">
                                <input class="form-check-input" type="checkbox" {{ $news->pin == 1 ? 'checked' : '' }} role="switch" name="pin" id="flexSwitchCheckDefault">
                                <label class="form-check-label" for="flexSwitchCheckDefault">Pin</label>
-                             </div>    
-                       
+                             </div>
+
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route('news.index')}}" class="btn btn-warning">Back</a>
                         </form>

@@ -12,13 +12,13 @@ class GroupController extends Controller
     public function index()
     {
         $groups = Group::all();
-        return view('groups.index', compact('groups'));
+        return view('Backend.groups.index', compact('groups'));
     }
 
     // Show the form for creating a new resource.
     public function create()
     {
-        return view('groups.create');
+        return view('Backend.groups.create');
     }
 
     // Store a newly created resource in storage.
@@ -31,14 +31,14 @@ class GroupController extends Controller
     // Display the specified resource.
     public function show(Group $group)
     {
-        return view('groups.show', compact('group'));
+        return view('Backend.groups.show', compact('group'));
     }
 
     // Show the form for editing the specified resource.
     public function edit($id)
     {
         $group = Group::findOrFail($id);
-        return view('groups.edit', compact('group'));
+        return view('Backend.groups.edit', compact('group'));
     }
 
     // Update the specified resource in storage.

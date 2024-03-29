@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'New Management')
 

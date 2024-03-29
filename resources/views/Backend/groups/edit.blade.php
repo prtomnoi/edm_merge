@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -18,9 +18,9 @@
                         <label for="">Title</label>
                         <input type="text" name="name"  class="form-control" value="{{ $group->name }}" required>
                       </div>
-             
-                     
-                 
+
+
+
                       <button type="submit" class="btn btn-success mt-2">Update</button>
                     </form>
 
@@ -29,9 +29,9 @@
             </div>
           </div>
       </div>
- 
+
   @endsection
-  
+
   @section('scripts')
   <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
   <script>

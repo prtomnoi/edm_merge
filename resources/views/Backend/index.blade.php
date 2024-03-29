@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('Backend.layout')
 
 @section('title', 'หน้าหลัก')
 
@@ -8,7 +8,7 @@
                <div class="col-md-4">
                   <div class="card" style="background-color:black; color:#ffffff;">
                     <div class="text-center h-100">
-                      <img src="{{ URL::asset('assets/images/logos/edm-media2.png') }}" width="250px" alt="...">
+                      <img src="{{ URL::asset('backend/assets/images/logos/edm-media2.png') }}" width="250px" alt="...">
                     </div>
                     <div class="card-body">
                       <h5 class="card-title text-white">EDM MEDIA</h5>
@@ -20,7 +20,7 @@
                <div class="col-md-4">
                 <div class="card " style="background-color:black; color:#ffffff;">
                   <div class="text-center mt-2">
-                    <img src="{{ URL::asset('assets/images/logos/edm-management.png') }}" width="250px"  alt="...">
+                    <img src="{{ URL::asset('backend/assets/images/logos/edm-management.png') }}" width="250px"  alt="...">
                   </div>
                   <div class="card-body">
                     <h5 class="card-title text-white">EDM MANAGEMENT</h5>
@@ -31,5 +31,5 @@
              </div>
            </div>
       </div>
-  
+
   @endsection

@@ -19,7 +19,7 @@ class NewsController extends Controller
     public function index()
     {
         $news = News::all();
-        return view('news.index', compact('news'));
+        return view('Backend.news.index', compact('news'));
     }
 
     /**
@@ -29,7 +29,7 @@ class NewsController extends Controller
     {
         $providers = Provider::all();
         $categorys = Category::all();
-        return view('news.create', compact('providers', 'categorys'));
+        return view('Backend.news.create', compact('providers', 'categorys'));
     }
 
     /**
@@ -110,7 +110,7 @@ class NewsController extends Controller
         $news = News::findOrFail($id);
         $providers = Provider::all();
         $categorys = Category::all();
-        return view('news.edit', compact('news', 'providers', 'categorys'));
+        return view('Backend.news.edit', compact('news', 'providers', 'categorys'));
     }
 
     /**

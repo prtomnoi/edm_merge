@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-lg-12 d-flex align-items-stretch">
-              
+
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Group</h5>
@@ -42,11 +42,11 @@
                                     @if(@$groups)
                                     @foreach(@$groups as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td style="width:10%;">{{$item->name}}</td></td>
                                           <td style="width:15%;">{{ $item->created_at }}</td>
-                                       
+
                                           <td class="text-center" style="width:10%;">
                                               <a href="{{route("groups.edit",$item->id)}}" class="btn btn-warning"><i class="ti ti-pencil"></i> Edit</a>
                                               <a href="javascript:void(0)" onclick="destroy('{{$item->id}}')" class="btn btn-danger"><i class="ti ti-trash"></i> Delete</a>
@@ -80,7 +80,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'DELETE',
-                    url: `/groups/${id}`,
+                    url: `groups/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },

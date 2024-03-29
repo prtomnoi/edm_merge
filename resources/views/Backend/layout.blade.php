@@ -25,7 +25,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-center">
                     <a href="#" class="text-nowrap logo-img">
-                        <img src="{{ URL::asset('assets/images/logos/logo-edm.png') }}" width="180"
+                        <img src="{{ URL::asset('backend/assets/images/logos/logo-edm.png') }}" width="180"
                             alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -65,7 +65,7 @@
                                 <span class="hide-menu">Groups</span>
                             </a>
                         </li>
-                        
+
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{ route('campaign.index') }}" aria-expanded="false">
                                 <span>
@@ -125,8 +125,8 @@
                             </a>
                         </li>
                         --}}
-                    
-                      
+
+
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">EDM MANAGEMENT</span>
@@ -167,7 +167,7 @@
                                 <span class="hide-menu">Logout</span>
                             </a>
                         </li>
-                        
+
                     </ul>
 
                 </nav>
@@ -188,7 +188,7 @@
                                 <i class="ti ti-menu-2"></i>
                             </a>
                         </li>
-                      
+
                     </ul>
                     <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
                         <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
@@ -196,7 +196,7 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img src="{{ URL::asset('assets/images/profile/user-1.jpg') }}" alt=""
+                                    <img src="{{ URL::asset('backend/assets/images/profile/user-1.jpg') }}" alt=""
                                         width="35" height="35" class="rounded-circle">
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up"
