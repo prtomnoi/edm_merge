@@ -94,7 +94,7 @@
             const queryString = window.location.search;
             const params = new URLSearchParams(queryString);
             const paramsSearch = params.get('search');
-            const campaignApiUrl = 'https://edm.desdev.me/api/campaigns';
+            const campaignApiUrl = 'https://edmcompany.co.th//api/campaigns';
 
             function template(data) {
                 var html = '';
@@ -186,7 +186,7 @@
             fetchCampaigns();
         });
 
-        // fetch("https://edm.desdev.me/api/campaigns-limit/1")
+        // fetch("https://edmcompany.co.th//api/campaigns-limit/1")
         //     .then(function(response) {
         //         return response.json();
         //     })

@@ -13,17 +13,6 @@ class Controller extends BaseController
 
     public function getLink()
     {
-        try {
-            $data = [];
-            $response = Http::get("https://edm.desdev.me/api/settings/");
-            if ($response->status() == 200) {
-                $data = $response->json();
-            }
-            // dd($data);
-            return view("gadget-menu", compact("data"));
-        } catch (\Exception $e) {
-            $data = [];
-            return view("gadget-menu", compact("data"));
-        }
+        return true;
     }
 }

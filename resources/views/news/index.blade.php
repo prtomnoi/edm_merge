@@ -84,7 +84,7 @@
         const queryString = window.location.search;
         const params = new URLSearchParams(queryString);
         const paramsSearch = params.get('search');
-        const newsApiUrl = 'https://edm.desdev.me/api/news';
+        const newsApiUrl = 'https://edmcompany.co.th//api/news';
 
         function template(data) {
             console.log(data);
@@ -184,7 +184,7 @@
         }
 
 
-        // fetch("https://edm.desdev.me/api/news-limit/1")
+        // fetch("https://edmcompany.co.th//api/news-limit/1")
         //     .then(function(response) {
         //         return response.json();
         //     })
@@ -215,7 +215,7 @@
         function searchInput() {
             const search = document.getElementById('search').value;
             const paramSearch = encodeURIComponent(paramsSearch);
-            const newsApiUrl = 'https://edm.desdev.me/api/news?search=' + search || paramSearch || '';
+            const newsApiUrl = 'https://edmcompany.co.th//api/news?search=' + search || paramSearch || '';
             async function fetchNewsSearch() {
                 try {
                     const response = await fetch(newsApiUrl);
@@ -426,7 +426,7 @@
     ></script>
     <script src="assets/js/navbar.js?v=6"></script>
     <script>
-       const newsApiUrl = 'https://edm.desdev.me/api/news';
+       const newsApiUrl = 'https://edmcompany.co.th//api/news';
       async function fetchNews() {
         try {
     const response = await fetch(newsApiUrl);
@@ -483,7 +483,7 @@
     }
     fetchNews()
 
-    fetch("https://edm.desdev.me/api/news-limit/1")
+    fetch("https://edmcompany.co.th//api/news-limit/1")
         .then(function (response) {
           return response.json();
         })

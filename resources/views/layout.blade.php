@@ -181,7 +181,7 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
     <script>
-        const newsApiUrl = 'https://edm.desdev.me/api/settings';
+        const newsApiUrl = 'https://edmcompany.co.th//api/settings';
         async function fetchNews() {
             try {
                 const response = await fetch(newsApiUrl);

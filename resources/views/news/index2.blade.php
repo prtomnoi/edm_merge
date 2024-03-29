@@ -129,7 +129,7 @@
 
 @section('scripts')
 <script>
-    const newsApiUrl = 'https://edm.desdev.me/api/news';
+    const newsApiUrl = 'https://edmcompany.co.th//api/news';
    async function fetchNews() {
      try {
  const response = await fetch(newsApiUrl);
@@ -186,7 +186,7 @@
  }
  fetchNews()
 
- fetch("https://edm.desdev.me/api/news-limit/1")
+ fetch("https://edmcompany.co.th//api/news-limit/1")
      .then(function (response) {
        return response.json();
      })

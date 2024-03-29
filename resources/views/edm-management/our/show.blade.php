@@ -101,7 +101,7 @@
         let modalImage;
         modal = document.getElementById('imagePreviewModal');
         modalImage = document.querySelector('.modal-image');
-        fetch("https://edm.desdev.me/api/portfolio-items/" + view)
+        fetch("https://edmcompany.co.th//api/portfolio-items/" + view)
             .then(function(response) {
                 return response.json();
             })

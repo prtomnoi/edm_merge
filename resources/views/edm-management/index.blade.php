@@ -30,7 +30,7 @@
             <div class="solu-items">
                 <lottie-player src="assets/img/animated-icons/services-icon/Network.json" background="transparent"
                     speed="1" hover loop></lottie-player>
-               
+
                 <span>Network <br/> Consulting</span>
             </div>
             <div class="solu-items">
@@ -155,7 +155,7 @@
 
 @section('scripts')
 <script>
-    const apiUrl = 'https://edm.desdev.me/api/portfolio-items-limit/5'; // Replace with your API URL
+    const apiUrl = 'https://edmcompany.co.th//api/portfolio-items-limit/5'; // Replace with your API URL
     const worksContainer = document.querySelector('.works-container');
 
     // Fetch data from the API and populate the HTML structure

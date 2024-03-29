@@ -116,7 +116,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
     <script src="https://pagination.js.org/dist/2.6.0/pagination.js"></script>
     <script>
-        const newsApiUrl = 'https://edm.desdev.me/api/portfolio-items';
+        const newsApiUrl = 'https://edmcompany.co.th//api/portfolio-items';
         const queryString = window.location.search;
         const params = new URLSearchParams(queryString);
         const paramsSearch = params.get('search');
@@ -219,7 +219,7 @@
         }
 
 
-        // fetch("https://edm.desdev.me/api/portfolio-items-limit/1")
+        // fetch("https://edmcompany.co.th//api/portfolio-items-limit/1")
         //     .then(function(response) {
         //         return response.json();
         //     })
@@ -249,7 +249,7 @@
         function searchInput() {
             const search = document.getElementById('searchInput').value;
             const paramSearch = encodeURIComponent(paramsSearch);
-            const newsApiUrl = 'https://edm.desdev.me/api/portfolio-items?search=' + search || paramSearch || '';
+            const newsApiUrl = 'https://edmcompany.co.th//api/portfolio-items?search=' + search || paramSearch || '';
             async function fetchNewsSearch() {
                 try {
                     const response = await fetch(newsApiUrl);

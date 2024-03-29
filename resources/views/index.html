@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EDM</title>
 
     <link rel="stylesheet" href="assets/fonts/fonts.css?v=3" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/css/base-style.css?v=5" />
     <link rel="stylesheet" href="assets/css/slick-theme.css" />
     <link rel="stylesheet" href="assets/css/slick.css" />
@@ -19,11 +15,13 @@
     <link rel="stylesheet" href="assets/css/navbar_style.css?v=3" />
     <link rel="stylesheet" href="assets/css/particle-anim.css?v=3" />
     <style>
-      .video-iframe {
-        width: 100%; /* Adjust the width as needed */
-        height: 300px; /* Adjust the height as needed */
-      }
-      /* .creator-card-des > div {
+        .video-iframe {
+            width: 100%;
+            /* Adjust the width as needed */
+            height: 300px;
+            /* Adjust the height as needed */
+        }
+        /* .creator-card-des > div {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: wrap;
@@ -33,305 +31,216 @@
             font-size: 1rem;
         } */
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="side-menu">
-      <svg
-        class="close-btn"
-        id="close-sidenav-btn"
-        xmlns="http://www.w3.org/2000/svg"
-        height="48"
-        width="48"
-      >
+        <svg class="close-btn" id="close-sidenav-btn" xmlns="http://www.w3.org/2000/svg" height="48" width="48">
         <path
           fill="#ffff"
           d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z"
         />
       </svg>
 
-      <div class="side-btn-section">
-        <a href="index.html" class="side-btn"
-          ><img src="assets/img/edm-logo.png" alt=""
-        /></a>
-        <a href="index.html" class="side-btn">ABOUT US</a>
-        <div class="side-collapse">
-          <a
-            href="#forCreator"
-            class="side-btn"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="forCreator"
-            >FOR CREATOR</a
+        <div class="side-btn-section">
+            <a href="index.html" class="side-btn"><img src="assets/img/edm-logo.png" alt="" /></a>
+            <a href="index.html" class="side-btn">ABOUT US</a>
+            <div class="side-collapse">
+                <a href="#forCreator" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="forCreator">FOR CREATOR</a
           >
           <div class="collapse" id="forCreator">
             <div class="card card-body">
               <a href="benefit.html">Solutions</a>
-              <a href="influencer.html">Creator</a>
-              <a href="vtuber-community.html">VTuber</a>
+                <a href="influencer.html">Creator</a>
+                <a href="vtuber-community.html">VTuber</a>
             </div>
-          </div>
         </div>
-        <div class="side-collapse">
-          <a
-            href="#forBrand"
-            class="side-btn"
-            data-bs-toggle="collapse"
-            role="button"
-            aria-expanded="false"
-            aria-controls="forBrand"
-            >FOR BRAND</a
+    </div>
+    <div class="side-collapse">
+        <a href="#forBrand" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="forBrand">FOR BRAND</a
           >
           <div class="collapse" id="forBrand">
             <div class="card card-body">
               <a href="branding.html">Service</a>
-              <a href="">Campaign</a>
-            </div>
-          </div>
-        </div>
-        <a href="news-activity.html" class="side-btn">NEWS</a>
-        <a href="contact-us.html" class="side-btn">CONTACT US</a>
-        <div class="lang-change-btns">
-          <a href="#" class="active" id="thaiBtn"
-            ><img src="assets/img/THAILAND.png" alt="" /> TH</a
-          >
-          <a href="#" id="engBtn"><img src="assets/img/UK.png" alt="" /> ENG</a>
-        </div>
-      </div>
+        <a href="">Campaign</a>
+    </div>
+    </div>
+    </div>
+    <a href="news-activity.html" class="side-btn">NEWS</a>
+    <a href="contact-us.html" class="side-btn">CONTACT US</a>
+    <div class="lang-change-btns">
+        <a href="#" class="active" id="thaiBtn"><img src="assets/img/THAILAND.png" alt="" /> TH</a>
+        <a href="#" id="engBtn"><img src="assets/img/UK.png" alt="" /> ENG</a>
+    </div>
+    </div>
     </div>
 
     <div class="main">
-      <nav class="">
-        <!-- Nav Hamberger menu -->
-        <div class="nav-menu">
-          <img src="assets/img/menu.svg" alt="" />
-        </div>
+        <nav class="">
+            <!-- Nav Hamberger menu -->
+            <div class="nav-menu">
+                <img src="assets/img/menu.svg" alt="" />
+            </div>
 
-        <div class="nav-btns">
-          <a href="index.html"><img src="assets/img/edm-logo.png" alt="" /></a>
-          <div class="nav-btns-wrapper">
-            <a href="index.html">ABOUT US</a>
-            <div class="nav-dropdown" data-dropdown>
-              <button class="nav-dropdown-btn" data-dropdown-button>
+            <div class="nav-btns">
+                <a href="index.html"><img src="assets/img/edm-logo.png" alt="" /></a>
+                <div class="nav-btns-wrapper">
+                    <a href="index.html">ABOUT US</a>
+                    <div class="nav-dropdown" data-dropdown>
+                        <button class="nav-dropdown-btn" data-dropdown-button>
                 FOR CREATOR
                 <img src="assets/img/expand.svg" alt="" />
               </button>
-              <div class="nav-dropdown-menu">
-                <a href="benefit.html">Solutions</a
+                        <div class="nav-dropdown-menu">
+                            <a href="benefit.html">Solutions</a
                 ><a href="vtuber-community.html">VTuber</a>
-                <a href="influencer.html">Creator</a>
-              </div>
-            </div>
-            <div class="nav-dropdown" data-dropdown>
-              <button class="nav-dropdown-btn" data-dropdown-button>
+                            <a href="influencer.html">Creator</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown" data-dropdown>
+                        <button class="nav-dropdown-btn" data-dropdown-button>
                 FOR BRAND
                 <img src="assets/img/expand.svg" alt="" />
               </button>
-              <div class="nav-dropdown-menu">
-                <a href="branding.html">Service</a>
-                <a href="our-campaign.html">Campaign</a>
-              </div>
-            </div>
-            <a href="news-activity.html">NEWS</a>
-            <a href="contact-us.html">CONTACT US</a>
-            <div class="nav-dropdown" data-dropdown>
-              <button class="nav-dropdown-btn" data-dropdown-button>
+                        <div class="nav-dropdown-menu">
+                            <a href="branding.html">Service</a>
+                            <a href="our-campaign.html">Campaign</a>
+                        </div>
+                    </div>
+                    <a href="news-activity.html">NEWS</a>
+                    <a href="contact-us.html">CONTACT US</a>
+                    <div class="nav-dropdown" data-dropdown>
+                        <button class="nav-dropdown-btn" data-dropdown-button>
                 <img src="assets/img/thai-lang-icon.png" alt="" />
                 <span>TH</span>
                 <img src="assets/img/expand.svg" alt="" />
               </button>
-              <div class="nav-dropdown-menu">
-                <a href="#"
-                  ><img
-                    src="assets/img/thai-lang-icon.png"
-                    id="thaiBtn2"
-                    alt=""
-                  />
-                  TH</a
-                >
-                <a href="#"
-                  ><img src="assets/img/UK.png" id="engBtn2" alt="" /> ENG</a
-                >
-              </div>
+                        <div class="nav-dropdown-menu">
+                            <a href="#"><img src="assets/img/thai-lang-icon.png" id="thaiBtn2" alt="" /> TH
+                            </a>
+                            <a href="#"><img src="assets/img/UK.png" id="engBtn2" alt="" /> ENG</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </nav>
+        </nav>
 
-      <section class="header-sec">
-        <div class="animation-wrapper">
-          <div id="stars-group-1"></div>
-          <div id="stars-group-2"></div>
-          <div id="stars-group-3"></div>
-          <div id="stars-group-4"></div>
-          <div id="stars-group-5"></div>
-          <div id="stars-group-6"></div>
-        </div>
-        <div class="gadget-menu">
-          <a href=""
-            ><img src="assets/img/gadget-icons/fb-icon.svg" alt=""
-          /></a>
-          <a href=""
-            ><img src="assets/img/gadget-icons/yt-icon.svg" alt=""
-          /></a>
-          <a href=""
-            ><img src="assets/img/gadget-icons/gadget-edm-icon.svg" alt=""
-          /></a>
-          <a href=""
-            ><img src="assets/img/gadget-icons/joinus-icon.svg" alt=""
-          /></a>
-        </div>
+        <section class="header-sec">
+            <div class="animation-wrapper">
+                <div id="stars-group-1"></div>
+                <div id="stars-group-2"></div>
+                <div id="stars-group-3"></div>
+                <div id="stars-group-4"></div>
+                <div id="stars-group-5"></div>
+                <div id="stars-group-6"></div>
+            </div>
+            <div class="gadget-menu">
+                <a href=""><img src="assets/img/gadget-icons/fb-icon.svg" alt="" /></a>
+                <a href=""><img src="assets/img/gadget-icons/yt-icon.svg" alt="" /></a>
+                <a href=""><img src="assets/img/gadget-icons/gadget-edm-icon.svg" alt="" /></a>
+                <a href=""><img src="assets/img/gadget-icons/joinus-icon.svg" alt="" /></a>
+            </div>
 
-        <h1 class="header-title">
-          เติมเต็มความฝัน <br />
-          ให้คุณประสบความสำเร็จเร็วขึ้น
-        </h1>
-        <p class="header-des">
-          ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์
-          ที่คอยสนับสนุนในทุกความฝันที่คุณอยากจะเป็น
-          โดยมุ่งเน้นให้คุณเติบโตแบบก้าวกระโดดในทุกโซเชียลมีเดีย แพลตฟอร์ม
-          ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้
-        </p>
-        <div class="joinus-header">
-          <p>อัพเกรด เพื่อยกระดับสู่เส้นทาง</p>
-          <p>ครีเอเตอร์มืออาชีพ</p>
-          <div class="morebtn mt-2">
-            <a href="contact-us.html">Join Us</a>
-          </div>
-        </div>
-      </section>
+            <h1 class="header-title">
+                เติมเต็มความฝัน <br /> ให้คุณประสบความสำเร็จเร็วขึ้น
+            </h1>
+            <p class="header-des">
+                ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์ ที่คอยสนับสนุนในทุกความฝันที่คุณอยากจะเป็น โดยมุ่งเน้นให้คุณเติบโตแบบก้าวกระโดดในทุกโซเชียลมีเดีย แพลตฟอร์ม ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้
+            </p>
+            <div class="joinus-header">
+                <p>อัพเกรด เพื่อยกระดับสู่เส้นทาง</p>
+                <p>ครีเอเตอร์มืออาชีพ</p>
+                <div class="morebtn mt-2">
+                    <a href="contact-us.html">Join Us</a>
+                </div>
+            </div>
+        </section>
 
-      <section class="stats-sec">
-        <div class="stats-numb">
-          <div class="numbs-item">
-            <p>100</p>
-            <p>ครีเอเตอร์</p>
-          </div>
-          <div class="numbs-item">
-            <p>80M</p>
-            <p>ผู้ติดตาม</p>
-          </div>
-          <div class="numbs-item">
-            <p>3,000M</p>
-            <p>จำนวนผู้เข้าชม</p>
-          </div>
-          <div class="numbs-item">
-            <p>8M</p>
-            <p>ชั่วโมงการรับชม</p>
-          </div>
-        </div>
+        <section class="stats-sec">
+            <div class="stats-numb">
+                <div class="numbs-item">
+                    <p>100</p>
+                    <p>ครีเอเตอร์</p>
+                </div>
+                <div class="numbs-item">
+                    <p>80M</p>
+                    <p>ผู้ติดตาม</p>
+                </div>
+                <div class="numbs-item">
+                    <p>3,000M</p>
+                    <p>จำนวนผู้เข้าชม</p>
+                </div>
+                <div class="numbs-item">
+                    <p>8M</p>
+                    <p>ชั่วโมงการรับชม</p>
+                </div>
+            </div>
 
-        <div class="stats-des">
-          <p>
-            EDM Media ผู้นำด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย
-            โดยทีมงานผู้มีประสบการณ์กว่า 10 ปี
-            ที่จะเข้ามาช่วยติดอาวุธให้กับครีเอเตอร์
-            พัฒนาตัวตนของคุณออกมาแสดงให้ชัดเจนมากขึ้น
-            ให้คุณเป็นครีเอเตอร์ที่ไม่เหมือนใครและเติบโตบนโลกออนไลน์อย่างยั่งยืน
-          </p>
-          <p>
-            ด้วยการใช้เครื่องมือวิเคราะห์ข้อมูลเชิงลึก
-            การวางแผนคอนเท้นต์เพื่อรักษาแฟนคลับปัจจุบันและเข้าถึงกลุ่มผู้ชมใหม่
-            เพื่อขยายโอกาสให้คุณได้ทำงานร่วมกับแบรนด์สินค้าชั้นนำ
-            จากทั่วโลกอย่างเป็นมืออาชีพ
-          </p>
-        </div>
-      </section>
+            <div class="stats-des">
+                <p>
+                    EDM Media ผู้นำด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย โดยทีมงานผู้มีประสบการณ์กว่า 10 ปี ที่จะเข้ามาช่วยติดอาวุธให้กับครีเอเตอร์ พัฒนาตัวตนของคุณออกมาแสดงให้ชัดเจนมากขึ้น ให้คุณเป็นครีเอเตอร์ที่ไม่เหมือนใครและเติบโตบนโลกออนไลน์อย่างยั่งยืน
+                </p>
+                <p>
+                    ด้วยการใช้เครื่องมือวิเคราะห์ข้อมูลเชิงลึก การวางแผนคอนเท้นต์เพื่อรักษาแฟนคลับปัจจุบันและเข้าถึงกลุ่มผู้ชมใหม่ เพื่อขยายโอกาสให้คุณได้ทำงานร่วมกับแบรนด์สินค้าชั้นนำ จากทั่วโลกอย่างเป็นมืออาชีพ
+                </p>
+            </div>
+        </section>
 
-      <section class="solution-sec">
-        <div class="solution-title">
-          <h1>Our Solution</h1>
-          <p>
-            ปลดล็อคขีดความสามารถให้ช่องของคุณก้าวไปสู่การเป็นครีเอเตอร์มืออาชีพ
-            ด้วยสิทธิประโยชน์ต่างๆ ที่เราคัดสรรมา
-            โดยคำนึกถึงความต้องการของคุณเป็นหลัก
-          </p>
-        </div>
+        <section class="solution-sec">
+            <div class="solution-title">
+                <h1>Our Solution</h1>
+                <p>
+                    ปลดล็อคขีดความสามารถให้ช่องของคุณก้าวไปสู่การเป็นครีเอเตอร์มืออาชีพ ด้วยสิทธิประโยชน์ต่างๆ ที่เราคัดสรรมา โดยคำนึกถึงความต้องการของคุณเป็นหลัก
+                </p>
+            </div>
 
-        <div class="solu-icons">
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/Laptop.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Channel Growth</span>
-          </div>
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/Bag-of-Money.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Platform Monetization</span>
-          </div>
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/Handshake.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Brand Sponsorships</span>
-          </div>
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/Care.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Support And Training</span>
-          </div>
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/Diagram.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Community</span>
-          </div>
-          <div class="solu-items">
-            <lottie-player
-              src="assets/img/animated-icons/blue-icons/User.json"
-              background="transparent"
-              speed="1"
-              hover
-              loop="true"
-            ></lottie-player>
-            <span>Creator Business</span>
-          </div>
-        </div>
-      </section>
+            <div class="solu-icons">
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/Laptop.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Channel Growth</span>
+                </div>
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/Bag-of-Money.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Platform Monetization</span>
+                </div>
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/Handshake.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Brand Sponsorships</span>
+                </div>
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/Care.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Support And Training</span>
+                </div>
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/Diagram.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Community</span>
+                </div>
+                <div class="solu-items">
+                    <lottie-player src="assets/img/animated-icons/blue-icons/User.json" background="transparent" speed="1" hover loop="true"></lottie-player>
+                    <span>Creator Business</span>
+                </div>
+            </div>
+        </section>
 
-      <hr class="section-line" />
+        <hr class="section-line" />
 
-      <section class="creator-sec">
-        <div class="creator-header">
-          <img src="assets/img/edm-logo.png" alt="" />
-          <span>Our Creator</span>
-        </div>
+        <section class="creator-sec">
+            <div class="creator-header">
+                <img src="assets/img/edm-logo.png" alt="" />
+                <span>Our Creator</span>
+            </div>
 
-        <div class="creator-cards-sec" id="influencerResult"></div>
+            <div class="creator-cards-sec" id="influencerResult"></div>
 
-        <div class="morebtn">
-          <a href="influencer.html">LOAD MORE</a>
-        </div>
-      </section>
+            <div class="morebtn">
+                <a href="influencer.html">LOAD MORE</a>
+            </div>
+        </section>
 
-      <section class="v-commu-sec">
-        <div class="v-commu-header">
-          <h1>VTuber Community</h1>
-          <span
-            >VTuber
+        <section class="v-commu-sec">
+            <div class="v-commu-header">
+                <h1>VTuber Community</h1>
+                <span>VTuber
             เป็นผู้ให้ความบันเทิงทางออนไลน์ที่ใช้อวตารเสมือนจริงที่สร้างขึ้นโดยใช้
             คอมพิวเตอร์กราฟิก และเทคโนโลยีการจับภาพเคลื่อนไหวแบบเรียลไทม์ ทำให้
             VTuber สามารถโต้ตอบกับผู้ชมได้อย่างคล่องแคล่วและสนุกสนาน
@@ -421,71 +330,68 @@
           <h1>Platforms we work with</h1>
           <div>
             <span>YouTube</span>
-            <span>TikTok</span>
-            <span>Facebook</span>
-            <span>Twitch</span>
-            <span>Instagram</span>
-          </div>
-        </div>
-      </section>
+                <span>TikTok</span>
+                <span>Facebook</span>
+                <span>Twitch</span>
+                <span>Instagram</span>
+            </div>
+    </div>
+    </section>
 
-      <section class="activity-sec">
+    <section class="activity-sec">
         <div class="activity-item">
-          <div class="activity-item-h">
-            <h1>News and Activity</h1>
-            <hr />
-          </div>
+            <div class="activity-item-h">
+                <h1>News and Activity</h1>
+                <hr />
+            </div>
 
-          <!-- result news -->
-          <div class="activity-cards" id="activity-cards"></div>
+            <!-- result news -->
+            <div class="activity-cards" id="activity-cards"></div>
 
-          <div class="morebtn">
-            <a href="news-activity.html">LOAD MORE</a>
-          </div>
+            <div class="morebtn">
+                <a href="news-activity.html">LOAD MORE</a>
+            </div>
         </div>
         <div class="activity-item">
-          <div class="activity-item-h">
-            <h1>Our Campaign</h1>
-            <hr />
-          </div>
-          <div class="activity-cards" id="campaign-cards"></div>
-          <div class="morebtn">
-            <a href="our-campaign.html">LOAD MORE</a>
-          </div>
+            <div class="activity-item-h">
+                <h1>Our Campaign</h1>
+                <hr />
+            </div>
+            <div class="activity-cards" id="campaign-cards"></div>
+            <div class="morebtn">
+                <a href="our-campaign.html">LOAD MORE</a>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <section class="vdo-highlight">
+    <section class="vdo-highlight">
         <h1>Influencer's Video Highlight</h1>
         <div class="vdo-container" id="vdo-container"></div>
-      </section>
+    </section>
 
-      <section class="joinus-sec">
+    <section class="joinus-sec">
         <span>
           เราคือผู้เชี่ยวชาญด้านการตลาด โดยใช้ อินฟลูเอนเซอร์ในประเทศไทยที่
           สามารถช่วยให้คุณประสบความสำเร็จ
         </span>
         <div class="morebtn">
-          <a href="contact-us.html">Join Us</a>
+            <a href="contact-us.html">Join Us</a>
         </div>
-      </section>
+    </section>
 
-      <footer>
+    <footer>
         <div class="footer-top">
-          <div class="footer-logos">
-            <img src="assets/img/edm_logo_com.svg" alt="" />
-            <img src="assets/img/edm-logo.png" alt="" />
-          </div>
+            <div class="footer-logos">
+                <img src="assets/img/edm_logo_com.svg" alt="" />
+                <img src="assets/img/edm-logo.png" alt="" />
+            </div>
 
-        
+
         </div>
         <div class="footer-bot">
-          <span
-            >COPYRIGHT <span>&copy;</span> 2023 EDM HOLDING ALL RIGHTS
-            RESERVED.</span
-          >
-          <a href="#" class="text-white"
-            >Terms of use I Privacy Policy I Contact us</a
+            <span>COPYRIGHT <span>&copy;</span> 2023 EDM HOLDING ALL RIGHTS RESERVED.
+            </span>
+            <a href="#" class="text-white">Terms of use I Privacy Policy I Contact us</a
           >
         </div>
       </footer>
@@ -513,11 +419,11 @@
     <!-- <script src="assets/js/vtuber-slider.js"></script> -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const apiUrl = "https://edm.desdev.me/api/vtuber-gallery";
-        const newsApiUrl = "https://edm.desdev.me/api/news-pin";
-        const campaignApiUrl = "https://edm.desdev.me/api/campaigns";
-        const videoApiUrl = "https://edm.desdev.me/api/influencer-video";
-        const ApiUrl = "https://edm.desdev.me/api/influencers-pin";
+        const apiUrl = "https://edmcompany.co.th//api/vtuber-gallery";
+        const newsApiUrl = "https://edmcompany.co.th//api/news-pin";
+        const campaignApiUrl = "https://edmcompany.co.th//api/campaigns";
+        const videoApiUrl = "https://edmcompany.co.th//api/influencer-video";
+        const ApiUrl = "https://edmcompany.co.th//api/influencers-pin";
 
         async function fetchImages() {
           try {
@@ -740,52 +646,26 @@
                   </g>
                 </svg>
               </a>
-              <a href="${item.twiter_url != null ? item.twiter_url : "#"}" ${
-                item.twiter_url != null ? 'class="d-block"' : 'class="d-none"'
-              }>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+            <a href="${item.twiter_url != null ? item.twiter_url : " # "}" ${ item.twiter_url !=n ull ? 'class="d-block"' : 'class="d-none"' }>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M22.9912 3.95021C22.9913 3.77357 22.9446 3.60007 22.8558 3.44735C22.7671 3.29464 22.6394 3.16817 22.4859 3.08084C22.3324 2.9935 22.1584 2.94842 21.9818 2.95017C21.8052 2.95193 21.6322 3.00046 21.4804 3.09083C20.8951 3.43921 20.265 3.70601 19.6074 3.88383C18.6684 3.07806 17.4708 2.63713 16.2334 2.64164C14.876 2.6432 13.5723 3.17223 12.5976 4.11702C11.623 5.06181 11.0536 6.3484 11.0098 7.70512C8.33378 7.27838 5.90843 5.88164 4.19625 3.78126C4.09308 3.65609 3.96133 3.55757 3.81211 3.494C3.66288 3.43043 3.50056 3.40368 3.33883 3.41601C3.17719 3.42932 3.02122 3.4818 2.88442 3.56892C2.74762 3.65603 2.63409 3.77516 2.55367 3.91601C2.1412 4.63582 1.9043 5.44276 1.86222 6.27131C1.82014 7.09986 1.97406 7.92666 2.31148 8.68456L2.30953 8.68651C2.15788 8.77991 2.03272 8.91066 1.94603 9.06625C1.85935 9.22185 1.81403 9.39708 1.81441 9.57519C1.81257 9.72211 1.82139 9.86898 1.84078 10.0146C1.94292 11.2729 2.50056 12.4507 3.40914 13.3271C3.3475 13.4446 3.30988 13.5731 3.29848 13.7052C3.28708 13.8373 3.30212 13.9704 3.34273 14.0967C3.73884 15.3308 4.58123 16.3727 5.70504 17.0185C4.56328 17.46 3.33046 17.614 2.11519 17.4668C1.89026 17.4386 1.66242 17.4876 1.46904 17.6059C1.27566 17.7242 1.12822 17.9047 1.0509 18.1178C0.973592 18.3309 0.970999 18.5639 1.04355 18.7787C1.1161 18.9935 1.25949 19.1772 1.45019 19.2998C3.54028 20.646 5.97387 21.3617 8.45996 21.3613C11.2792 21.393 14.0299 20.4921 16.2842 18.7988C18.5385 17.1054 20.1699 14.7145 20.9248 11.998C21.2778 10.8146 21.4581 9.58648 21.46 8.35157C21.46 8.28614 21.46 8.21876 21.459 8.15138C21.9811 7.58831 22.3855 6.92668 22.6486 6.20527C22.9117 5.48387 23.0282 4.7172 22.9912 3.95021ZM19.6845 7.16212C19.5194 7.35746 19.4358 7.60891 19.4511 7.86427C19.4609 8.02927 19.4599 8.19527 19.4599 8.35157C19.4579 9.39511 19.3049 10.4329 19.0058 11.4326C18.3893 13.744 17.015 15.7817 15.1029 17.2192C13.1908 18.6568 10.8516 19.4111 8.45996 19.3613C7.60084 19.3616 6.74468 19.2606 5.90918 19.0606C6.97459 18.7172 7.97077 18.1879 8.85156 17.4971C9.01378 17.3693 9.13251 17.1945 9.19145 16.9967C9.25038 16.7988 9.24664 16.5875 9.18073 16.3918C9.11483 16.1961 8.98999 16.0257 8.82334 15.9038C8.65669 15.7819 8.4564 15.7145 8.24996 15.7109C7.41879 15.698 6.62509 15.363 6.03609 14.7764C6.18551 14.7481 6.33395 14.7129 6.48141 14.6709C6.69742 14.6094 6.88645 14.477 7.01807 14.295C7.14969 14.1131 7.21623 13.8921 7.20698 13.6677C7.19773 13.4433 7.11324 13.2285 6.96709 13.058C6.82095 12.8874 6.62167 12.7711 6.40133 12.7275C5.91887 12.6323 5.46487 12.427 5.07464 12.1277C4.68441 11.8284 4.36845 11.4432 4.15133 11.002C4.33206 11.0266 4.51394 11.0419 4.69625 11.0479C4.91283 11.0511 5.12484 10.9854 5.30162 10.8603C5.47841 10.7351 5.6108 10.5569 5.67965 10.3516C5.74563 10.1443 5.74223 9.92123 5.66998 9.7161C5.59772 9.51096 5.46055 9.33499 5.27926 9.21485C4.83941 8.92182 4.4791 8.52427 4.23061 8.0578C3.98213 7.59134 3.85322 7.07052 3.85543 6.54201C3.85543 6.47561 3.85738 6.4092 3.86129 6.34377C6.10255 8.43402 9.00961 9.66621 12.0703 9.82326C12.2248 9.82934 12.3786 9.80024 12.5202 9.73816C12.6618 9.67607 12.7875 9.58262 12.8877 9.46486C12.9869 9.34596 13.0571 9.20566 13.0928 9.05501C13.1286 8.90437 13.1289 8.74748 13.0937 8.5967C13.0365 8.35806 13.0073 8.11357 13.0068 7.86818C13.0077 7.01271 13.3479 6.19254 13.9528 5.58764C14.5577 4.98274 15.3779 4.64251 16.2334 4.64161C16.6735 4.64043 17.1091 4.7305 17.5127 4.90615C17.9162 5.0818 18.279 5.3392 18.5781 5.66212C18.6934 5.7862 18.8386 5.87871 18.9998 5.93085C19.161 5.98299 19.3328 5.99303 19.499 5.96001C19.9097 5.88006 20.3146 5.7724 20.7109 5.63775C20.4406 6.19072 20.0952 6.70369 19.6845 7.16212Z"
                     fill="white"
                   />
                 </svg>
-              </a>
-              <a href="${item.youtube_url != null ? item.youtube_url : "#"}" ${
-                item.youtube_url != null ? 'class="d-block"' : 'class="d-none"'
-              }>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+            </a>
+            <a href="${item.youtube_url != null ? item.youtube_url : " # "}" ${ item.youtube_url !=n ull ? 'class="d-block"' : 'class="d-none"' }>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.4 11.16L10.5 8.00005C10.348 7.91228 10.1755 7.86608 10 7.86608C9.82446 7.86608 9.65202 7.91228 9.5 8.00005C9.35174 8.08557 9.22791 8.20771 9.14036 8.35479C9.05282 8.50187 9.00449 8.66895 9 8.84005V15.16C9.0013 15.3382 9.05019 15.5129 9.14161 15.6658C9.23303 15.8188 9.36367 15.9445 9.52 16.0301C9.66543 16.1157 9.83123 16.1606 10 16.16C10.1771 16.1479 10.3487 16.093 10.5 16L15.4 12.84C15.5403 12.7494 15.6557 12.625 15.7356 12.4783C15.8155 12.3315 15.8574 12.1671 15.8574 12C15.8574 11.833 15.8155 11.6686 15.7356 11.5218C15.6557 11.3751 15.5403 11.2507 15.4 11.16ZM11 13.32V10.68L13 12L11 13.32ZM19.38 4.51005L17.83 4.31005C13.991 3.84001 10.109 3.84001 6.27 4.31005L4.72 4.51005C3.97471 4.59116 3.2854 4.94392 2.78368 5.50098C2.28195 6.05803 2.00297 6.78036 2 7.53005V16.47C2.00636 17.2086 2.28051 17.9198 2.77155 18.4715C3.26259 19.0233 3.93715 19.3781 4.67 19.47L6.22 19.66C8.13776 19.8931 10.0681 20.0066 12 20C13.9323 20 15.8627 19.8798 17.78 19.64L19.33 19.4501C20.0628 19.3581 20.7374 19.0033 21.2285 18.4515C21.7195 17.8998 21.9936 17.1886 22 16.4501V7.53005C21.9985 6.78803 21.7265 6.072 21.235 5.51609C20.7435 4.96017 20.0662 4.6025 19.33 4.51005H19.38ZM20.05 16.51C20.0508 16.762 19.9565 17.0049 19.7859 17.1903C19.6154 17.3757 19.3811 17.4899 19.13 17.51L17.58 17.7001C13.9077 18.1601 10.1923 18.1601 6.52 17.7001L4.97 17.51C4.71889 17.4899 4.48463 17.3757 4.31406 17.1903C4.1435 17.0049 4.04919 16.762 4.05 16.51V7.53005C4.06192 7.282 4.16055 7.04601 4.32869 6.86325C4.49683 6.68049 4.7238 6.56256 4.97 6.53005L6.47 6.30005C10.1427 5.8467 13.8573 5.8467 17.53 6.30005L19.08 6.49005C19.3262 6.52256 19.5532 6.64049 19.7213 6.82325C19.8894 7.00601 19.9881 7.242 20 7.49005L20.05 16.51Z"
                     fill="white"
                   />
                 </svg>
-              </a>
-              <a href="${
-                item.instagram_url !== "" ? item.instagram_url : "#"
-              }" ${
-                item.instagram_url != null
-                  ? 'class="d-block"'
-                  : 'class="d-none"'
-              }>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+            </a>
+            <a href="${
+                item.instagram_url !== " " ? item.instagram_url : "# "
+              }" ${ item.instagram_url !=n ull ? 'class="d-block"' : 'class="d-none"' }>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g id="Brands / Instagram">
                     <path
                       id="Vector"
@@ -794,14 +674,13 @@
                     />
                   </g>
                 </svg>
-              </a>
-            </div>
-            <div class="creator-card-des">
-              <img src="${item.icon}" alt="" />
-              <div>
+            </a>
+        </div>
+        <div class="creator-card-des">
+            <img src="${item.icon}" alt="" />
+            <div>
                 <span>${item.name}</span>
-                <span
-                  ><img
+                <span><img
                     src="assets/img/creator-sub-icon.png"
                     alt=""
                   />${item.youtube_subscribe}</span
