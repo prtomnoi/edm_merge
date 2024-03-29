@@ -97,7 +97,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'DELETE',
-                    url: `/news/${id}`,
+                    url: `news/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },

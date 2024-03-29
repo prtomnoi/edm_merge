@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class NewsController extends Controller
 {
@@ -73,15 +74,13 @@ class NewsController extends Controller
                 while ($check) {
                     $data['slug'] = $request->slug . '-' . (string)$i;
                     $checkSlug = News::where('slug', $data['slug'])->get()->last();
-                    if(!$checkSlug){
+                    if (!$checkSlug) {
                         $check = false;
                         break;
                     }
                     $i++;
                 }
-            }
-            else
-            {
+            } else {
                 $data['slug'] = $request->slug;
             }
             // end for check slug
@@ -141,7 +140,10 @@ class NewsController extends Controller
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($news->image != null) {
-                    Storage::disk('public')->delete($news->image);
+                    // Storage::disk('public/')->delete($news->image);
+                    if (File::exists(public_path('backend/' . $news->image))) {
+                        File::delete(public_path('backend/' . $news->image));
+                    }
                 }
                 $upImage = Helper::upload_image($request->file('image'), 'news', 412, null);
                 $data['image'] = $upImage['image'];
@@ -172,7 +174,10 @@ class NewsController extends Controller
             $news = News::findOrFail($id);
             if ($news->image != null) {
                 try {
-                    Storage::disk('public')->delete($news->image);
+                    // Storage::disk('public')->delete($news->image);
+                    if (File::exists(public_path('backend/' . $news->image))) {
+                        File::delete(public_path('backend/' . $news->image));
+                    }
                 } catch (\Exception $e) {
                 }
             }

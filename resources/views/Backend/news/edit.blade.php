@@ -60,7 +60,7 @@
                                 <textarea name="detail_en" class="form-control" placeholder="Detail" id="editor2">{{@$news->detail_en}}</textarea>
                             </div>
                             <div class="form-group col-4 mb-2">
-                                <img id="example_image01" src="@if($news->image){{asset("$news->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt=""                           <img id="example_image01" src="{{asset("assets/noimage.jpg")}}" class="img-fluid" alt="" style="width:200px">
+                                <img id="example_image01" src="@if($news->image){{asset("backend/$news->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt=""                           <img id="example_image01" src="{{asset("assets/noimage.jpg")}}" class="img-fluid" alt="" style="width:200px">
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">File</label>
