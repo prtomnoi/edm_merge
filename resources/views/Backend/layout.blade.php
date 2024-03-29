@@ -160,7 +160,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link" href="logout" aria-expanded="false">
+                            <a class="sidebar-link" href="{{route('logOut')}}" aria-expanded="false">
                                 <span>
                                     <i class="ti ti-logout"></i>
                                 </span>
@@ -212,7 +212,7 @@
                                             <i class="ti ti-mail fs-6"></i>
                                             <p class="mb-0 fs-3">My Account</p>
                                         </a>
-                                        <a href="#" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                                        <a href="{{route('logOut')}}" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                                     </div>
                                 </div>
                             </li>

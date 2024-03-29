@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'หน้าหลัก')
 
@@ -42,7 +42,7 @@
                                     @if(@$items)
                                     @foreach(@$items as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td style="width:10%;">{{$item->name}}</td>
                                           <td style="width:50%;">{{$item->email}}</td>

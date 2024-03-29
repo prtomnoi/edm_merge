@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <button type="submit" class="btn btn-success">Create</button>
                         </form>
 

@@ -20,7 +20,7 @@ class AccountController extends Controller
     public function index()
     {
         $items = User::all();
-        return view("$this->folder.index", [
+        return view("Backend.account.index", [
             'items' => $items,
             'name_page' => $this->namePage,
             'folder' => $this->folder,
@@ -33,7 +33,7 @@ class AccountController extends Controller
     public function create()
     {
         $providers = Provider::all();
-        return view("$this->folder.create", [
+        return view("Backend.account.create", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'providers' => $providers,
@@ -78,7 +78,7 @@ class AccountController extends Controller
     {
         $providers = Provider::all();
         $data = User::findOrFail($id);
-        return view("$this->folder.edit", [
+        return view("Backend.account.edit", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'row' => $data,

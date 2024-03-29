@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -53,7 +53,7 @@
                                     </div>
                                 </div>
                             </div>
-                          
+
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route("$folder.index")}}" class="btn btn-warning">Back</a>
                         </form>

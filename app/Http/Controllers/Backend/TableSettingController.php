@@ -9,13 +9,13 @@ class TableSettingController extends Controller
     public function index()
     {
         $tableSetting = TableSetting::first();
-        return view('table-settings.index', compact('tableSetting'));
+        return view('Backend.table-settings.index', compact('tableSetting'));
     }
 
     public function edit($id)
     {
         $tableSetting = TableSetting::findOrFail($id);
-        return view('table-settings.edit', compact('tableSetting'));
+        return view('Backend.table-settings.edit', compact('tableSetting'));
     }
 
     public function update(Request $request, $id)

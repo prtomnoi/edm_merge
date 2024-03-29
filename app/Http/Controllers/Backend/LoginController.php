@@ -14,7 +14,7 @@ use App\Models\User;
 class LoginController extends Controller
 {
     public function __construct() {
-        
+
         return view("Backend.login");
     }
 
@@ -32,14 +32,14 @@ class LoginController extends Controller
         try{
             $email = $request->email;
             $password = $request->password;
-        
+
             $remember = ($request->remember == 'on') ? true : false;
-            if (Auth::guard('Admin')->attempt(['email' => $email, 'password' => $password], $remember)) 
+            if (Auth::guard('Admin')->attempt(['email' => $email, 'password' => $password], $remember))
             {
                 $member = User::find(Auth::guard('Admin')->id());
                 return redirect('/admin/index')->with(['success' => 'เข้าสู่ระบบสำเร็จ !']);
-            } 
-            else 
+            }
+            else
             {
                 return redirect('/admin')->with(['error' => 'ชื่อผู้ใช้งาน หรือรหัสผ่านผิด !']);
             }
@@ -56,7 +56,7 @@ class LoginController extends Controller
     public function logOut()
     {
         if (!Auth::guard('Admin')->logout()) {
-            return redirect("");
+            return redirect("/admin");
         }
     }
     public function createDummy(){
@@ -66,7 +66,7 @@ class LoginController extends Controller
             'email' => 'wry.tomnoi1083@gmail.com',
             'password' => bcrypt('123456'),
         ]);
-        
+
     }
 }
 
