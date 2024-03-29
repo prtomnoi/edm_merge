@@ -123,7 +123,7 @@
             };
             return date.toLocaleDateString("en-US", options);
         }
-        fetch("https://edmcompany.co.th//api/news/" + view)
+        fetch("https://edmcompany.co.th/api/news/" + view)
             .then(function(response) {
                 return response.json();
             })
@@ -164,7 +164,7 @@
             });
 
         document.addEventListener('DOMContentLoaded', () => {
-            const newsApiUrl = 'https://edmcompany.co.th//api/news-top';
+            const newsApiUrl = 'https://edmcompany.co.th/api/news-top';
             const maxActivities = 3; // Set the maximum number of recent activities to display
 
             async function fetchTopRecentActivities() {

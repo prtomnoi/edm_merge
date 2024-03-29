@@ -283,7 +283,7 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
     <script>
-        const settingApiUrl = 'https://edmcompany.co.th//api/settings';
+        const settingApiUrl = 'https://edmcompany.co.th/api/settings';
         async function fetchSetting() {
             try {
                 const response = await fetch(settingApiUrl);

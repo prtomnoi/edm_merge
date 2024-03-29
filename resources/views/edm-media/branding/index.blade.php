@@ -397,9 +397,9 @@
 @section('scripts')
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const apiUrl = "https://edmcompany.co.th//api/branding-gallery";
-        const newsApiUrl = "https://edmcompany.co.th//api/news";
-        const campaignApiUrl = "https://edmcompany.co.th//api/campaigns";
+        const apiUrl = "https://edmcompany.co.th/api/branding-gallery";
+        const newsApiUrl = "https://edmcompany.co.th/api/news";
+        const campaignApiUrl = "https://edmcompany.co.th/api/campaigns";
 
         async function fetchImages() {
           try {
@@ -550,7 +550,7 @@
         fetchImages();
       });
       async function loadData(id) {
-        const portUrl = "https://edmcompany.co.th//api/portfolios-group/" + id;
+        const portUrl = "https://edmcompany.co.th/api/portfolios-group/" + id;
         try {
           const response = await fetch(portUrl);
           const campaignData = await response.json();

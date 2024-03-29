@@ -155,7 +155,7 @@
 
 @section('scripts')
 <script>
-    const apiUrl = 'https://edmcompany.co.th//api/portfolio-items-limit/5'; // Replace with your API URL
+    const apiUrl = 'https://edmcompany.co.th/api/portfolio-items-limit/5'; // Replace with your API URL
     const worksContainer = document.querySelector('.works-container');
 
     // Fetch data from the API and populate the HTML structure

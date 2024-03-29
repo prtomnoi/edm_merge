@@ -99,7 +99,7 @@
         let modalImage;
         modal = document.getElementById('imagePreviewModal');
         modalImage = document.querySelector('.modal-image');
-        fetch("https://edmcompany.co.th//api/campaigns/" + view)
+        fetch("https://edmcompany.co.th/api/campaigns/" + view)
             .then(function(response) {
                 return response.json();
             })

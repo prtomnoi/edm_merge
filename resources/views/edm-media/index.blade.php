@@ -207,11 +207,11 @@
 @section('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const apiUrl = "https://edmcompany.co.th//api/vtuber-gallery";
-      const newsApiUrl = "https://edmcompany.co.th//api/news-pin";
-      const campaignApiUrl = "https://edmcompany.co.th//api/campaigns";
-      const videoApiUrl = "https://edmcompany.co.th//api/influencer-video";
-      const ApiUrl = "https://edmcompany.co.th//api/influencers-pin";
+      const apiUrl = "https://edmcompany.co.th/api/vtuber-gallery";
+      const newsApiUrl = "https://edmcompany.co.th/api/news-pin";
+      const campaignApiUrl = "https://edmcompany.co.th/api/campaigns";
+      const videoApiUrl = "https://edmcompany.co.th/api/influencer-video";
+      const ApiUrl = "https://edmcompany.co.th/api/influencers-pin";
       const baseUrl = window.location.origin;
 
       async function fetchImages() {

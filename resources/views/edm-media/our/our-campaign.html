@@ -189,7 +189,7 @@
     <script src="assets/js/navbar.js?v=6"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const campaignApiUrl = 'https://edmcompany.co.th//api/campaigns';
+            const campaignApiUrl = 'https://edmcompany.co.th/api/campaigns';
 
             async function fetchCampaigns() {
                 try {
@@ -242,7 +242,7 @@
             fetchCampaigns();
         });
 
-        fetch("https://edmcompany.co.th//api/campaigns-limit/1")
+        fetch("https://edmcompany.co.th/api/campaigns-limit/1")
             .then(function(response) {
                 return response.json();
             })
