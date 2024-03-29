@@ -21,7 +21,7 @@ class CampaignController extends Controller
     public function index()
     {
         $items = Campaign::all();
-        return view("$this->folder.index", [
+        return view("Backend.campaign.index", [
             'items' => $items,
             'name_page' => $this->namePage,
             'folder' => $this->folder,
@@ -35,7 +35,7 @@ class CampaignController extends Controller
     {
         $groups = Group::all();
         $providers = Provider::all();
-        return view("$this->folder.create", [
+        return view("Backend.campaign.create", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'groups' => $groups,
@@ -65,14 +65,14 @@ class CampaignController extends Controller
 
         try {
             DB::beginTransaction();
-          
+
 
             $transformedData = [
                 'top' => isset($data['top']) ? '1' : '0',
             ];
-        
+
             $data = array_merge($data, $transformedData);
-            
+
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 $upImage = Helper::upload_image($request->file('image'), 'campaign', 412, null);
@@ -103,7 +103,7 @@ class CampaignController extends Controller
         $groups = Group::all();
         $providers = Provider::all();
         $data = Campaign::findOrFail($id);
-        return view("$this->folder.edit", [
+        return view("Backend.campaign.edit", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'row' => $data,
@@ -138,10 +138,10 @@ class CampaignController extends Controller
             $transformedData = [
                 'top' => isset($data['top']) ? '1' : '0',
             ];
-        
+
             $data = array_merge($data, $transformedData);
 
-            
+
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($campaign->image != null) {

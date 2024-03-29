@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -58,7 +58,7 @@
                                 <label for="">Detail - EN</label>
                                 <textarea name="detail_en" class="form-control" placeholder="Detail" id="editor2">{{@$row->detail_en}}</textarea>
                             </div>
-                         
+
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt="" style="width:200px">
                             </div>
@@ -86,8 +86,8 @@
                             <div class="form-check form-switch my-4">
                                 <input class="form-check-input" type="checkbox" {{ $row->top == 1 ? 'checked' : '' }} role="switch" name="top" id="flexSwitchCheckDefault">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Top Recent</label>
-                              </div>       
-                          
+                              </div>
+
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route("$folder.index")}}" class="btn btn-warning">Back</a>
                         </form>

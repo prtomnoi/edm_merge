@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -39,7 +39,7 @@
                                       @endforeach
                                   </select>
                                  </div>
-                             
+
                               </div>
                             <div class="form-group mb-2">
                                 <label for=""><span class="text-danger">*</span> Title</label>
@@ -77,7 +77,7 @@
                                 <label for="">Detail EN</label>
                                 <textarea name="detail_en" class="form-control" placeholder="Detail" id="editor2"></textarea>
                             </div>
-                          
+
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="{{ asset('assets/noimage.jpg') }}" class="img-fluid"
                                     alt="" style="width:200px">
@@ -110,7 +110,7 @@
                             <div class="form-check form-switch my-4">
                                 <input class="form-check-input" type="checkbox" role="switch" name="top" id="flexSwitchCheckDefault">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Top Recent</label>
-                              </div> 
+                              </div>
                             <button type="submit" class="btn btn-success">Create</button>
                         </form>
 
@@ -148,7 +148,7 @@ CKEDITOR.config.allowedContent = true;
         document.addEventListener('DOMContentLoaded', function () {
         const form = document.querySelector('#my-form-id'); // Replace with your form ID
         const requiredInputs = form.querySelectorAll('.required');
-       
+
         form.addEventListener('submit', function (event) {
         let isValid = true;
             requiredInputs.forEach(function (input) {
