@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use App\Helpers\Helper;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 class CampaignController extends Controller
 {
@@ -121,13 +122,13 @@ class CampaignController extends Controller
         try {
             DB::beginTransaction();
             $data = $request->validate([
-                'title' => 'required|string|max:255',
-                'title_en' => 'string|max:255',
-                'short_detail' => 'required|string',
-                'short_detail_en' => 'string',
-                'detail' => 'required|string',
-                'detail_en' => 'string',
-                'signature' => 'string',
+                'title' => 'string|max:255|nullable',
+                'title_en' => 'string|max:255|nullable',
+                'short_detail' => 'string|nullable',
+                'short_detail_en' => 'string|nullable',
+                'detail' => 'string|nullable',
+                'detail_en' => 'string|nullable',
+                'signature' => 'string|nullable',
                 'image' => 'image|mimes:jpeg,png,jpg,gif|max:3072',
                 'status' => 'required|in:draft,published',
                 'provider_id' => 'required|exists:providers,id',
@@ -145,7 +146,10 @@ class CampaignController extends Controller
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($campaign->image != null) {
-                    Storage::disk('public')->delete($campaign->image);
+                    // Storage::disk('public')->delete($campaign->image);
+                    if (File::exists(public_path('backend/' . $campaign->image))) {
+                        File::delete(public_path('backend/' . $campaign->image));
+                    }
                 }
                 $upImage = Helper::upload_image($request->file('image'), 'campaign', 412, null);
                 $data['image'] = $upImage['image'];
@@ -154,7 +158,7 @@ class CampaignController extends Controller
             DB::commit();
             return redirect()->route("$this->folder.index")->with('success', "$this->namePage updated successfully!");
         } catch (\Exception $e) {
-            dd($e);
+            // dd($e);
             DB::rollBack();
             return back()->with('error', $e->getMessage());
         }
@@ -170,7 +174,10 @@ class CampaignController extends Controller
             $data = Campaign::findOrFail($id);
             if ($data->image != null) {
                 try {
-                    Storage::disk('public')->delete($data->image);
+                    // Storage::disk('public')->delete($data->image);
+                    if (File::exists(public_path('backend/' . $data->image))) {
+                        File::delete(public_path('backend/' . $data->image));
+                    }
                 } catch (\Exception $e) {
                 }
             }

@@ -50,7 +50,7 @@
                                       <tr>
 
                                           <td style="width:5%;">{{$key+1}}</td>
-                                          <td style="width:10%;"><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:100%;"></a></td>
+                                          <td style="width:10%;"><a href="{{ asset('backend/'.$item->image)}}" target="_blank"><img src="{{asset('backend/'.$item->image)}}" alt="" style="width:100%;"></a></td>
                                           <td style="width:50%;">{{$item->title}}</td>
                                           <td style="width:15%;">{{ Helper::dateThai($item->created_at) }}</td>
                                           <td style="width:10%;">
@@ -92,7 +92,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'DELETE',
-                    url: `/{{$folder}}/${id}`,
+                    url: `{{$folder}}/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },
