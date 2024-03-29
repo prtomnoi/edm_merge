@@ -24,7 +24,7 @@ class PortfolioItemCollection extends ResourceCollection
                 'detail' => $portfolio->detail,
                 'detail_en' => $portfolio->detail_en,
                 'event_date' => $portfolio->event_date,
-                'image' => asset($portfolio->image), // Full URL to the image
+                'image' => 'https://edmcompany.co.th/backend/'.$portfolio->image, // Full URL to the image
                 'status' => $portfolio->status,
                 'signature' => $portfolio->signature, 
                 'created_at' => $portfolio->created_at->format('M d Y'),

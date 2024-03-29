@@ -23,7 +23,7 @@ class CampaignCollection extends ResourceCollection
                 'short_detail_en' => $campaign->short_detail_en,
                 'detail' => $campaign->detail,
                 'detail_en' => $campaign->detail_en,
-                'image' => asset($campaign->image),
+                'image' => 'https://edmcompany.co.th/backend/'.$campaign->image,
                 'status' => $campaign->status,
                 'created_at' => $campaign->created_at->format('M d Y'),
                 'signature' => $campaign->signature, 

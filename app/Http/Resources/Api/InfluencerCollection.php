@@ -31,8 +31,8 @@ class InfluencerCollection extends ResourceCollection
                 'instagram' => $influencer->instagram,
                 'instagram_subscribe' => $influencer->instagram_subscribe,
                 'instagram_url' => $influencer->instagram_url,
-                'icon' => asset($influencer->icon),
-                'image' => asset( $influencer->image),
+                'icon' => 'https://edmcompany.co.th/backend/'.$influencer->icon,
+                'image' => 'https://edmcompany.co.th/backend/'.$influencer->image,
                 'status' => $influencer->status,
             ];
         });

@@ -16,7 +16,7 @@ class BrandingGalleryCollection extends ResourceCollection
     {
         return $this->collection->map(function ($influencer) {
             return [
-                'image' => asset($influencer->image),
+                'image' => 'https://edmcompany.co.th/backend/'.$influencer->image,
             ];
         });
     }

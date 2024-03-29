@@ -16,7 +16,7 @@ class VtuberGalleryCollection extends ResourceCollection
     {
         return $this->collection->map(function ($vtuber) {
             return [
-                'image' => asset($vtuber->image),
+                'image' => 'https://edmcompany.co.th/backend/'.$vtuber->image,
             ];
         });
     }

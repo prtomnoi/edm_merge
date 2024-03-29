@@ -20,7 +20,7 @@ class PortfolioCollection extends ResourceCollection
                 'title' => $portfolio->name,
                 'link' => $portfolio->link,
                 'group_id' => $portfolio->group_id,
-                'image' => asset($portfolio->image), 
+                'image' => 'https://edmcompany.co.th/backend/'.$portfolio->image, 
             ];
         });
     }

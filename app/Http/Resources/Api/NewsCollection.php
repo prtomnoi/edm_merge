@@ -23,7 +23,7 @@ class NewsCollection extends ResourceCollection
                 'short_detail_en' => $news->short_detail_en,
                 'detail' => $news->detail,
                 'detail_en' => $news->detail_en,
-                'image' => asset($news->image), // Full URL to the image
+                'image' => 'https://edmcompany.co.th/backend/'.$news->image,
                 'status' => $news->status,
                 'provider_id' => $news->provider_id,
                 'created_at' => $news->created_at->format('M d Y'),
