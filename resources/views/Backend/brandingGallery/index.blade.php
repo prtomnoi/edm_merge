@@ -48,7 +48,7 @@
                                       <tr>
 
                                           <td style="width:5%;">{{$key+1}}</td>
-                                          <td style="width:10%;"><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:150px;"></a></td>
+                                          <td style="width:10%;"><a href="{{asset('backend/' . $item->image)}}" target="_blank"><img src="{{asset('backend/' . $item->image)}}" alt="" style="width:150px;"></a></td>
                                           <td style="width:15%;">{{ Helper::dateThai($item->created_at) }}</td>
                                           <td style="width:10%;">
                                               <div class="form-check form-switch">
@@ -89,7 +89,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'DELETE',
-                    url: `/branding-gallery/${id}`,
+                    url: `branding-gallery/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },

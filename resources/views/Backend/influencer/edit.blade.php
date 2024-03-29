@@ -115,14 +115,14 @@
                                      </div>
 
                             <div class="form-group col-4 mb-2">
-                                 <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif"  alt="" style="width:200px">
+                                 <img id="example_image01" src="@if($row->image){{asset("backend/$row->image")}}@else {{asset("backend/assets/noimage.jpg")}}@endif"  alt="" style="width:200px">
                              </div>
                              <div class="form-group mb-2">
                                 <label for="">Creator Photo </label>
                                <input type="file" name="image" accept="image/png, image/gif, image/jpeg" onchange="readURL01(this);" class="form-control">
                             </div>
                             <div class="form-group col-2 mb-2">
-                                <img id="example_image02" src="@if($row->icon){{asset("$row->icon")}}@else {{asset("assets/noimage.jpg")}}@endif"   alt="" style="width:100px">
+                                <img id="example_image02" src="@if($row->icon){{asset("backend/$row->icon")}}@else {{asset("backend/assets/noimage.jpg")}}@endif"   alt="" style="width:100px">
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">Channel Logo</label>

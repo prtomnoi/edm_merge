@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="form-group col-4 mb-2">
-                                <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt="" style="width:200px">
+                                <img id="example_image01" src="@if($row->image){{asset("backend/$row->image")}}@else {{asset("backend/assets/noimage.jpg")}}@endif" class="img-fluid" alt="" style="width:200px">
                             </div>
                             <div class="form-group mb-2">
                                 <label for="">File</label>

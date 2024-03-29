@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Helpers\Helper;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\File;
 class InfluencerController extends Controller
 {
     /**
@@ -183,7 +183,10 @@ class InfluencerController extends Controller
             // Upload the image and save its path in the database
             if ($request->hasFile('icon')) {
                 if ($influencer->icon != null) {
-                    Storage::disk('public')->delete($influencer->icon);
+                    // Storage::disk('public')->delete($influencer->icon);
+                    if (File::exists(public_path('backend/' . $influencer->icon))) {
+                        File::delete(public_path('backend/' . $influencer->icon));
+                    }
                 }
                 $upImage = Helper::upload_image($request->file('icon'), 'influencer/icon', 77, 77);
                 $data['icon'] = $upImage['image'];
@@ -191,7 +194,10 @@ class InfluencerController extends Controller
 
             if ($request->hasFile('image')) {
                 if ($influencer->image != null) {
-                    Storage::disk('public')->delete($influencer->image);
+                    // Storage::disk('public')->delete($influencer->image);
+                    if (File::exists(public_path('backend/' . $influencer->image))) {
+                        File::delete(public_path('backend/' . $influencer->image));
+                    }
                 }
                 $upImage = Helper::upload_image($request->file('image'), 'influencer', 301, null);
                 $data['image'] = $upImage['image'];
@@ -216,7 +222,10 @@ class InfluencerController extends Controller
             $data = Influencer::findOrFail($id);
             if ($data->image != null) {
                 try {
-                    Storage::disk('public')->delete($data->image);
+                    // Storage::disk('public')->delete($data->image);
+                    if (File::exists(public_path('backend/' . $data->image))) {
+                        File::delete(public_path('backend/' . $data->image));
+                    }
                 } catch (\Exception $e) {
                 }
             }

@@ -61,7 +61,7 @@
                                       <tr>
 
                                           <td style="width:5%;">{{$key+1}}</td>
-                                          <td ><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:100%;"></a></td>
+                                          <td ><a href="{{asset('backend/' . $item->image)}}" target="_blank"><img src="{{asset('backend/' . $item->image)}}" alt="" style="width:100%;"></a></td>
                                           <td style="width:10%;">{{$item->name}}</td>
                                           <td class="limited-text"><a href="{{$item->link}}" target="_blank">{{$item->link}}</a></td>
                                           <td >{{ Helper::dateThai($item->created_at) }}</td>

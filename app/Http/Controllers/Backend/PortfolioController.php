@@ -8,6 +8,7 @@ use App\Models\Portfolio;
 use App\Helpers\Helper;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 
 class PortfolioController extends Controller
@@ -115,7 +116,10 @@ class PortfolioController extends Controller
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($portflio->image != null) {
-                    Storage::disk('public')->delete($portflio->image);
+                    // Storage::disk('public')->delete($portflio->image);
+                    if (File::exists(public_path('backend/' . $portflio->image))) {
+                        File::delete(public_path('backend/' . $portflio->image));
+                    }
                 }
                 $upImage = Helper::upload_image($request->file('image'), 'portfolio', 412, null);
                 $data['image'] = $upImage['image'];
@@ -139,7 +143,10 @@ class PortfolioController extends Controller
             $data = Portfolio::findOrFail($id);
             if ($data->image != null) {
                 try {
-                    Storage::disk('public')->delete($data->image);
+                    // Storage::disk('public')->delete($data->image);
+                    if (File::exists(public_path('backend/' . $data->image))) {
+                        File::delete(public_path('backend/' . $data->image));
+                    }
                 } catch (\Exception $e) {
                 }
             }

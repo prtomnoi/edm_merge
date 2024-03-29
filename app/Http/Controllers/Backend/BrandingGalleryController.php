@@ -6,8 +6,9 @@ use App\Helpers\Helper;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Intervention\Image\Facades\Image;
-
+// use Intervention\Image\Facades\Image;
+use Illuminate\Support\Facades\File;
+use Intervention\Image\Laravel\Facades\Image;
 class BrandingGalleryController extends Controller
 {
       /**
@@ -41,12 +42,13 @@ class BrandingGalleryController extends Controller
             $image = $request->file('image');
 
             // Resize the image with a maximum width of 412 and an automatically calculated height
-            $resizedImage = Image::make($image)->resize(412, null, function ($constraint) {
-                $constraint->aspectRatio();
-            });
+            // $resizedImage = Image::make($image)->resize(412, null, function ($constraint) {
+            //     $constraint->aspectRatio();
+            // });
+            // $manager = Image::read($image);
+            // $resizedImage = $manager->scale(width: 412);
 
-
-            $upImage = Helper::upload_image($resizedImage->stream(), 'branding', 412, null);
+            $upImage = Helper::upload_image_resize($image, 'branding', 412, null);
             $validatedData['image'] = $upImage['image'];
         }
 
@@ -55,7 +57,7 @@ class BrandingGalleryController extends Controller
 
         BrandingGallery::create($validatedData);
 
-        return redirect('/branding-gallery')->with('success', 'Branding image added successfully.');
+        return redirect('/admin/branding-gallery')->with('success', 'Branding image added successfully.');
     }
 
     /**
@@ -93,7 +95,10 @@ class BrandingGalleryController extends Controller
             $data = BrandingGallery::findOrFail($id);
             if ($data->image != null) {
                 try {
-                    Storage::disk('public')->delete($data->image);
+                    // Storage::disk('public')->delete($data->image);
+                    if (File::exists(public_path('backend/' . $data->image))) {
+                        File::delete(public_path('backend/' . $data->image));
+                    }
                 } catch (\Exception $e) {
                 }
             }

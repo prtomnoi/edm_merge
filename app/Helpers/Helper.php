@@ -97,7 +97,26 @@ class Helper
         }
         return $arr;
     }
-
+    public static function upload_image_resize($image_stream, $folder, $x, $y)
+    {
+        $new_nameImage = "$folder" . date('dmY') . '-' . uniqid() . '.' .$image_stream->getClientOriginalExtension();
+        // path image
+        $path = public_path('backend/uploads/' . $folder . '/' . $new_nameImage);
+        // read image file
+        $manager = Image::read($image_stream);
+        // scale image to width 300px height auto
+        $manager->scale(width: $x);
+        // save image to path public/upload/...
+        if ($manager->save($path)) {
+            $arr['image'] = 'uploads/' . $folder  . '/' . $new_nameImage;
+            $arr['ext'] = $image_stream->getClientOriginalExtension();
+            $arr['size'] = getimagesize($image_stream);
+        } else {
+            $arr['status'] = 500;
+            $arr['message'] = "Error";
+        }
+        return $arr;
+    }
     public static function getYouTubeVideoId($url)
     {
         $query = parse_url($url, PHP_URL_QUERY);
