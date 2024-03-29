@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-lg-12 d-flex align-items-stretch">
-              
+
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Influencer Video</h5>
@@ -49,7 +49,7 @@
                                     @if(@$influencerVideo)
                                     @foreach(@$influencerVideo as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td style="width:10%;">{{$item->title}}</td></td>
                                           <td style="width:10%;"><a href="{{$item->link}}" target="_blank">{{$item->link}}</a></td></td>

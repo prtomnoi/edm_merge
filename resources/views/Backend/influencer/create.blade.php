@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -38,12 +38,12 @@
                                     </div>
                                 </div>
                             </div>
-  
+
                             <div class="form-group mb-2">
                                 <label for=""><span class="text-danger">*</span> Video Link</label>
-                                <input type="text" class="form-control" name="video_link" placeholder="link.." required> 
+                                <input type="text" class="form-control" name="video_link" placeholder="link.." required>
                             </div>
-                          
+
                             <div class="row">
                               <div class="form-group col-md-4 mb-2">
                                   <label for="">Facebook</label>
@@ -105,11 +105,11 @@
                                        <input type="text" class="form-control" name="instagram_url"  placeholder="URL">
                                    </div>
                                    </div>
-                               
-                              
-                          
 
-                          
+
+
+
+
 
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="{{ asset('assets/noimage.jpg') }}" class="img-fluid" alt="" style="width:200px">
@@ -136,7 +136,7 @@
                             <div class="form-check form-switch my-4">
                                 <input class="form-check-input" type="checkbox" role="switch" name="pin" id="flexSwitchCheckDefault">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Pin</label>
-                              </div>      
+                              </div>
                             <button type="submit" class="btn btn-success">Create</button>
                         </form>
 
@@ -154,11 +154,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modalBody">
-                
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          
+
             </div>
         </div>
     </div>
@@ -202,7 +202,7 @@ function loadApiData(searchText) {
         dataType: 'json',
         data: {
             name: searchText,
-        
+
         },
         success: function(data) {
            console.log(data.data);
@@ -235,7 +235,7 @@ function loadApiData(searchText) {
             });
         },
         error: function(xhr, status, error) {
-        
+
         }
     });
 }

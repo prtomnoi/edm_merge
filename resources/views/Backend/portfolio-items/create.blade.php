@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -17,7 +17,7 @@
                         @endif
                         <form action="{{ route("$folder.store") }}" method="post" enctype="multipart/form-data">
                             @csrf
-                          
+
                             <div class="form-group mb-2">
                                 <label for="">Title - th</label>
                                 <input type="text" class="form-control" name="title" placeholder="">
@@ -35,7 +35,7 @@
                                 <label for="">Short Detail - EN (255 characters)</label>
                                 <textarea class="form-control" name="short_detail_en" id="short-detail-en" cols="30" rows="3" data-max-length="255"></textarea>
                                 <span id="char-count-en">0 / 255</span>
-                            </div>                            
+                            </div>
                              <div class="form-group mb-2">
                                <label for="">Detail - th</label>
                                <textarea name="detail" class="form-control"  placeholder="Detail" id="editor"></textarea>
@@ -51,7 +51,7 @@
                              <label for="">File</label>
                              <input type="file" name="image" accept="image/png, image/gif, image/jpeg" onchange="readURL01(this);" class="form-control">
                            </div>
-                         
+
                             <div class="row">
                                 <div class="col-md-4">
                                    <div class="form-group mb-2">
@@ -75,15 +75,15 @@
                                      </div>
                                 </div>
                             </div>
-                          
+
 
                             <label for="exampleInputEmail3">More pictures (You can upload more than 1 photo at a time)</label>
                             <div class="input-field">
-            
+
                               <div class="input-images-1" style="padding-top: .5rem;"></div>
                             </div>
 
-                
+
                             <button type="submit" class="btn btn-success mt-4">Create</button>
                         </form>
 
@@ -130,7 +130,7 @@ CKEDITOR.config.allowedContent = true;
             const currentLength = textarea.value.length;
             charCount.textContent = currentLength + " / " + maxLength;
 
-        
+
             if (currentLength > maxLength) {
                 textarea.value = textarea.value.substring(0, maxLength);
                 charCount.textContent = maxLength + " / " + maxLength;
@@ -147,6 +147,6 @@ CKEDITOR.config.allowedContent = true;
             }
         });
     });
- 
+
     </script>
 @endsection

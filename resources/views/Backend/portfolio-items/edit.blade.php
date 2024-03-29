@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('.Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -48,7 +48,7 @@
                         <form action="{{ route("$folder.update",$row->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
-                           
+
                             <div class="form-group mb-2">
                                 <label for="">Title - th</label>
                                 <input type="text" class="form-control" name="title" value="{{ $row->title }}" placeholder="">
@@ -66,8 +66,8 @@
                                  <label for="">Short Detail - EN (255 characters)</label>
                                  <textarea class="form-control" name="short_detail_en" id="short-detail-en" cols="30" rows="3" data-max-length="255">{{ $row->short_detail_en }}</textarea>
                                  <span id="char-count-en">0 / 255</span>
-                             </div>                            
-                          
+                             </div>
+
                              <div class="form-group mb-2">
                                <label for="">Detail - th</label>
                                <textarea name="detail" class="form-control"  placeholder="Detail" id="editor">{{ $row->detail }}</textarea>
@@ -76,7 +76,7 @@
                                <label for="">Detail - en</label>
                                <textarea name="detail_en" class="form-control"  placeholder="Detail" id="editor2">{{ $row->detail_en }}</textarea>
                             </div>
-                      
+
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt="" style="width:200px">
                             </div>
@@ -84,7 +84,7 @@
                                 <label for="">File</label>
                                 <input type="file" name="image" accept="image/png, image/gif, image/jpeg" onchange="readURL01(this);" class="form-control">
                             </div>
-                        
+
                             <div class="row">
                                 <div class="col-md-4">
                                    <div class="form-group mb-2">
@@ -115,17 +115,17 @@
                                       <img src="{{ asset($image->image) }}" alt="">
                                       <a class="remove-image" onclick="delete_images({{$image->id}})" style="display: inline; cursor: pointer;">&#215;</a>
                                  </div>
-                                 @endforeach     
+                                 @endforeach
                             </div>
-                           
+
                             <label for="exampleInputEmail3">More pictures (You can upload more than 1 photo at a time)</label>
                             <div class="input-field mb-4">
-            
+
                               <div class="input-images-1" style="padding-top: .5rem;"></div>
                             </div>
 
-                            
-                          
+
+
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route("$folder.index")}}" class="btn btn-warning">Back</a>
                         </form>
@@ -217,7 +217,7 @@ CKEDITOR.config.allowedContent = true;
             const currentLength = textarea.value.length;
             charCount.textContent = currentLength + " / " + maxLength;
 
-        
+
             if (currentLength > maxLength) {
                 textarea.value = textarea.value.substring(0, maxLength);
                 charCount.textContent = maxLength + " / " + maxLength;

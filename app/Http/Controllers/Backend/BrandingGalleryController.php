@@ -16,7 +16,7 @@ class BrandingGalleryController extends Controller
     public function index()
     {
         $brandingGallery = BrandingGallery::all();
-        return view('brandingGallery.index', ['brandingGallery' => $brandingGallery]);
+        return view('Backend.brandingGallery.index', ['brandingGallery' => $brandingGallery]);
     }
 
     /**
@@ -24,7 +24,7 @@ class BrandingGalleryController extends Controller
      */
     public function create()
     {
-        return view('brandingGallery.create');
+        return view('Backend.brandingGallery.create');
     }
 
     /**
@@ -39,20 +39,20 @@ class BrandingGalleryController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-    
+
             // Resize the image with a maximum width of 412 and an automatically calculated height
             $resizedImage = Image::make($image)->resize(412, null, function ($constraint) {
                 $constraint->aspectRatio();
             });
-    
-       
-            $upImage = Helper::upload_image($resizedImage->stream(), 'branding', 412, null); 
+
+
+            $upImage = Helper::upload_image($resizedImage->stream(), 'branding', 412, null);
             $validatedData['image'] = $upImage['image'];
         }
-        
-      
+
+
         $validatedData['path'] = "branding";
-        
+
         BrandingGallery::create($validatedData);
 
         return redirect('/branding-gallery')->with('success', 'Branding image added successfully.');

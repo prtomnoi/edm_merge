@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'Campaigns')
 
@@ -6,9 +6,9 @@
 <style>
     .limited-text {
     max-width: 250px;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 </style>
     <div class="container-fluid">
@@ -59,7 +59,7 @@
                                     @if(@$items)
                                     @foreach(@$items as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td ><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:100%;"></a></td>
                                           <td style="width:10%;">{{$item->name}}</td>
@@ -80,7 +80,7 @@
                                     <!-- END member  -->
                                 </tbody>
                             </table>
-                            
+
                         </div>
                     </div>
                 </div>

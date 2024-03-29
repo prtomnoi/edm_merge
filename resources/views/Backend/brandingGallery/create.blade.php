@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -13,7 +13,7 @@
 
                     <form action="{{ route('branding-gallery.store') }}" method="post" enctype="multipart/form-data">
                       @csrf
-                
+
                      <div class="form-group mb-2 text-center">
                         <img id="example_image01" src="{{asset("assets/noimage.jpg")}}" class="img-fluid" alt="" style="width:300px">
                     </div>
@@ -21,7 +21,7 @@
                       <label for="">File</label>
                       <input type="file" name="image" accept="image/png, image/gif, image/jpeg" onchange="readURL01(this);" class="form-control">
                     </div>
-                  
+
                     <div class="form-group mb-2">
                         <label for="">Status</label>
                         <select name="status" class="form-control">
@@ -29,8 +29,8 @@
                           <option value="published">Published</option>
                       </select>
                       </div>
-                     
-                 
+
+
                       <button type="submit" class="btn btn-success mt-2">Create</button>
                     </form>
 
@@ -39,9 +39,9 @@
             </div>
           </div>
       </div>
- 
+
   @endsection
-  
+
   @section('scripts')
   <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
   <script>

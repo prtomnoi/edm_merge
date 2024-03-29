@@ -19,7 +19,7 @@ class InfluencerController extends Controller
     public function index()
     {
         $items = Influencer::orderBy('created_at', 'desc') ->get();
-        return view("$this->folder.index", [
+        return view("Backend.influencer.index", [
             'items' => $items,
             'name_page' => $this->namePage,
             'folder' => $this->folder,
@@ -31,7 +31,7 @@ class InfluencerController extends Controller
      */
     public function create()
     {
-        return view("$this->folder.create", [
+        return view("Backend.influencer.create", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
         ]);
@@ -65,7 +65,7 @@ class InfluencerController extends Controller
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:3072',
                 'status' => 'required|in:draft,published',
                 'pin' => 'sometimes|in:on',
-                
+
             ]);
 
             if ($data['youtube_subscribe'] !== null) {
@@ -76,16 +76,16 @@ class InfluencerController extends Controller
                 'pin' => isset($data['pin']) ? '1' : '0',
             ];
 
-            $videoId = Helper::getYouTubeVideoId($request->input('video_link')); 
+            $videoId = Helper::getYouTubeVideoId($request->input('video_link'));
 
             if (strpos($request->input('video_link'), 'https://www.youtube.com/embed/') !== false) {
                 $embedLink = $request->input('video_link');
             } else {
                 $embedLink = "https://www.youtube.com/embed/$videoId";
             }
-    
+
             $data['video_link'] = $embedLink;
-    
+
 
             $data = array_merge($data, $transformedData);
 
@@ -121,7 +121,7 @@ class InfluencerController extends Controller
     public function edit(string $id)
     {
         $data = Influencer::findOrFail($id);
-        return view("$this->folder.edit", [
+        return view("Backend.influencer.edit", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'row' => $data,
@@ -158,7 +158,7 @@ class InfluencerController extends Controller
                 'status' => 'required|in:draft,published',
                 'pin' => 'sometimes|in:on',
             ]);
-            
+
             if ($data['youtube_subscribe'] !== null) {
                 $data['youtube_subscribe'] = intval(str_replace(',', '', $data['youtube_subscribe']));
             }
@@ -169,16 +169,16 @@ class InfluencerController extends Controller
 
             $data = array_merge($data, $transformedData);
 
-            $videoId = Helper::getYouTubeVideoId($request->input('video_link')); 
+            $videoId = Helper::getYouTubeVideoId($request->input('video_link'));
 
             if (strpos($request->input('video_link'), 'https://www.youtube.com/embed/') !== false) {
                 $embedLink = $request->input('video_link');
             } else {
                 $embedLink = "https://www.youtube.com/embed/$videoId";
             }
-    
+
             $data['video_link'] = $embedLink;
-            
+
 
             // Upload the image and save its path in the database
             if ($request->hasFile('icon')) {
@@ -201,7 +201,7 @@ class InfluencerController extends Controller
             return redirect()->route("$this->folder.index")->with('success', "$this->namePage created successfully!");
         } catch (\Exception $e) {
             DB::rollBack();
-  
+
             return back()->withInput()->withErrors([$e->getMessage()]);
         }
     }

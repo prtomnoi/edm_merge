@@ -15,7 +15,7 @@ class InfluencerVideoController extends Controller
     public function index()
     {
         $influencerVideo = InfluencerVideo::all();
-        return view('influencer-video.index', ['influencerVideo' => $influencerVideo]);
+        return view('Backend.influencer-video.index', ['influencerVideo' => $influencerVideo]);
     }
 
     /**
@@ -23,7 +23,7 @@ class InfluencerVideoController extends Controller
      */
     public function create()
     {
-        return view('influencer-video.create');
+        return view('Backend.influencer-video.create');
     }
 
     /**
@@ -37,7 +37,7 @@ class InfluencerVideoController extends Controller
             'status' => 'required|in:draft,published',
         ]);
 
-        $videoId = Helper::getYouTubeVideoId($request->input('link')); 
+        $videoId = Helper::getYouTubeVideoId($request->input('link'));
 
         if (strpos($request->input('link'), 'https://www.youtube.com/embed/') !== false) {
             $embedLink = $request->input('link');
@@ -66,7 +66,7 @@ class InfluencerVideoController extends Controller
     public function edit(string $id)
     {
         $influencerVideo = InfluencerVideo::findOrfail($id);
-        return view('influencer-video.edit', ['data' => $influencerVideo]);
+        return view('Backend.influencer-video.edit', ['data' => $influencerVideo]);
     }
 
     /**
@@ -82,7 +82,7 @@ class InfluencerVideoController extends Controller
             'status' => 'required|in:draft,published',
         ]);
 
-        $videoId = Helper::getYouTubeVideoId($request->input('link')); 
+        $videoId = Helper::getYouTubeVideoId($request->input('link'));
 
         if (strpos($request->input('link'), 'https://www.youtube.com/embed/') !== false) {
             $embedLink = $request->input('link');
@@ -112,11 +112,11 @@ class InfluencerVideoController extends Controller
             DB::rollBack();
             return response()->json(['message' => 'Something broke'], 500);
         }
-       
+
     }
 
- 
-  
+
+
     public function status($id = null)
     {
         $data = InfluencerVideo::findOrFail($id);
@@ -127,5 +127,5 @@ class InfluencerVideoController extends Controller
             return response()->json(false);
         }
     }
-    
+
 }

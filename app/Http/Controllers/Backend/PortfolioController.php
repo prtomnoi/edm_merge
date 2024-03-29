@@ -21,7 +21,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $items = Portfolio::all();
-        return view("$this->folder.index", [
+        return view("Backend.portfolios.index", [
             'items' => $items,
             'name_page' => $this->namePage,
             'folder' => $this->folder,
@@ -35,7 +35,7 @@ class PortfolioController extends Controller
     {
         $groups = Group::all();
 
-        return view("$this->folder.create", [
+        return view("Backend.portfolios.create", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'groups' => $groups,
@@ -85,7 +85,7 @@ class PortfolioController extends Controller
     {
         $groups = Group::all();
         $data = Portfolio::findOrFail($id);
-        return view("$this->folder.edit", [
+        return view("Backend.portfolios.edit", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'row' => $data,
@@ -109,9 +109,9 @@ class PortfolioController extends Controller
                 'group_id' => 'required|exists:table_group,id',
             ]);
 
-          
 
-            
+
+
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($portflio->image != null) {

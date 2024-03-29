@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -7,7 +7,7 @@
         <div class="row">
 
             <div class="col-lg-12 d-flex align-items-stretch">
-              
+
                 <div class="card w-100">
                     <div class="card-body p-4">
                         <h5 class="card-title fw-semibold mb-4">Branding Gallery</h5>
@@ -46,7 +46,7 @@
                                     @if(@$brandingGallery)
                                     @foreach(@$brandingGallery as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td style="width:10%;"><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:150px;"></a></td>
                                           <td style="width:15%;">{{ Helper::dateThai($item->created_at) }}</td>
@@ -56,7 +56,7 @@
                                               </div>
                                           </td>
                                           <td class="text-center" style="width:10%;">
-                                            
+
                                               <a href="javascript:void(0)" onclick="destroy('{{$item->id}}')" class="btn btn-danger"><i class="ti ti-trash"></i> Delete</a>
                                           </td>
                                       </tr>

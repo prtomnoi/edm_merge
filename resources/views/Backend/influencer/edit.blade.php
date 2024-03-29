@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -22,7 +22,7 @@
                             </ul>
                         </div>
                     @endif
-                    
+
                         <form action="{{ route("$folder.update",$row->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             {{ method_field('PUT') }}
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                             </div>
-                       
+
                             <div class="form-group mb-2">
                                 <label for=""><span class="text-danger">*</span> Video Link</label>
                                 <input type="text" class="form-control" name="video_link" placeholder="link.." value="{{@$row->video_link}}">
@@ -113,7 +113,7 @@
                                          <input type="text" class="form-control" name="instagram_url" value="{{@$row->instagram_url}}"  placeholder="URL">
                                      </div>
                                      </div>
-                                 
+
                             <div class="form-group col-4 mb-2">
                                  <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif"  alt="" style="width:200px">
                              </div>
@@ -129,7 +129,7 @@
                                 <input type="file" name="icon" accept="image/png, image/gif, image/jpeg" onchange="readURL02(this);" class="form-control">
                             </div>
 
-                      
+
                             <div class="form-group mb-2">
                                 <label for="">Status</label>
                                 <select name="status" class="form-control">
@@ -140,10 +140,10 @@
                             <div class="form-check form-switch my-4">
                                 <input class="form-check-input" type="checkbox" {{ $row->pin == 1 ? 'checked' : '' }} role="switch" name="pin" id="flexSwitchCheckDefault">
                                 <label class="form-check-label" for="flexSwitchCheckDefault">Pin</label>
-                              </div>       
+                              </div>
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route("$folder.index")}}" class="btn btn-warning">Back</a>
-                        
+
                         </form>
 
                     </div>
@@ -160,11 +160,11 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="modalBody">
-                
+
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          
+
             </div>
         </div>
     </div>
@@ -210,7 +210,7 @@ function loadApiData(searchText) {
         dataType: 'json',
         data: {
             name: searchText,
-        
+
         },
         success: function(data) {
            console.log(data.data);
@@ -243,7 +243,7 @@ function loadApiData(searchText) {
             });
         },
         error: function(xhr, status, error) {
-        
+
         }
     });
 }

@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'หน้าหลัก')
 
@@ -51,7 +51,7 @@
                                     @if(@$items)
                                     @foreach(@$items as $key=>$item)
                                       <tr>
-                                        
+
                                           <td style="width:5%;">{{$key+1}}</td>
                                           <td style="width:10%;"><a href="{{$item->image}}" target="_blank"><img src="{{$item->image}}" alt="" style="width:100%;"></a></td>
                                           <td style="width:50%;">{{$item->name}}</td>

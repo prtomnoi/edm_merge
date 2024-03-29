@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', 'VTuber Gallery')
 
@@ -22,8 +22,8 @@
                         <label for="">Link url</label>
                         <input type="text" name="link"  class="form-control" value="{{ $data->link }}"  placeholder="E.g., https://www.youtube.com/watch?v=cfFxBeMyoas" required>
                       </div>
-               
-                  
+
+
                     <div class="form-group mb-2">
                         <label for="">Status</label>
                         <select name="status" class="form-control">
@@ -31,8 +31,8 @@
                           <option value="published">Published</option>
                       </select>
                       </div>
-                     
-                 
+
+
                       <button type="submit" class="btn btn-success mt-2">Update</button>
                     </form>
 
@@ -41,9 +41,9 @@
             </div>
           </div>
       </div>
- 
+
   @endsection
-  
+
   @section('scripts')
   <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
   <script>

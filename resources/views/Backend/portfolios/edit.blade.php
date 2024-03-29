@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -15,7 +15,7 @@
                             @csrf
                             {{ method_field('PUT') }}
                             <div class="row">
-                            
+
                                  <div class="col-md-12">
                                     <label for="">Group</label>
                                     <select name="group_id" class="form-control">
@@ -29,7 +29,7 @@
                                 <label for="">Name</label>
                                 <input type="text" class="form-control" name="name" placeholder="Title" value="{{@$row->name}}">
                             </div>
-                      
+
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="@if($row->image){{asset("$row->image")}}@else {{asset("assets/noimage.jpg")}}@endif" class="img-fluid" alt="" style="width:200px">
                             </div>
@@ -54,8 +54,8 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                          
+
+
                             <button type="submit" class="btn btn-success">Update</button>
                             <a href="{{route("$folder.index")}}" class="btn btn-warning">Back</a>
                         </form>

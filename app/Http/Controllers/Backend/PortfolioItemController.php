@@ -20,7 +20,7 @@ class PortfolioItemController extends Controller
     public function index()
     {
         $portfolioItems = PortfolioItem::all();
-        return view("$this->folder.index", [
+        return view("Backend.portfolio-items.index", [
             'items' => $portfolioItems,
             'name_page' => $this->namePage,
             'folder' => $this->folder,
@@ -32,7 +32,7 @@ class PortfolioItemController extends Controller
      */
     public function create()
     {
-        return view("$this->folder.create", [
+        return view("Backend.portfolio-items.create", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
         ]);
@@ -59,7 +59,7 @@ class PortfolioItemController extends Controller
             'updated_by' => 'nullable|exists:users,id',
         ]);
 
-     
+
 
         if ($request->hasFile('image')) {
             $upImage = Helper::upload_image($request->file('image'), 'portfolio', 412, null);
@@ -74,7 +74,7 @@ class PortfolioItemController extends Controller
                 $imagePath = Helper::upload_image($image, 'portfolio', 412, null);
                 PortfolioItemImage::create([
                     'image' => $imagePath['image'],
-                    'portfolio_item_id' => $portfolioItem->id, 
+                    'portfolio_item_id' => $portfolioItem->id,
                 ]);
             }
         }
@@ -97,7 +97,7 @@ class PortfolioItemController extends Controller
     public function edit(string $id)
     {
         $data = PortfolioItem::findOrFail($id);
-        return view("$this->folder.edit", [
+        return view("Backend.portfolio-items.edit", [
             'name_page' => $this->namePage,
             'folder' => $this->folder,
             'row' => $data,
@@ -126,8 +126,8 @@ class PortfolioItemController extends Controller
                 'created_by' => 'nullable|exists:users,id',
                 'updated_by' => 'nullable|exists:users,id',
             ]);
-    
-    
+
+
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {
                 if ($portfolioItem->image != null) {
@@ -141,11 +141,11 @@ class PortfolioItemController extends Controller
 
             if ($request->hasFile('images')) {
                 foreach ($request->file('images') as $image) {
-    
+
                     $imagePath = Helper::upload_image($image, 'portfolio', 412, null);
                     PortfolioItemImage::create([
                         'image' => $imagePath['image'],
-                        'portfolio_item_id' => $portfolioItem->id, 
+                        'portfolio_item_id' => $portfolioItem->id,
                     ]);
                 }
             }
@@ -165,9 +165,9 @@ class PortfolioItemController extends Controller
     {
         try {
             DB::beginTransaction();
-    
+
             $portfolioItem = PortfolioItem::findOrFail($id);
-            
+
             $portfolioItem->images()->each(function ($image) {
                 if ($image->image != null) {
                     try {
@@ -177,7 +177,7 @@ class PortfolioItemController extends Controller
                 }
                 $image->delete();
             });
-    
+
             if ($portfolioItem->image != null) {
                 try {
                     Storage::disk('public')->delete($portfolioItem->image);
@@ -185,7 +185,7 @@ class PortfolioItemController extends Controller
                 }
             }
             $portfolioItem->delete();
-    
+
             DB::commit();
             return response()->json(['message' => 'Successfully'], 200);
         } catch (\Exception $e) {
@@ -194,11 +194,11 @@ class PortfolioItemController extends Controller
         }
     }
     public function delete_image($id){
-        
+
         try {
-      
+
             $portfolioItem = PortfolioItemImage::findOrFail($id);
-            
+
             if ($portfolioItem->image != null) {
                 try {
                     Storage::disk('public')->delete($portfolioItem->image);
@@ -206,7 +206,7 @@ class PortfolioItemController extends Controller
                 }
             }
             $portfolioItem->delete();
-    
+
             return response()->json(['message' => 'Successfully'], 200);
         } catch (\Exception $e) {
             return response()->json(['message' => 'Something broke'], 500);

@@ -1,4 +1,4 @@
-@extends('../layout')
+@extends('Backend.layout')
 
 @section('title', "$name_page Management")
 
@@ -18,7 +18,7 @@
                         <form action="{{ route("$folder.store") }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                             
+
                                 <div class="col-md-12 mb-2" >
                                     <label for="">Group</label>
                                     <select name="group_id" class="form-control">
@@ -27,13 +27,13 @@
                                       @endforeach
                                   </select>
                                  </div>
-                             
+
                               </div>
                             <div class="form-group mb-2">
                                 <label for="">Name</label>
                                 <input type="text" class="form-control" name="name" placeholder="Title">
                             </div>
-                       
+
                             <div class="form-group col-4 mb-2">
                                 <img id="example_image01" src="{{ asset('assets/noimage.jpg') }}" class="img-fluid"
                                     alt="" style="width:200px">
@@ -60,7 +60,7 @@
                                      </div>
                                 </div>
                             </div>
-                        
+
                             <button type="submit" class="btn btn-success">Create</button>
                         </form>
 
