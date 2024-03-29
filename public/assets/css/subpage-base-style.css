@@ -1,0 +1,286 @@
+.header-sec {
+  background: none;
+  height: unset;
+  padding: 10rem 0 0 0;
+}
+
+.title {
+  width: 100%;
+  max-width: 1250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: start;
+  padding: 1rem;
+}
+
+.sub-text > h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.sub-breadcrumb > a {
+  color: rgb(165, 165, 165);
+}
+
+.sub-breadcrumb > a:last-of-type {
+  color: gray;
+  pointer-events: none;
+}
+
+.sub-breadcrumb > a:not(:last-child)::after {
+  content: ">";
+}
+
+.sub-search {
+  width: 100%;
+  max-width: 280px;
+}
+
+.sub-search form:first-of-type {
+  margin: 0 0 1rem 0;
+}
+
+.sub-search form input {
+  width: 100%;
+}
+
+/* Slider Style */
+.sub-slider-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.sub-slider-title > h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  max-width: 430px;
+}
+
+.sub-slider-title > h1 > span {
+  color: #008cf3;
+}
+
+.sub-slider-title > img {
+  width: 200px;
+  display: none;
+}
+
+.sub-slider-container {
+  margin: 4rem 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1.5rem;
+}
+
+.sub-carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sub-item-des {
+  max-width: 439px;
+}
+
+.sub-item-des > * {
+  margin: 0.5rem;
+}
+
+.sub-item-des > p:first-of-type {
+  color: #008cf3;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.sub-item-des > p:last-of-type {
+  font-size: 1.5rem;
+  color: #cacaca;
+  width: unset;
+}
+
+.sub-carousel-item > img {
+  width: 100%;
+  max-width: 438px;
+  max-height: 631px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.sub-item-follower {
+  display: grid;
+  width: 100%;
+  max-width: 300px;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.sub-item-follower > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Article Sec */
+
+.article-header {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.article-header > span {
+  display: inline-block;
+  width: 100%;
+  text-align: start;
+  font-size: 16px;
+  color: #cacaca;
+  margin: 0 0 0.5rem 0;
+}
+
+.article-header > img {
+  width: 100%;
+  max-width: 1300px;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.article-h-text {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.7rem 0 0 0;
+}
+
+.article-h-text > span:not(:last-child) {
+  flex: 1 1 auto;
+  color: #cacaca;
+}
+
+.article-h-text > span:nth-of-type(1) {
+  text-align: start;
+}
+
+.article-h-text > span:nth-of-type(2) {
+  text-align: end;
+}
+
+.article-h-text > span:last-of-type {
+  width: 100%;
+  text-align: start;
+  margin: 1rem 0 0 0;
+  color: #008cf3;
+  font-size: 1.5rem;
+}
+
+.article-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0 0 0;
+}
+
+.article-textfield {
+  max-width: 856px;
+  text-align: start;
+}
+
+.article-textfield p {
+  width: unset;
+  margin-bottom: 1rem;
+  color: #cacaca;
+}
+
+.top-recents {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: #1d1d1d;
+}
+
+.article-textfield > img {
+  width: 100%;
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .title {
+    justify-content: space-between;
+  }
+
+  .sub-text > h1 {
+    font-size: 3.6rem;
+  }
+
+  .gadget-menu {
+    display: none;
+  }
+
+  .sub-slider-title > img {
+    display: block;
+  }
+
+  .sub-carousel-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  .sub-item-des {
+    text-align: start;
+  }
+
+  .sub-item-des > h1 {
+    font-size: 2.8rem;
+  }
+
+  .sub-item-follower {
+    row-gap: 2rem;
+  }
+
+  .sub-slider-title > h1 {
+    text-align: start;
+  }
+
+  .article-h-text > span:last-of-type {
+    font-size: 3rem;
+  }
+
+  .article-textfield p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1920px) {
+  .gadget-menu {
+    display: flex;
+  }
+}

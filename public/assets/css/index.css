@@ -1,0 +1,262 @@
+#map-bg {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav-btns {
+  min-width: 1100px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-sec {
+  width: 100vw;
+  margin: auto 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15rem 1rem 5rem 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.link-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 1 1 230px;
+  max-width: 230px;
+}
+
+.link-item.orange {
+  --color: #ff7011;
+}
+.link-item.blue {
+  --color: #12adf7;
+}
+
+.link-item > h1 {
+  background-color: black;
+  color: white;
+  border-radius: 999px;
+  margin: 0;
+  font-size: 16px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color);
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* .link-item.active > .links-wrapper {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(-10px);
+} */
+
+.links-wrapper {
+  --bg-color: rgba(0, 0, 0, 0.7);
+}
+
+.links-wrapper {
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 4.5rem 0;
+  background: var(--bg-color);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem 1rem 1.2rem;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  /* display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1; */
+  /* min-height: 100px; */
+}
+
+.links-wrapper ul {
+  margin: 0;
+}
+
+.links-wrapper li {
+  margin: 0 0 0.7rem 0;
+}
+
+.links-wrapper a {
+  color: rgb(209, 209, 209);
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+
+.links-wrapper a:hover {
+  color: white;
+}
+
+.links-wrapper::after {
+  width: 30px;
+  height: 20px;
+  content: "";
+  top: 100%;
+  position: absolute;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
+  background: var(--bg-color);
+}
+
+.top-sec {
+  min-height: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  background: black;
+  transition: all 0.5s ease-in-out;
+}
+
+[collapse-button].active {
+  text-decoration: underline;
+}
+.underline:active {
+    text-decoration: underline;
+}
+.underline:focus {
+    text-decoration: underline;
+}
+.underline.active {
+    text-decoration: underline;
+}
+.top-collapse-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.top-collapse-wrapper.open > .top-sec {
+  padding: 7rem 1rem 2rem 1rem;
+}
+
+.top-collapse-wrapper.open {
+  grid-template-rows: 1fr;
+}
+
+.top-link-item img {
+  width: 100%;
+  max-height: 40px;
+  object-fit: contain;
+  object-position: left;
+  margin: 0 0 1.5rem 0;
+}
+
+.top-link-item > ul {
+  margin-left: -10px;
+  margin-bottom: 0;
+}
+
+.top-link-item > ul > li {
+  margin: 0 0 0.5rem 0;
+}
+
+.top-link-item > ul > li > a {
+  color: white;
+}
+
+.contact-us-header > p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.contact-us-header > h1 {
+  font-weight: 600;
+  font-size: 20px;
+  color: #12adf7;
+}
+
+.contact-us-header > div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+}
+
+.contact-us-header > div > p {
+  margin: 0;
+  line-height: 130%;
+}
+
+.main-contact-us-form {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 690px;
+}
+
+.main-contact-us-form input::placeholder {
+  color: white;
+}
+
+.main-contact-us-form textarea {
+  flex: 1 1 320px;
+}
+
+.main-contact-us-form input,
+.main-contact-us-form textarea {
+  padding: 0.5rem 1rem;
+  background: #272727;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 11px;
+}
+
+.main-contact-us-form > div {
+  display: flex;
+  flex: 1 1 164px;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main-contact-us-form > button {
+  margin: 0 0 0 auto;
+  color: white;
+  border-radius: 1rem;
+  font-size: 12px;
+  padding: 0.2rem 0.5rem;
+}
+
+.link-item:hover .links-wrapper {
+    opacity: 1;
+    /* margin-top: ; */
+}

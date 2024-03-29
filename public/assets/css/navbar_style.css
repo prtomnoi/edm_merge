@@ -1,0 +1,291 @@
+.profile-pic {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #ffdf01;
+  padding: 0.2rem;
+}
+
+.nonuser-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.sign-btns {
+  padding: 0 1rem;
+  border-radius: 1.5rem;
+  height: 35px;
+  color: #313b45;
+  font-size: 1rem;
+}
+
+.sign-up-btn {
+  border: none;
+  color: #313b45;
+  background: #ffdf01;
+}
+
+.sign-in-btn {
+  background: none;
+  border: solid 2px #ffcd45;
+}
+
+.profile-section {
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 5;
+  justify-content: start;
+  padding: 1rem 1.8rem;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+nav.sticky {
+  position: fixed;
+  top: 0;
+  background: #000000e3;
+}
+
+.nav-menu {
+  cursor: pointer;
+}
+
+.side-menu {
+  display: flex;
+  flex-direction: column;
+  right: 100%;
+  gap: 2rem;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 2rem 0 2rem 0;
+  position: fixed;
+  z-index: 7;
+  background: #1e1e1e;
+  transition: all 0.3s ease-in-out;
+}
+
+.side-logo img {
+  height: 57px;
+  margin: 0 0 1.1rem 2rem;
+}
+
+.side-btn-section {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.7rem;
+  padding: 3rem 0 5rem 0;
+  justify-content: start;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.side-btn {
+  color: white;
+  font-size: 1.7rem;
+  margin: 0 0 0.3rem 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.side-btn > img {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.black-fillter {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 6;
+  background: black;
+  pointer-events: none;
+}
+
+.nav-btns {
+  display: none;
+  gap: 10rem;
+}
+
+.nav-btns > a > img {
+  height: 40px;
+}
+
+.nav-btns-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-btns-wrapper > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.main.side-active {
+  filter: opacity(0.5);
+}
+
+/* Dropdown Style */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown.active > button + .nav-dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown-menu {
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.25rem);
+  padding: 0.5rem 0;
+  background: rgba(61, 61, 61, 0.7);
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.nav-dropdown-menu > a {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#engBtn > img {
+  width: 35px;
+}
+
+#thaiBtn2,
+#engBtn2 {
+  width: 20px;
+}
+
+.nav-dropdown-menu > a:hover {
+  background: rgb(118, 118, 118);
+}
+
+[menus-dropdown-btn] > img {
+  width: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+[menus-dropdown].active > [menus-dropdown-btn] > img:last-of-type {
+  transform: rotate(180deg);
+}
+
+[data-dropdown-button] > img {
+    width: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  [data-dropdown].active > [data-dropdown-button] > img:last-of-type {
+    transform: rotate(180deg);
+  }
+
+.side-collapse {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.side-collapse .collapse,
+.side-collapse .collapse .show,
+.side-collapse .collapsing {
+  width: 100%;
+}
+
+.side-collapse .card {
+  width: 100%;
+  background: #131313;
+}
+
+.side-collapse .card a {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  color: white;
+}
+
+.side-collapse .card a:hover {
+  background: #1313133a;
+  color: #2e9bff;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+  .side-menu {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+  .side-menu {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav-menu {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .nav-btns {
+    display: flex;
+  }
+}
+
+@media (min-width: 1600px) {
+}

@@ -1,0 +1,192 @@
+:root {
+  --particle-color: #2e9bff;
+}
+
+.animation-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  pointer-events: none;
+}
+
+#stars-group-1 {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 300px 914px var(--particle-color),
+    1204px 698px var(--particle-color), 1242px 744px var(--particle-color),
+    1688px 637px var(--particle-color), 1192px 1356px var(--particle-color),
+    1681px 718px var(--particle-color), 88px 232px var(--particle-color),
+    1025px 1076px var(--particle-color), 1163px 833px var(--particle-color),
+    1747px 520px var(--particle-color), 1229px 1293px var(--particle-color),
+    1512px 1627px var(--particle-color), 1243px 714px var(--particle-color),
+    775px 1623px var(--particle-color), 1376px 352px var(--particle-color),
+    1657px 1487px var(--particle-color), 970px 1733px var(--particle-color),
+    1753px 542px var(--particle-color), 1061px 978px var(--particle-color),
+    578px 1147px var(--particle-color), 353px 22px var(--particle-color),
+    135px 960px var(--particle-color), 917px 1688px var(--particle-color),
+    233px 1173px var(--particle-color), 1120px 1018px var(--particle-color),
+    1040px 452px var(--particle-color), 123px 1286px var(--particle-color),
+    246px 1571px var(--particle-color), 221px 1231px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+#stars-group-2 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 29px 903px var(--particle-color),
+    51px 1693px var(--particle-color), 1735px 856px var(--particle-color),
+    326px 395px var(--particle-color), 570px 1659px var(--particle-color),
+    53px 152px var(--particle-color), 453px 562px var(--particle-color),
+    1374px 92px var(--particle-color), 262px 1435px var(--particle-color),
+    810px 684px var(--particle-color), 1152px 387px var(--particle-color),
+    1080px 107px var(--particle-color), 1129px 993px var(--particle-color),
+    1222px 442px var(--particle-color), 885px 230px var(--particle-color),
+    1102px 1021px var(--particle-color), 474px 1165px var(--particle-color),
+    68px 521px var(--particle-color), 1692px 31px var(--particle-color),
+    500px 1471px var(--particle-color), 1317px 1410px var(--particle-color),
+    270px 1377px var(--particle-color), 1551px 712px var(--particle-color),
+    342px 1527px var(--particle-color), 1747px 1578px var(--particle-color),
+    109px 1704px var(--particle-color), 151px 776px var(--particle-color),
+    290px 920px var(--particle-color), 650px 551px var(--particle-color),
+    1317px 102px var(--particle-color), 1604px 127px var(--particle-color),
+    89px 1764px var(--particle-color), 437px 692px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+#stars-group-3 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 1299px 1739px var(--particle-color),
+    1670px 374px var(--particle-color), 1050px 109px var(--particle-color),
+    849px 591px var(--particle-color), 1510px 118px var(--particle-color),
+    1158px 672px var(--particle-color), 283px 1115px var(--particle-color),
+    518px 394px var(--particle-color), 616px 1604px var(--particle-color),
+    1489px 1451px var(--particle-color), 1064px 629px var(--particle-color),
+    1649px 1713px var(--particle-color), 154px 1754px var(--particle-color),
+    452px 9px var(--particle-color), 1794px 260px var(--particle-color),
+    1459px 1736px var(--particle-color), 257px 856px var(--particle-color),
+    1308px 1065px var(--particle-color), 1541px 80px var(--particle-color),
+    399px 1500px var(--particle-color), 714px 1497px var(--particle-color),
+    182px 1505px var(--particle-color), 34px 38px var(--particle-color),
+    866px 1584px var(--particle-color), 890px 973px var(--particle-color),
+    731px 1261px var(--particle-color), 245px 947px var(--particle-color),
+    329px 252px var(--particle-color), 733px 263px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.2s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+#stars-group-4 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 152px 586px var(--particle-color),
+    1175px 1037px var(--particle-color), 712px 1086px var(--particle-color),
+    844px 580px var(--particle-color), 1193px 435px var(--particle-color),
+    1209px 302px var(--particle-color), 583px 1253px var(--particle-color),
+    901px 859px var(--particle-color), 654px 1510px var(--particle-color),
+    668px 267px var(--particle-color), 750px 1351px var(--particle-color),
+    164px 1159px var(--particle-color), 652px 843px var(--particle-color),
+    851px 1245px var(--particle-color), 1200px 218px var(--particle-color),
+    1492px 748px var(--particle-color), 1181px 560px var(--particle-color),
+    1686px 1617px var(--particle-color), 214px 10px var(--particle-color),
+    1713px 1257px var(--particle-color), 433px 820px var(--particle-color),
+    710px 866px var(--particle-color), 1357px 1269px var(--particle-color),
+    637px 351px var(--particle-color), 990px 1684px var(--particle-color),
+    801px 495px var(--particle-color), 637px 797px var(--particle-color),
+    445px 578px var(--particle-color), 1350px 79px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.3s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+#stars-group-5 {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 1628px 1578px var(--particle-color),
+    151px 1796px var(--particle-color), 1026px 1264px var(--particle-color),
+    970px 237px var(--particle-color), 1400px 589px var(--particle-color),
+    452px 1057px var(--particle-color), 208px 569px var(--particle-color),
+    627px 343px var(--particle-color), 117px 498px var(--particle-color),
+    1021px 1097px var(--particle-color), 584px 1291px var(--particle-color),
+    1759px 1587px var(--particle-color), 397px 420px var(--particle-color),
+    1779px 1079px var(--particle-color), 380px 768px var(--particle-color),
+    1454px 37px var(--particle-color), 854px 1284px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.4s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+#stars-group-6 {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 130px 911px var(--particle-color),
+    287px 862px var(--particle-color), 1640px 218px var(--particle-color),
+    1728px 506px var(--particle-color), 1602px 766px var(--particle-color),
+    1507px 1595px var(--particle-color), 1241px 74px var(--particle-color),
+    1065px 645px var(--particle-color), 1515px 1652px var(--particle-color),
+    574px 543px var(--particle-color), 523px 45px var(--particle-color),
+    1560px 1337px var(--particle-color), 1434px 1390px var(--particle-color),
+    867px 1187px var(--particle-color), 505px 457px var(--particle-color),
+    35px 42px var(--particle-color), 321px 1047px var(--particle-color),
+    1526px 1048px var(--particle-color), 945px 239px var(--particle-color),
+    1333px 1162px var(--particle-color), 1247px 780px var(--particle-color),
+    731px 1787px var(--particle-color), 652px 1548px var(--particle-color),
+    1569px 1634px var(--particle-color), 1040px 1516px var(--particle-color),
+    1479px 124px var(--particle-color), 753px 1669px var(--particle-color),
+    1284px 299px var(--particle-color), 502px 1739px var(--particle-color);
+  animation-name: glowing-stars;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+  filter: drop-shadow(0px 0px 5px var(--particle-color));
+}
+
+@keyframes glowing-stars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

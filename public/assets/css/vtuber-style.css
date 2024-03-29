@@ -1,0 +1,18 @@
+.sub-slider-container {
+  max-width: unset;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.sub-slider-title {
+  max-width: 1600px;
+}
+
+.vtuber-des {
+  max-width: 1341px;
+  font-size: 1.5rem;
+  margin: 5rem 0;
+  padding: 0 0 5rem 0;
+  border-bottom: 3px solid white;
+}

@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url("LINESeedSansTH-Bold.woff2") format("woff2"),
+    url("LINESeedSansTH-Bold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url("LINESeedSansTH-Thin.woff2") format("woff2"),
+    url("LINESeedSansTH-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans";
+  src: url("LINESeedSansTH-Regular.woff2") format("woff2"),
+    url("LINESeedSansTH-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url("LINESeedSansTH-ExtraBold.woff2") format("woff2"),
+    url("LINESeedSansTH-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LINE Seed Sans TH";
+  src: url("LINESeedSansTH-Heavy.woff2") format("woff2"),
+    url("LINESeedSansTH-Heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

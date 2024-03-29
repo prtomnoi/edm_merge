@@ -1,0 +1,182 @@
+/* Top Recents Custom */
+
+.activity-cards {
+  width: unset;
+  flex-direction: column;
+}
+
+.act-card {
+  max-width: 353px;
+}
+
+.act-card > div {
+  background: none;
+}
+
+/* .act-card > img {
+  max-width: 348px;
+  max-height: 263px;
+} */
+
+.campaign {
+  max-width: 1300px;
+  margin: 5rem auto;
+  padding: 1rem 1rem 10rem 1rem;
+  border-bottom: 3px solid white;
+}
+
+.campaign-header{
+  width: 100%;
+}
+
+.campaign-h-title {
+  display: flex;
+  margin: 0 auto 0.5rem auto;
+}
+
+.campaign-h-title > span {
+  font-size: 2rem;
+  text-align: start;
+}
+
+.campaign-h-title > span > span {
+  color: #008cf3;
+}
+
+.campaign-thumbnail {
+  position: relative;
+}
+
+.campaign-thumbnail > img {
+  width: 100%;
+  max-width: 1300px;
+  max-height: 670px;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1300/678;
+}
+
+.ct-txt {
+  position: static;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 3rem;
+  bottom: 50px;
+  left: 50px;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.campaign-h-des {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 0;
+  padding: 1rem;
+  background: #171313;
+}
+
+.campaign-h-des > div {
+  flex: 1 1 0;
+}
+
+.campaign-h-des > div > p {
+  color: #cacaca;
+  width: unset;
+  max-width: 622px;
+  margin: 0 auto 0 0;
+}
+
+.campaign-h-des > .morebtn {
+  padding: 1rem 0.5rem;
+  flex: 0 0 auto;
+}
+
+.campaign-h-des > .morebtn > a {
+  font-size: 0.8rem;
+}
+
+.campaign-cards {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  margin: 5rem auto;
+  max-width: 1300px;
+  padding: 1rem;
+}
+
+.campaign-cards > .act-card {
+  max-width: 412px;
+}
+
+/* .campaign-cards > .act-card > img {
+  max-width: 412px;
+  max-height: 300px;
+} */
+
+.article-h-text.campaign-article {
+  padding: 1rem 2rem;
+  background: #373737;
+  margin: 0;
+}
+
+.article-h-text.campaign-article > span {
+  color: white;
+}
+
+.article-h-text.campaign-article > span > span {
+  color: #008cf3;
+}
+
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+  .ct-txt {
+    position: absolute;
+  }
+
+  .campaign-h-des {
+    flex-wrap: nowrap;
+    gap: 1rem;
+    text-align: start;
+    padding: 1.5rem 2rem;
+  }
+
+  .campaign-h-des > div > h2 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+  }
+
+  .campaign-h-title > span {
+    font-size: 3rem;
+  }
+
+  .campaign-cards {
+    grid-template-columns: 412px 412px 412px;
+    justify-content: space-between;
+    row-gap: 2rem;
+  }
+
+  .campaign-h-des > div > p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 1920px) {
+}
