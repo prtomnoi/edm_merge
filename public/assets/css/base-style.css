@@ -909,6 +909,17 @@ form>button {
     }
 }
 
+@media (max-width: 576px) {
+    .partner-logo>div {
+        display: grid;
+        grid-template-columns: 150px 150px;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        gap: 0rem;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .act-card {
         width: 100%;
