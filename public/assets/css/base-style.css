@@ -327,15 +327,7 @@ section h1 {
 }
 
 .morebtn {
-    background: linear-gradient(#1e1e1e, #1e1e1e) 50% 50% / calc(100% - 6px) calc(100% - 6px) no-repeat,
-        linear-gradient(216deg,
-            transparent 0%,
-            transparent 64%,
-            var(--main-color) 100%),
-        linear-gradient(45deg,
-            transparent 0%,
-            rgba(72, 171, 224, 0.03) 67%,
-            var(--main-color) 100%);
+    background: linear-gradient(#1e1e1e, #1e1e1e) 50% 50% / calc(100% - 6px) calc(100% - 6px) no-repeat, linear-gradient(216deg, transparent 0%, transparent 64%, var(--main-color) 100%), linear-gradient(45deg, transparent 0%, rgba(72, 171, 224, 0.03) 67%, var(--main-color) 100%);
     border-radius: 0px;
     padding: 1.5rem 1rem;
     box-sizing: content-box;
@@ -352,7 +344,6 @@ section h1 {
 
 .vtuber-slider {
     width: 100%;
-
     max-width: 1920px;
     display: flex;
     justify-content: center;
@@ -429,7 +420,7 @@ section h1 {
 
 .act-card {
     width: 100%;
-    max-width: 412px;
+    /* max-width: 412px; */
 }
 
 .act-card a {
@@ -445,6 +436,7 @@ section h1 {
     object-position: center;
     aspect-ratio: 16/9;
 }
+
 .act-card>img {
     width: 100%;
     height: 320px;
@@ -502,7 +494,7 @@ section h1 {
     font-weight: 300;
 }
 
-.act-card>div>span:nth-of-type(-n + 2) {
+.act-card>div>span:nth-of-type(-n+2) {
     flex: 1;
     color: #cacaca;
 }
@@ -511,7 +503,9 @@ section h1 {
     margin: 0 0 0 auto;
 }
 
+
 /* Video Section */
+
 .vdo-highlight {
     padding: 11rem 2rem;
     background: rgba(34, 33, 33, 0.6);
@@ -561,7 +555,9 @@ section h1 {
     max-width: 1200px;
 }
 
+
 /* Footer Sec */
+
 .footer-top,
 .footer-bot {
     width: 100%;
@@ -607,6 +603,7 @@ form>input {
     border-radius: 0.3rem 0 0 0.3rem;
     color: white;
 }
+
 .buttonSearch {
     border: none;
     background: #343434;
@@ -629,6 +626,7 @@ form>button {
     background: unset;
 }
 
+
 /* Dropdown Custom Style */
 
 .nav-dropdown-btn {
@@ -648,6 +646,7 @@ form>button {
 .nav-dropdown-btn>* {
     pointer-events: none;
 }
+
 
 /* Side Lang Change */
 
@@ -698,6 +697,7 @@ form>button {
 .nav-link {
     color: rgb(190, 190, 190);
 }
+
 
 /* Contact Us Form */
 
@@ -789,33 +789,27 @@ form>button {
     section {
         padding: 4rem 1rem;
     }
-
     .gadget-menu {
         display: flex;
     }
-
     .header-title {
         /* width: 45%; */
     }
-
     .joinus-header,
     .v-commu-header,
     .partner-header {
         width: 80%;
     }
-
     .header-title {
         font-size: 3rem;
         line-height: 80px;
     }
-
     .header-des {
         color: #fff;
         font-size: 25px;
         font-weight: 400;
         margin: 0;
     }
-
     .stats-sec {
         display: flex;
         flex-direction: column;
@@ -823,67 +817,54 @@ form>button {
         align-items: center;
         height: 833px;
     }
-
     .stats-des {
         margin: 5rem 0 0 0;
     }
-
     .numbs-item>p:first-of-type {
         font-size: 80px;
     }
-
     .solu-icons {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 10rem;
     }
-
     section p {
         font-size: 25px;
         font-weight: 400;
         width: 60%;
         margin: auto;
     }
-
     .partner-header>p {
         width: unset;
     }
-
     .partner-header>p:last-of-type {
         margin-top: 3rem;
     }
-
     .solution-sec {
         gap: 4rem;
         padding: 4rem;
     }
-
     .creator-cards-sec {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 35px;
         row-gap: 25px;
     }
-
     .creator-header {
         gap: 2.5rem;
     }
-
     .creator-header>span,
     section h1 {
         font-size: 45px;
         font-weight: 600;
     }
-
     .v-commu-header>h1 {
         margin-bottom: 2rem;
     }
-
     .creator-sec {
         gap: 5rem;
         margin-top: 8rem !important;
     }
-
     .v-commu-header>span {
         font-size: 25px;
         max-width: 1300px;
@@ -892,31 +873,25 @@ form>button {
         margin-top: 2rem;
         font-weight: 400;
     }
-
     .v-commu-sec {
         margin-top: 5rem;
     }
-
     .vtuber-slider {
         height: 500px;
         margin: 5rem 0;
     }
-
     .joinus-sec>span {
         font-size: 50px;
     }
-
     .footer-top,
     .footer-bot {
         justify-content: space-between;
         padding: 1.2rem 10rem;
     }
-
     .tabs-container>ul {
         font-size: 2rem;
         gap: 4rem;
     }
-
     .stats-des>p {
         font-size: 25px;
     }
@@ -932,4 +907,31 @@ form>button {
     .slick-center .vtuber-item {
         transform: scale(1.1);
     }
+}
+
+@media only screen and (max-width: 768px) {
+    .act-card {
+        width: 100%;
+        /* max-width: 412px; */
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .act-card {
+        width: 100%;
+        max-width: 412px;
+    }
+    .activity-cards {
+        padding-left: 70px;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .act-card {
+        width: 100%;
+        max-width: 388px;
+    }
+    /* .activity-cards {
+        padding-left: 70px;
+    } */
 }
