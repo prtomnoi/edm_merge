@@ -54,7 +54,7 @@
             <a href="{{ url('/') }}" class="side-btn"><img src="{{ asset('assets/img/edm-company-logo.png') }}"
                     alt="" /></a>
             <a href="{{ url('/') }}" class="side-btn">ABOUT US</a>
-            <div class="side-collapse">
+            {{-- <div class="side-collapse">
                 <a href="#forCreator" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false"
                     aria-controls="forCreator">FOR CREATOR</a>
                 <div class="collapse" id="forCreator">
@@ -64,7 +64,7 @@
                         <a href="{{ route('vtuber-community.index') }}">VTuber</a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="side-collapse">
                 <a href="#forBrand" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false"
                     aria-controls="forBrand">FOR BRAND</a>
