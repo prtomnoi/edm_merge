@@ -28,7 +28,7 @@
         <div class="side-btn-section">
             <a href="index.html" class="side-btn"><img src="{{asset('edm-management/assets/img/edm-logo.png')}}" alt="" /></a>
 
-            <a href="our-works.html" class="side-btn">OUR WORK</a>
+            <a href="{{route('our-work.index')}}" class="side-btn">OUR WORK</a>
             <a href="#serviceSection" class="side-btn">SERVICE</a>
             <a href="#contactSection" class="side-btn">CONTACT US</a>
             <div class="lang-change-btns">
