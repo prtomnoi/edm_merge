@@ -14,7 +14,7 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $portfolio = Portfolio::where('status', 'published')->get();
+        $portfolio = Portfolio::where('status', 'published')->orderByDesc('created_at')->get();
         return new PortfolioCollection($portfolio);
     }
 
@@ -36,7 +36,7 @@ class PortfolioController extends Controller
 
     public function group(string $id)
     {
-        $portfolio = Portfolio::where("group_id", $id)->where('status', 'published')->get();
+        $portfolio = Portfolio::where("group_id", $id)->where('status', 'published')->orderByDesc('created_at')->get();
         return new PortfolioCollection($portfolio);
     }
 

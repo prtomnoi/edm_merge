@@ -8,14 +8,19 @@
             {{view('animation-wrapper')}}
             {{-- {{view('gadget-menu')}} --}}
             <h1 class="header-title">
-                เติมเต็มความฝัน <br />
-                ให้คุณประสบความสำเร็จเร็วขึ้น
+                {{-- เติมเต็มความฝัน <br />
+                ให้คุณประสบความสำเร็จเร็วขึ้น --}}
+                เข้าร่วมเป็นพาร์ทเนอร์ <br />
+                เพื่อให้เราจัดการเรื่อง ยุ่งยากต่างๆ  แทนคุณ
             </h1>
             <p class="header-des">
-                ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์
+                {{-- ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์
                 ที่คอยสนับสนุนในทุกความฝันที่คุณอยากจะเป็น
                 โดยมุ่งเน้นให้คุณเติบโตแบบก้าวกระโดดในทุกโซเชียลมีเดีย แพลตฟอร์ม
-                ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้
+                ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้ --}}
+                ทีมงานมืออาชีพของเรามีความเชี่ยวชาญในการดูแล และบริหารจัดการงานอินฟลูเอนเซอร์, แคมเปญการตลาด,
+                และสื่อออนไลน์ เราเข้าใจถึงความสำคัญของการบริหารจัดการงานสปอนเซอร์ ป้องกันการถูกแฮ็ค จัดการเรื่องภาษี
+                ดังนั้นเราพร้อมที่จะเป็นพันธมิตรที่มั่นคง และมุ่งมั่นในการจัดการเรื่องที่เกี่ยวกับธุรกิจของคุณอย่างมืออาชีพ
             </p>
             <div class="joinus-header">
                 <p>อัพเกรด เพื่อยกระดับสู่เส้นทาง</p>
@@ -26,8 +31,8 @@
             </div>
         </section>
 
-        {{-- <section class="stats-sec">
-            <div class="stats-numb">
+        {{-- <section class="stats-sec"> --}}
+            {{-- <div class="stats-numb">
                 <div class="numbs-item">
                     <p>100</p>
                     <p>ครีเอเตอร์</p>
@@ -44,21 +49,27 @@
                     <p>8M</p>
                     <p>ชั่วโมงการรับชม</p>
                 </div>
-            </div>
+            </div> --}}
 
-            <div class="stats-des">
-                <p>
-                    EDM Media ผู้นำด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย
+            {{-- <div class="stats-des">
+                <p> --}}
+                    {{-- EDM Media ผู้นำด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย
                     โดยทีมงานผู้มีประสบการณ์กว่า 10 ปี
                     ที่จะเข้ามาช่วยติดอาวุธให้กับครีเอเตอร์
                     พัฒนาตัวตนของคุณออกมาแสดงให้ชัดเจนมากขึ้น
-                    ให้คุณเป็นครีเอเตอร์ที่ไม่เหมือนใครและเติบโตบนโลกออนไลน์อย่างยั่งยืน
+                    ให้คุณเป็นครีเอเตอร์ที่ไม่เหมือนใครและเติบโตบนโลกออนไลน์อย่างยั่งยืน --}}
+                    {{-- EDM Media คือ มืออาชีพด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย
+                    โดยทีมงานผู้มีประสบการณ์กว่า 10 ปี
+                    ที่จะเข้ามาช่วยให้คุณสามารถสร้างสรรค์คอนเทนต์ได้อย่างสบายใจ
+                    ไม่ต้องห่วงปัญหา เพราะเรามีทั้งพาร์ทเนอร์ และผู้เชี่ยวชาญ ที่สามารถดูแล
+                    และให้คำปรึกษาอย่างมืออาชีพ
                 </p>
-                <p>
-                    ด้วยการใช้เครื่องมือวิเคราะห์ข้อมูลเชิงลึก
+                <p> --}}
+                    {{-- ด้วยการใช้เครื่องมือวิเคราะห์ข้อมูลเชิงลึก
                     การวางแผนคอนเท้นต์เพื่อรักษาแฟนคลับปัจจุบันและเข้าถึงกลุ่มผู้ชมใหม่
                     เพื่อขยายโอกาสให้คุณได้ทำงานร่วมกับแบรนด์สินค้าชั้นนำ
-                    จากทั่วโลกอย่างเป็นมืออาชีพ
+                    จากทั่วโลกอย่างเป็นมืออาชีพ --}}
+                    {{-- ด้วยบริการที่ทำให้คุณมั่นใจ เพื่อให้คุณสามารถสร้างสรรค์ และบริหารจัดการช่องของคุณได้อย่างสบายใจ
                 </p>
             </div>
         </section> --}}
@@ -511,12 +522,63 @@
           console.error("Error fetching campaigns:", error);
         }
       }
-
       fetchInfluencers();
       fetchVideos();
       fetchNews();
       fetchCampaigns();
       fetchImages();
+      loadData(1);
     });
+
+    async function loadData(id) {
+        const portUrl = "https://edmcompany.co.th/api/portfolios-group/" + id;
+        try {
+          const response = await fetch(portUrl);
+          const campaignData = await response.json();
+        //   console.log(campaignData.data);
+          const campaignCards = document.getElementById("campaign-cards-" + id);
+          campaignCards.innerHTML = "";
+
+          campaignData.data.forEach((campaignItem) => {
+            const campaignCard = document.createElement("div");
+            campaignCard.classList.add("act-card");
+
+            const dateSpan = document.createElement("span");
+            dateSpan.textContent = campaignItem.created_at;
+
+            const img = document.createElement("img");
+            img.src = campaignItem.image;
+            img.alt = "";
+
+            const divContent = document.createElement("div");
+            const typeSpan = document.createElement("span");
+            typeSpan.textContent = campaignItem.group;
+
+            const authorSpan = document.createElement("span");
+            authorSpan.textContent = ``;
+
+            const descriptionSpan = document.createElement("span");
+            descriptionSpan.textContent = campaignItem.title;
+
+            const readMoreLink = document.createElement("a");
+            readMoreLink.href = campaignItem.link;
+            readMoreLink.textContent = "READ MORE";
+            readMoreLink.target = "_blank";
+
+            divContent.appendChild(typeSpan);
+            divContent.appendChild(authorSpan);
+            divContent.appendChild(descriptionSpan);
+            divContent.appendChild(readMoreLink);
+
+            campaignCard.appendChild(dateSpan);
+            campaignCard.appendChild(img);
+            campaignCard.appendChild(divContent);
+
+            campaignCards.appendChild(campaignCard);
+          });
+        } catch (error) {
+          console.error("Error fetching campaigns:", error);
+        }
+      }
   </script>
 @endsection

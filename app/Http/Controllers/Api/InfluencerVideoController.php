@@ -14,7 +14,7 @@ class InfluencerVideoController extends Controller
      */
     public function index()
     {
-        $influencers = Influencer::where('status', 'published')->where("type_name" , "influencer")->get();;
+        $influencers = Influencer::where('status', 'published')->where("type_name" , "influencer")->orderByDesc('created_at')->get();;
         return new InfluencerVideoCollection($influencers);
     }
 

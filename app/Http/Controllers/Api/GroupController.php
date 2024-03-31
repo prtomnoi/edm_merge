@@ -15,7 +15,7 @@ class GroupController extends Controller
      */
     public function index()
     {
-        $groups = Group::all();
+        $groups = Group::orderByDesc('created_at')->get();
         return new GroupCollection($groups);
     }
 

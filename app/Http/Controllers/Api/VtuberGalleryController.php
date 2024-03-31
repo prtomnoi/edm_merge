@@ -14,7 +14,7 @@ class VtuberGalleryController extends Controller
      */
     public function index()
     {
-        $vtuber = Influencer::where('status', 'published')->where("type_name" , "vtuber")->get();
+        $vtuber = Influencer::where('status', 'published')->where("type_name" , "vtuber")->orderByDesc('created_at')->get();
         return new VtuberGalleryCollection($vtuber);
     }
 

@@ -14,7 +14,7 @@ class InfluencerController extends Controller
      */
     public function index()
     {
-        $influencers = Influencer::where('status', 'published')->get();
+        $influencers = Influencer::where('status', 'published')->orderByDesc('created_at')->get();
         return new InfluencerCollection($influencers);
     }
 
@@ -48,7 +48,7 @@ class InfluencerController extends Controller
                                  ->orderBy('created_at', 'desc') // You can change the sorting as needed
                                  ->take($limit)
                                  ->get();
-    
+
         return new InfluencerCollection($influencers);
     }
 
@@ -57,7 +57,7 @@ class InfluencerController extends Controller
         $influencers = Influencer::where('status', 'published')->where('type_name', $type)
                                  ->orderBy('created_at', 'desc') // You can change the sorting as needed
                                  ->get();
-    
+
         return new InfluencerCollection($influencers);
     }
     public function showPin()
@@ -65,8 +65,8 @@ class InfluencerController extends Controller
         $influencers = Influencer::where('status', 'published')->where("pin" , '1')
                                  ->orderBy('created_at', 'desc')
                                  ->get();
-                  
-    
+
+
         return new InfluencerCollection($influencers);
     }
 

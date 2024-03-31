@@ -14,7 +14,7 @@ class BrandingGalleryController extends Controller
      */
     public function index()
     {
-        $influencer = BrandingGallery::where('status', 'published')->get();
+        $influencer = BrandingGallery::where('status', 'published')->orderByDesc('created_at')->get();
         return new BrandingGalleryCollection($influencer);
     }
 

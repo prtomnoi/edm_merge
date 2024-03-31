@@ -21,7 +21,7 @@ class CampaignController extends Controller
 
     public function index()
     {
-        $items = Campaign::all();
+        $items = Campaign::orderByDesc('created_at')->get();
         return view("Backend.campaign.index", [
             'items' => $items,
             'name_page' => $this->namePage,

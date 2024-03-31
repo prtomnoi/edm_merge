@@ -16,7 +16,7 @@ class BrandingGalleryController extends Controller
      */
     public function index()
     {
-        $brandingGallery = BrandingGallery::all();
+        $brandingGallery = BrandingGallery::orderByDesc('created_at')->get();
         return view('Backend.brandingGallery.index', ['brandingGallery' => $brandingGallery]);
     }
 

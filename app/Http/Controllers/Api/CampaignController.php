@@ -28,7 +28,7 @@ class CampaignController extends Controller
 
     public function top()
     {
-        $campaigns = Campaign::where('status', 'published')->where('top', '1')->get();
+        $campaigns = Campaign::where('status', 'published')->where('top', '1')->orderByDesc('created_at')->get();
         return new CampaignCollection($campaigns);
 
     }

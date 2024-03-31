@@ -23,7 +23,7 @@ class NewsController extends Controller
             // $news->pages->start = $news->perPage() * $news->currentPage() - $news->perPage();
             return new NewsCollection($news);
         } catch (\Exception $e) {
-            $news = News::where('status', 'published')->get();
+            $news = News::where('status', 'published')->orderByDesc('created_at')->get();
             return $news;
         }
     }
@@ -36,12 +36,12 @@ class NewsController extends Controller
 
     public function pin()
     {
-        $news = News::where('status', 'published')->where('pin', '1')->get();
+        $news = News::where('status', 'published')->where('pin', '1')->orderByDesc('created_at')->get();
         return new NewsCollection($news);
     }
     public function top()
     {
-        $news = News::where('status', 'published')->where('top', '1')->get();
+        $news = News::where('status', 'published')->where('top', '1')->orderByDesc('created_at')->get();
         return new NewsCollection($news);
     }
 

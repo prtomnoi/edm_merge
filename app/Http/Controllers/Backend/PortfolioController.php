@@ -21,7 +21,7 @@ class PortfolioController extends Controller
 
     public function index()
     {
-        $items = Portfolio::all();
+        $items = Portfolio::orderByDesc('created_at')->get();
         return view("Backend.portfolios.index", [
             'items' => $items,
             'name_page' => $this->namePage,

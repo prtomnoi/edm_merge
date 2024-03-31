@@ -24,10 +24,13 @@
 
             <img src="{{ asset('assets/img/edm-logo.png') }}" alt="" />
             <p class="header-des">
-                ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์
+                {{-- ผู้เชี่ยวชาญทางด้านการดูแลบริหารจัดการครีเอเตอร์
                 ที่คอยสนับสนุนในทุกความฝันที่คุณอยากจะเป็น
                 โดยมุ่งเน้นให้คุณเติบโตแบบก้าวกระโดดในทุกโซเชียลมีเดีย แพลตฟอร์ม
-                ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้
+                ทั้งในด้านการขยายกลุ่มผู้ชมและการเพิ่มรายได้ --}}
+                ทีมงานมืออาชีพของเรามีความเชี่ยวชาญในการดูแล และบริหารจัดการงานอินฟลูเอนเซอร์, แคมเปญการตลาด,
+                และสื่อออนไลน์ เราเข้าใจถึงความสำคัญของการบริหารจัดการงานสปอนเซอร์ ป้องกันการถูกแฮ็ค จัดการเรื่องภาษี
+                ดังนั้นเราพร้อมที่จะเป็นพันธมิตรที่มั่นคง และมุ่งมั่นในการจัดการเรื่องที่เกี่ยวกับธุรกิจของคุณอย่างมืออาชีพ
             </p>
         </section>
 
@@ -466,6 +469,7 @@
               img.alt = "";
 
               const divContent = document.createElement("div");
+              divContent.classList.add("div-activity-cards");
               const typeSpan = document.createElement("span");
               typeSpan.textContent = newsItem.type;
 
@@ -482,7 +486,7 @@
               readMoreLink.textContent = "READ MORE";
 
               divContent.appendChild(typeSpan);
-              divContent.appendChild(authorSpan);
+            //   divContent.appendChild(authorSpan);
               divContent.appendChild(descriptionSpan);
               divContent.appendChild(readMoreLink);
 

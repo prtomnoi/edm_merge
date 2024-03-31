@@ -935,10 +935,14 @@ form>button {
 @media only screen and (min-width: 769px) {
     .act-card {
         width: 100%;
-        max-width: 412px;
+        max-width: 388px;
     }
     .activity-cards {
-        padding-left: 70px;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 388px 388px;
+        gap: 2rem;
+        row-gap: 2rem;
     }
 }
 
@@ -946,6 +950,13 @@ form>button {
     .act-card {
         width: 100%;
         max-width: 388px;
+    }
+    .activity-cards {
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 388px 388px 388px;
+        gap: 2rem;
+        row-gap: 2rem;
     }
     /* .activity-cards {
         padding-left: 70px;
