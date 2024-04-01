@@ -743,6 +743,59 @@ form>button {
     background: var(--main-color);
 }
 
+.modal {
+    display: none; /* Initially hide the modal */
+    position: fixed; /* Fix the modal to the viewport */
+    top: 50%; /* Position the modal vertically at the center */
+    left: 50%; /* Position the modal horizontally at the center */
+    transform: translate(-50%, -50%); /* Translate the modal to its center position */
+    width: 600px; /* Set a fixed width for the modal */
+    height: 500px; /* Set a fixed height for the modal */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+    z-index: 10; /* Set the z-index to ensure the modal is above other content */
+    overflow: hidden; /* Prevent scrollbars within the modal */
+  }
+
+  .modal.show {
+    display: block; /* Make the modal visible */
+  }
+
+  .modal-content {
+    background-color: #fff; /* Set the background color for the modal content */
+    padding: 20px; /* Add some padding for the content */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+  }
+
+  .modal-header {
+    display: flex; /* Arrange header elements horizontally */
+    justify-content: space-between; /* Space header elements evenly */
+    align-items: center; /* Align header elements vertically */
+    padding-bottom: 10px; /* Add some bottom padding */
+    border-bottom: 1px solid #ddd; /* Add a dividing line below the header */
+  }
+
+  .modal-title {
+    font-size: 18px; /* Set the modal title font size */
+    font-weight: bold; /* Make the title bold */
+  }
+
+  .modal-body {
+    /* Additional styling for the modal body content (optional) */
+  }
+
+  .modal-image {
+    display: block; /* Ensure the image displays as block-level */
+    width: 100%; /* Make the image fill the width of the modal body */
+    height: 100%; /* Make the image fill the height of the modal body */
+    object-fit: contain; /* Ensure the image stays within the content area */
+  }
+
+  .modal-close {
+    border: none; /* Remove default border from close button */
+    background-color: transparent; /* Set transparent background for close button */
+    cursor: pointer; /* Make the close button clickable */
+  }
+
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {}

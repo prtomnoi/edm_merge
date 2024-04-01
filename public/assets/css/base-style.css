@@ -365,10 +365,17 @@ section h1 {
     margin: 0 auto;
     padding-bottom: 40px;
   }
-
+  .splide__slide {
+    /* margin: auto; */
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .splide__slide img {
-    width: 100%; /* Images will fill the slide width */
+    width: 400px; /* Images will fill the slide width */
+    height: 400px;
     object-fit: cover; /* Crop images to fit with aspect ratio preserved */
+    /* margin: auto; */
+    border-radius: 10px;
   }
 
 

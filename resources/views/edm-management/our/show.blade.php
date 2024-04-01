@@ -62,27 +62,28 @@
                 <span id="resultDate">loading ..</span>
                 <img id="resultImage" src="" alt="" />
                 <div class="article-h-text">
-                    <!-- <span>Gameplay</span>
-                        <span>By KillMax Trone</span> -->
                     <span style="color:#FF4200;" id="resultTitle2">loading ..</span>
                 </div>
             </div>
             <div class="article-body">
                 <div class="container">
-                    <div id="resultImages" class="row"></div>
-                    <div class="article-textfield" id="resultDetail">
-
+                    <div id="resultImages" class="row">
 
                     </div>
+                    <div class="article-textfield" id="resultDetail">
 
+                    </div>
                 </div>
-
             </div>
         </section>
-    </div>
+
 @endsection
 
 @section('scripts')
+    <script src="{{asset('assets/js/splide.min.js')}}"></script>
+    <script type="text/javascript" src="{{asset('assets/js/jquery.min.js')}}"></script>
+    <link href="{{asset('assets/css/nanogallery2.min.css')}}" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{{asset('assets/js/jquery.nanogallery2.min.js')}}"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         // const view = urlParams.get("view");
@@ -119,20 +120,52 @@
                     spanDescription.innerHTML = data.data[0].title;
                 }
                 const imagesContainer = document.getElementById("resultImages");
+                let source = [];
+                data.data[0].images.forEach((imageData, index) => {
+                    source.push({ src: imageData.image, srct: imageData.image, title: 'Image ' + (index + 1)});
+                    // const col = document.createElement("a");
+                    // const texts = document.createTextNode("Image " + (index + 1));
+                    // col.href = imageData.image;
+                    // col.setAttribute('data-ngthumb', imageData.image);
+                    // col.setAttribute('data-ngdesc', "");
+                    // col.appendChild(texts);
+                    // console.log(col);
 
-                data.data[0].images.forEach(imageData => {
-                    const col = document.createElement("div");
-                    col.classList.add("col-md-2", "mb-2");
+                    // col.appendChild(img);
+                    // imagesContainer.appendChild(col);
+                                    // Handle image click event
+                    // const sliderImages = document.querySelectorAll('.splide__slide img');
+                    // img.addEventListener('click', function() {
+                    //     // openImagePreview(img.src);
+                    //     const largeImagePath = this.dataset.modalImage;
+                    //     console.log(largeImagePath);
+                    //     modalImage.src = largeImagePath;
+                    //     modal.classList.add('show');
+                    // });
+                });
+                // setTimeout(() => {
+                //     imagesContainer.setAttribute("data-nanogallery2", `{
+                //             "thumbnailWidth": "200",
+                //             "thumbnailLabel": {
+                //               "position": "overImageOnBottom"
+                //             },
+                //             "thumbnailAlignment": "center",
+                //             "thumbnailOpenImage": true
+                //           }`);
+                // }, 1000);
+                $("#resultImages").nanogallery2({
+                // ### gallery settings ###
+                thumbnailHeight:  150,
+                thumbnailWidth:   150,
+                thumbnailLabel: {
+                position: "overImageOnBottom",
+                display: false
+                },
+                // itemsBaseURL:     'https://nanogallery2.nanostudio.org/samples/',
 
-                    const img = document.createElement("img");
-                    img.src = imageData.image;
-                    img.alt = "Image Alt Text";
+                // ### gallery content ###
+                items: source,
 
-                    col.appendChild(img);
-                    imagesContainer.appendChild(col);
-                    img.addEventListener('click', function() {
-                        openImagePreview(img.src);
-                    });
                 });
 
                 document.getElementById("resultImage").src = data.data[0].image;
@@ -143,6 +176,11 @@
                     Description.innerHTML = data.data[0].detail;
                 }
 
+                // Handle modal close button click
+                // closeButton.addEventListener('click', function() {
+                //     modal.classList.remove('show'); // Remove visible class from modal
+                //     modalImage.src = ''; // Clear modal image source
+                // });
             })
             .catch(function(e) {
                 console.log(e);

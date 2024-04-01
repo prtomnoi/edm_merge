@@ -203,11 +203,11 @@
 
 
                         const aReadMore = document.createElement('a');
-                        aReadMore.href = 'news-activity/' + activityItem.id;
+                        aReadMore.href = '/news-activity/' + activityItem.id + '?view=' + activityItem.id;
                         aReadMore.textContent = 'READ MORE';
 
-                        divContent.appendChild(spanTitle);
-                        divContent.appendChild(spanAuthor);
+                        // divContent.appendChild(spanTitle);
+                        // divContent.appendChild(spanAuthor);
                         divContent.appendChild(spanDescription);
                         divContent.appendChild(aReadMore);
 
