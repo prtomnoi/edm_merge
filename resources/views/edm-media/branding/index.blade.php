@@ -291,12 +291,33 @@
 
         <section class="gallery">
             <h1>Gallery</h1>
-            <div class="sub-slider-container">
+            {{-- <div class="sub-slider-container">
                 <ul class="vtuber-slider" id="vtuber-slider"></ul>
-            </div>
+            </div> --}}
         </section>
+        <div id="carouselExampleControls" class="carousel slide slidemain" data-bs-ride="carousel">
+            <div class="carousel-inner slider" id="vtuber-slider">
+              {{-- <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="..." class="d-block w-100" alt="...">
+              </div> --}}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
 
-        <section class="partner-sec">
+        <section class="partner-sec mt-2">
             <div class="partner-header">
                 <h1>Our Trusted Partner</h1>
                 <p>
@@ -411,40 +432,52 @@
 
             const vtuberSlider = document.getElementById("vtuber-slider");
 
-            data.data.forEach((imageUrl) => {
-              const vtuberItem = document.createElement("li");
-              vtuberItem.classList.add("vtuber-item");
+            data.data.forEach((imageUrl,index) => {
+                const vtuberItem = document.createElement("div");
+                vtuberItem.classList.add("carousel-item");
+                if(index == 0)
+                {
+                    vtuberItem.classList.add("active");
+                }
+                const img = document.createElement("img");
+                img.src = imageUrl.image;
+                img.classList.add("d-block");
+                img.classList.add("text-center");
+                img.classList.add("showSlide");
+                img.classList.add("img-fluid");
+            //   const vtuberItem = document.createElement("li");
+            //   vtuberItem.classList.add("vtuber-item");
 
-              const img = document.createElement("img");
-              img.src = imageUrl.image;
-              img.alt = "";
+            //   const img = document.createElement("img");
+            //   img.src = imageUrl.image;
+            //   img.alt = "";
 
               vtuberItem.appendChild(img);
               vtuberSlider.appendChild(vtuberItem);
             });
 
-            setTimeout(() => {
-              // Initialize the Slick slider
-              $(vtuberSlider).slick({
-                infinite: true,
-                centerMode: true,
-                infinite: true,
-                centerPadding: "0",
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                arrows: false,
-                responsive: [
-                  {
-                    breakpoint: 1400,
-                    settings: {
-                      slidesToShow: 1,
-                      slidesToScroll: 1,
-                      centerPadding: 0,
-                    },
-                  },
-                ],
-              });
-            }, 1500);
+            // setTimeout(() => {
+            //   // Initialize the Slick slider
+            //   $(vtuberSlider).slick({
+            //     infinite: true,
+            //     centerMode: true,
+            //     infinite: true,
+            //     centerPadding: "0",
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     arrows: false,
+            //     responsive: [
+            //       {
+            //         breakpoint: 1400,
+            //         settings: {
+            //           slidesToShow: 1,
+            //           slidesToScroll: 1,
+            //           centerPadding: 0,
+            //         },
+            //       },
+            //     ],
+            //   });
+            // }, 1500);
           } catch (error) {
             console.error("Error fetching images:", error);
           }
@@ -477,6 +510,7 @@
               authorSpan.textContent = ''; //`By ${newsItem.signature}`;
 
               const descriptionSpan = document.createElement("span");
+              descriptionSpan.classList.add('description');
               descriptionSpan.textContent = newsItem.title;
 
               const readMoreLink = document.createElement("a");
@@ -581,6 +615,7 @@
             authorSpan.textContent = ``;
 
             const descriptionSpan = document.createElement("span");
+            descriptionSpan.classList.add('description');
             descriptionSpan.textContent = campaignItem.title;
 
             const readMoreLink = document.createElement("a");
@@ -588,8 +623,8 @@
             readMoreLink.textContent = "READ MORE";
             readMoreLink.target = "_blank";
 
-            divContent.appendChild(typeSpan);
-            divContent.appendChild(authorSpan);
+            // divContent.appendChild(typeSpan);
+            // divContent.appendChild(authorSpan);
             divContent.appendChild(descriptionSpan);
             divContent.appendChild(readMoreLink);
 

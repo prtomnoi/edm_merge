@@ -344,10 +344,21 @@ section h1 {
 
 .vtuber-slider {
     width: 100%;
-    max-width: 1920px;
+    /* max-width: 1920px; */
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.showSlide {
+    height: 500px;
+    max-height: 500px;
+    margin: auto;
+}
+.slidemain {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin: auto;
 }
 
 .vtuber-item {
@@ -487,10 +498,20 @@ section h1 {
     display: inline-block;
     color: #cacaca;
 }
-
 .act-card>div>span {
     width: 100%;
     text-align: start;
+}
+
+.act-card>div>span.description {
+    width: 100%;
+    text-align: start;
+    overflow: hidden;
+    display: -webkit-box;
+    max-height: 52px;
+    min-height: 52px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 .act-card>div>span:nth-of-type(1) {
@@ -935,6 +956,17 @@ form>button {
         color: var(--main-color);
         font-weight: 700;
         font-size: 57px;
+    }
+    .showSlide {
+        height: 300px;
+        max-height: 300px;
+        margin: auto;
+    }
+    .slidemain {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        margin: auto;
     }
 }
 
