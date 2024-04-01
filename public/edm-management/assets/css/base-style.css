@@ -422,6 +422,13 @@ section h1 {
 .act-card a {
     color: white;
 }
+.management a {
+    color: white;
+}
+.management a:hover {
+    color: #ee6921;
+}
+
 
 .act-card>img {
     width: 100%;
@@ -879,3 +886,4 @@ form>button {
         font-size: 57px;
     }
 }
+
