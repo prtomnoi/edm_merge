@@ -295,17 +295,29 @@
                 <ul class="vtuber-slider" id="vtuber-slider"></ul>
             </div> --}}
         </section>
-        <div id="carouselExampleControls" class="carousel slide slidemain" data-bs-ride="carousel">
+        <div class="slider-gallery">
+            <div class="flex justify-content-around">
+                <div id="image-slider" class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list" id="vtuber-slider">
+                            {{-- <li class="splide__slide">
+                                <img src="{{asset('assets/img/activity_img_1.png')}}">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="{{asset('assets/img/activity_img_1.png')}}">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="{{asset('assets/img/activity_img_1.png')}}">
+                            </li> --}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        {{-- <div id="carouselExampleControls" class="carousel slide slidemain" data-bs-ride="carousel">
             <div class="carousel-inner slider" id="vtuber-slider">
-              {{-- <div class="carousel-item active">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="..." class="d-block w-100" alt="...">
-              </div> --}}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -315,7 +327,7 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+          </div> --}}
 
         <section class="partner-sec mt-2">
             <div class="partner-header">
@@ -419,6 +431,8 @@
 @endsection
 
 @section('scripts')
+    <link rel="stylesheet" href="{{asset('assets/css/splide.min.css')}}">
+    <script src="{{asset('assets/js/splide.min.js')}}"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const apiUrl = "https://edmcompany.co.th/api/branding-gallery";
@@ -433,28 +447,25 @@
             const vtuberSlider = document.getElementById("vtuber-slider");
 
             data.data.forEach((imageUrl,index) => {
-                const vtuberItem = document.createElement("div");
-                vtuberItem.classList.add("carousel-item");
-                if(index == 0)
-                {
-                    vtuberItem.classList.add("active");
-                }
+                const vtuberItem = document.createElement("li");
+                vtuberItem.classList.add("splide__slide");
                 const img = document.createElement("img");
                 img.src = imageUrl.image;
-                img.classList.add("d-block");
-                img.classList.add("text-center");
-                img.classList.add("showSlide");
-                img.classList.add("img-fluid");
-            //   const vtuberItem = document.createElement("li");
-            //   vtuberItem.classList.add("vtuber-item");
-
-            //   const img = document.createElement("img");
-            //   img.src = imageUrl.image;
-            //   img.alt = "";
 
               vtuberItem.appendChild(img);
               vtuberSlider.appendChild(vtuberItem);
             });
+            var splide = new Splide('#image-slider', {
+            type: 'carousel',
+            perPage: 2,
+            gap: 10,
+            arrows: true,
+            pagination: true,
+            autoplay: true,
+            rewind: true,
+            });
+
+            splide.mount();
 
             // setTimeout(() => {
             //   // Initialize the Slick slider
@@ -645,5 +656,6 @@
           console.error("Error fetching campaigns:", error);
         }
       }
+
     </script>
 @endsection

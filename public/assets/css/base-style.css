@@ -360,6 +360,17 @@ section h1 {
     width: 700px;
     margin: auto;
 }
+  .splide {
+    width: 900px; /* Adjust width as needed */
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  .splide__slide img {
+    width: 100%; /* Images will fill the slide width */
+    object-fit: cover; /* Crop images to fit with aspect ratio preserved */
+  }
+
 
 .vtuber-item {
     width: 100%;
