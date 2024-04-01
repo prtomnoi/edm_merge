@@ -72,7 +72,7 @@
                 </div>
             </div>
             {{-- <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a> --}}
-            <a href="{{ route('contact-us.index') }}" class="side-btn">CONTACT US</a>
+            <a href="#contactSection" class="side-btn">CONTACT US</a>
             <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" />
@@ -113,7 +113,8 @@
                     </div>
                 </div>
                 {{-- <a href="{{ route('news-activity.index') }}">NEWS</a> --}}
-                <a href="{{ route('contact-us.index') }}" class="underline">CONTACT US</a>
+                {{-- <a href="{{ route('contact-us.index') }}" class="underline">CONTACT US</a> --}}
+                <a href="#contactSectionMedia" class="underline">CONTACT US</a>
                 <div class="nav-dropdown" menus-dropdown>
                     <button class="nav-dropdown-btn" menus-dropdown-btn>
                         <img src="{{ asset('assets/img/thai-lang-icon.png') }}" alt="" />
@@ -218,6 +219,23 @@
 
         var footerYear = document.getElementById('year');
         footerYear.innerHTML = new Date().getFullYear();
+        document.querySelector('a[href="#contactSectionMedia"]').addEventListener('click', function(event) {
+            // event.preventDefault();
+            const targetSection = document.getElementById('contactSectionMedia');
+            if (window.location.pathname != "/branding" || window.location.pathname != "/branding#contactSectionMedia") {
+                window.location.href = "branding#contactSectionMedia";
+            }
+            // else {
+            //     // ไปยังหน้า branding
+
+            // }
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+
     </script>
 </body>
 

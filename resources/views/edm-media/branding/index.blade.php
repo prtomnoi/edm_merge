@@ -391,7 +391,7 @@
             </div> --}}
         </section>
 
-        <section class="contact-us">
+        <section class="contact-us"  id="contactSectionMedia">
             <h1>
                 เราคือผู้เชี่ยวชาญด้านการตลาด โดยใช้ อินฟลูเอนเซอร์ในประเทศไทยที่
                 สามารถช่วยให้คุณประสบความสำเร็จ
@@ -582,7 +582,14 @@
         //     console.error('Error fetching campaigns:', error);
         //   }
         // }
+        const hash = window.location.hash; // Get the hash part of the URL
+        const targetSection = document.getElementById('contactSectionMedia'); // Get the element with the id "contactSection"
 
+        if (hash === '#contactSectionMedia' && targetSection) {
+            targetSection.scrollIntoView({
+                behavior: 'smooth' // Add smooth scrolling for better user experience
+                });
+        }
         fetchNews();
         loadData(1);
         fetchImages();

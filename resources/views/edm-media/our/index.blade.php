@@ -184,6 +184,17 @@
                 }
             }
             fetchCampaigns();
+            const hash = window.location.hash; // Get the hash part of the URL
+
+            // Check if hash includes #contactSection
+            // if (hash.includes('#contactSection')) {
+            //     const targetSection = document.getElementById('contactSection'); // Get the element with the id "contactSection"
+            //     if (targetSection) {
+            //     targetSection.scrollIntoView({
+            //         behavior: 'smooth' // Add smooth scrolling for better user experience
+            //     });
+            //     }
+            // }
         });
 
         // fetch("https://edmcompany.co.th/api/campaigns-limit/1")
