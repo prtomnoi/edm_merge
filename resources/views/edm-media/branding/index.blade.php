@@ -456,13 +456,21 @@
               vtuberSlider.appendChild(vtuberItem);
             });
             var splide = new Splide('#image-slider', {
-            type: 'carousel',
+            type: 'loop',
             perPage: 2,
             gap: 10,
             arrows: true,
             pagination: true,
             autoplay: true,
             rewind: true,
+            breakpoints: {
+                940: { // Target screens below 640px
+                perPage: 1, // Show only 1 image per slide on mobile
+                arrows: false,
+                rewind: true,
+                type: 'loop',
+                }
+            }
             });
 
             splide.mount();

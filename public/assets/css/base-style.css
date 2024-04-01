@@ -956,6 +956,11 @@ form>button {
 }
 
 @media (max-width: 576px) {
+    .splide {
+        width: 300px; /* Adjust width as needed */
+        margin: 0 auto;
+        padding-bottom: 40px;
+      }
     .partner-logo>div {
         display: grid;
         grid-template-columns: 150px 150px;
@@ -987,6 +992,16 @@ form>button {
         width: 100%;
         /* max-width: 412px; */
     }
+    .splide {
+        width: 300px; /* Adjust width as needed */
+        margin: 0 auto;
+        padding-bottom: 40px;
+      }
+
+      .splide__slide img {
+        width: 100%; /* Images will fill the slide width */
+        object-fit: cover; /* Crop images to fit with aspect ratio preserved */
+      }
 }
 
 @media only screen and (min-width: 769px) {
