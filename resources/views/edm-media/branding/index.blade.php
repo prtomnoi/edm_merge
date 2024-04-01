@@ -459,7 +459,7 @@
 
             newsData.data.forEach((newsItem) => {
               const actCard = document.createElement("div");
-              actCard.classList.add("act-card");
+              actCard.classList.add("act-card", "company");
 
               const dateSpan = document.createElement("span");
               dateSpan.textContent = newsItem.created_at;
@@ -485,8 +485,8 @@
                 // "news-activity/"+newsItem.id+"?view=" + newsItem.id;
               readMoreLink.textContent = "READ MORE";
 
-              divContent.appendChild(typeSpan);
-            //   divContent.appendChild(authorSpan);
+                //   divContent.appendChild(typeSpan);
+                //   divContent.appendChild(authorSpan);
               divContent.appendChild(descriptionSpan);
               divContent.appendChild(readMoreLink);
 

@@ -433,7 +433,12 @@ section h1 {
 .company a:hover {
     color: #0b90ef;
 }
-
+.management a {
+    color: white;
+}
+.management a:hover {
+    color: #ef5b0b;
+}
 
 .act-card>a>img {
     width: 100%;
