@@ -123,7 +123,7 @@
         function template(data) {
             var html = '';
             data.forEach(element => {
-                html += '<div class="act-card">';
+                html += '<div class="act-card management">';
                 html += '<span>' + element.created_at + '</span>';
                 html += '<a href="our-work/' + element.id + '?view=' + element.id + '">';
                 html += '<img src="' + element.image + '" alt="">';
