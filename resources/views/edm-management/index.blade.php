@@ -128,12 +128,12 @@
         </div> --}}
     </section>
 
-    <section class="contact-us" id="contactSection">
+    <section class="contact-us">
         <h1>“Achieve your dreams with great innovation”</h1>
 
         <hr class="section-line" />
         <div class="contact-us-form">
-            <div>
+            <div id="contactSectionManagement">
                 <p>Have Question?</p>
                 <h2>CONTACT US</h2>
                 <p>
@@ -209,14 +209,43 @@
               targetSection.scrollIntoView({ behavior: 'smooth' });
           }
       });
-      document.querySelector('a[href="#contactSection"]').addEventListener('click', function(event) {
-          event.preventDefault();
+    //   document.querySelector('a[href="#contactSection"]').addEventListener('click', function(event) {
+    //     //   event.preventDefault();
+    //     console.log('hi');
+    //       const targetSection = document.getElementById('contactSection');
 
-          const targetSection = document.getElementById('contactSection');
+    //       if (targetSection) {
+    //           targetSection.scrollIntoView({ behavior: 'smooth' });
+    //       }
+    //   });
+    // document.addEventListener("DOMContentLoaded", () => {
+    //     const targetSection = document.getElementById('contactSectionManagement');
+    //     console.log(targetSection)
+    //       if (targetSection) {
+    //           targetSection.scrollIntoView({ behavior: 'smooth' });
+    //       }
+    // });
+    async function scrollToContactSection() {
+    await document.addEventListener("DOMContentLoaded", () => {});
+        const hash = window.location.hash; // Get the hash part of the URL
+        const targetSectionManagement = document.getElementById('contactSectionManagement'); // Get the element with the id "contactSection"
+        const targetSectionService = document.getElementById('serviceSection');
+        if (hash === '#contactSectionManagement' && targetSectionManagement) {
+              // รอ 1 วินาทีเพื่อให้ CSS โหลดเสร็จ
+            await new Promise((resolve) => setTimeout(resolve, 500));
+            targetSectionManagement.scrollIntoView({
+                behavior: 'smooth' // Add smooth scrolling for better user experience
+                });
+        } else if (hash === '#serviceSection' && targetSectionService)
+        {
+            await new Promise((resolve) => setTimeout(resolve, 500));
+            targetSectionService.scrollIntoView({
+                    behavior: 'smooth' // Add smooth scrolling for better user experience
+                    });
+        }
 
-          if (targetSection) {
-              targetSection.scrollIntoView({ behavior: 'smooth' });
-          }
-      });
+        }
+
+    scrollToContactSection();
   </script>
 @endsection

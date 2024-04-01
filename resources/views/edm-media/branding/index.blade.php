@@ -391,7 +391,7 @@
             </div> --}}
         </section>
 
-        <section class="contact-us"  id="contactSectionMedia">
+        <section class="contact-us">
             <h1>
                 เราคือผู้เชี่ยวชาญด้านการตลาด โดยใช้ อินฟลูเอนเซอร์ในประเทศไทยที่
                 สามารถช่วยให้คุณประสบความสำเร็จ
@@ -399,7 +399,7 @@
 
             <hr class="section-line" />
             <div class="contact-us-form">
-                <div>
+                <div id="contactSectionMedia">
                     <p>Have Question?</p>
                     <h2>CONTACT US</h2>
                     <p>

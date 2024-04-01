@@ -30,7 +30,7 @@
 
             <a href="{{route('our-work.index')}}" class="side-btn">OUR WORK</a>
             <a href="#serviceSection" class="side-btn">SERVICE</a>
-            <a href="#contactSection" class="side-btn">CONTACT US</a>
+            <a href="#contactSectionManagement" class="side-btn">CONTACT US</a>
             <div class="lang-change-btns">
                 <a href="" class="active" id="thaiBtn"><img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" width="20"
                         alt="" /> TH</a>
@@ -51,7 +51,7 @@
                 <div class="nav-btns-wrapper">
                     <a href="{{route('our-work.index')}}" class="underline-our">OUR WORK</a>
                     <a href="#serviceSection" class="underline">SERVICE</a>
-                    <a href="#contactSection" class="underline">CONTACT US</a>
+                    <a href="#contactSectionManagement" class="underline">CONTACT US</a>
                     <div class="nav-dropdown" data-dropdown>
                         <button class="nav-dropdown-btn" data-dropdown-button>
                             <img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" alt="" /> TH
@@ -208,6 +208,43 @@
         fetchSetting()
         var footerYear = document.getElementById('year');
         footerYear.innerHTML = new Date().getFullYear();
+        const dataMenuSection = document.querySelectorAll('a[href="#contactSectionManagement"]');
+        const dataMenuService = document.querySelectorAll('a[href="#serviceSection"]');
+        for (let i = 0; i < dataMenuService.length; i++)
+        {
+            dataMenuService[i].addEventListener("click", function() {
+                const targetSection = document.getElementById('serviceSection');
+            if (window.location.pathname != "/index" || window.location.pathname != "/index#serviceSection") {
+                window.location.href = "index#serviceSection";
+            }
+            // else {
+            //     // ไปยังหน้า branding
+
+            // }
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            });
+        }
+        for (let i = 0; i < dataMenuSection.length; i++) {
+            dataMenuSection[i].addEventListener("click", function() {
+                const targetSection = document.getElementById('contactSectionManagement');
+            if (window.location.pathname != "/index" || window.location.pathname != "/index#contactSectionManagement") {
+                window.location.href = "index#contactSectionManagement";
+            }
+            // else {
+            //     // ไปยังหน้า branding
+
+            // }
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            });
+        }
     </script>
 </body>
 

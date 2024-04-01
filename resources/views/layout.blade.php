@@ -72,7 +72,7 @@
                 </div>
             </div>
             {{-- <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a> --}}
-            <a href="#contactSection" class="side-btn">CONTACT US</a>
+            <a href="#contactSectionMedia" class="side-btn">CONTACT US</a>
             <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" />
@@ -219,23 +219,20 @@
 
         var footerYear = document.getElementById('year');
         footerYear.innerHTML = new Date().getFullYear();
-        document.querySelector('a[href="#contactSectionMedia"]').addEventListener('click', function(event) {
-            // event.preventDefault();
-            const targetSection = document.getElementById('contactSectionMedia');
+        const section = document.querySelectorAll('a[href="#contactSectionMedia"]')
+        for (let index = 0; index < section.length; index++) {
+            section[index].addEventListener('click', function(event) {
+                const targetSection = document.getElementById('contactSectionMedia');
             if (window.location.pathname != "/branding" || window.location.pathname != "/branding#contactSectionMedia") {
                 window.location.href = "branding#contactSectionMedia";
             }
-            // else {
-            //     // ไปยังหน้า branding
-
-            // }
             if (targetSection) {
                 targetSection.scrollIntoView({
                     behavior: 'smooth'
                 });
             }
         });
-
+        }
     </script>
 </body>
 
