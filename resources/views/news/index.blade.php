@@ -90,13 +90,13 @@
             console.log(data);
             var html = '';
             data.forEach(element => {
-                html += '<div class="act-card">';
+                html += '<div class="act-card company">';
                 html += '<span>' + element.created_at + '</span>';
                 html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">';
                 html += '<img src="' + element.image + '" alt="">';
                 html += '</a>';
                 html += '<div>';
-                html += '<span>' + element.type + '</span>'
+                // html += '<span>' + element.type + '</span>'
                     // if(element.signature)
                     // {
                     //     html += '<span>'+ element.signature  +'</span>';

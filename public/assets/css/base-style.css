@@ -44,8 +44,8 @@ body {
 }
 
 .gadget-menu img {
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
 }
 
 .header-title {
@@ -151,7 +151,7 @@ section {
     gap: 3rem;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    /* text-align: center; */
     padding: 1rem 1rem;
 }
 
@@ -427,6 +427,14 @@ section h1 {
     color: white;
 }
 
+.company a {
+    color: white;
+}
+.company a:hover {
+    color: #0b90ef;
+}
+
+
 .act-card>a>img {
     width: 100%;
     height: 320px;
@@ -485,7 +493,7 @@ section h1 {
 }
 
 .act-card>div>span:nth-of-type(2) {
-    text-align: end;
+    /* text-align: end; */
 }
 
 .act-card>div>span:nth-of-type(3) {
