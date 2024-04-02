@@ -125,14 +125,14 @@
             data.forEach(element => {
                 html += '<div class="act-card management">';
                 html += '<span>' + element.created_at + '</span>';
-                html += '<a href="our-work/' + element.id + '?view=' + element.id + '">';
+                html += '<a href="our-work/' + element.id + '">';
                 html += '<img src="' + element.image + '" alt="">';
                 html += '</a>';
                 html += '<div>';
                 html += '<span></span>';
                 html += '<span></span>';
                 html += '<span>' + element.title + '</span>';
-                html += '<a href="our-work/' + element.id + '?view=' + element.id + '">READ MORE</a>';
+                html += '<a href="our-work/' + element.id + '">READ MORE</a>';
                 html += '</div>';
                 html += '</div>';
             });

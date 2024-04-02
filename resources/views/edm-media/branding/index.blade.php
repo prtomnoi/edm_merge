@@ -457,19 +457,26 @@
             });
             var splide = new Splide('#image-slider', {
             type: 'loop',
-            perPage: 2,
+            perPage: 3,
             gap: 10,
             arrows: true,
             pagination: true,
             autoplay: true,
             rewind: true,
             breakpoints: {
+                1024: {
+                perPage: 2, // Show only 1 image per slide on mobile
+                arrows: false,
+                rewind: true,
+                type: 'loop',
+                },
                 940: { // Target screens below 640px
                 perPage: 1, // Show only 1 image per slide on mobile
                 arrows: false,
                 rewind: true,
                 type: 'loop',
-                }
+                pagination: false,
+                },
             }
             });
 

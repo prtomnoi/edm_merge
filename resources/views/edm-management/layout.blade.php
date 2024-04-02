@@ -215,7 +215,7 @@
             dataMenuService[i].addEventListener("click", function() {
                 const targetSection = document.getElementById('serviceSection');
             if (window.location.pathname != "/index" || window.location.pathname != "/index#serviceSection") {
-                window.location.href = "index#serviceSection";
+                window.location.href = "/edm-management/index#serviceSection";
             }
             // else {
             //     // ไปยังหน้า branding
@@ -231,8 +231,9 @@
         for (let i = 0; i < dataMenuSection.length; i++) {
             dataMenuSection[i].addEventListener("click", function() {
                 const targetSection = document.getElementById('contactSectionManagement');
+                console.log('window.location.pathname', window.location);
             if (window.location.pathname != "/index" || window.location.pathname != "/index#contactSectionManagement") {
-                window.location.href = "index#contactSectionManagement";
+                window.location.href = "/edm-management/index#contactSectionManagement";
             }
             // else {
             //     // ไปยังหน้า branding

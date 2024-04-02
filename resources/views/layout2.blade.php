@@ -252,7 +252,7 @@
             <footer>
                 <div class="footer-top">
                     <div class="footer-logos">
-                        <img src="{{ asset('assets/img/edm-company-logo.png') }}" alt="" />
+                        <a href="{{url('/')}}"><img src="{{ asset('assets/img/edm-company-logo.png') }}" alt="" /></a>
                     </div>
 
 

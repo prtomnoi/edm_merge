@@ -349,35 +349,42 @@ section h1 {
     justify-content: center;
     align-items: center;
 }
+
 .showSlide {
     height: 500px;
     max-height: 500px;
     margin: auto;
 }
+
 .slidemain {
     display: flex;
     justify-content: center;
     width: 700px;
     margin: auto;
 }
-  .splide {
-    width: 900px; /* Adjust width as needed */
+
+.splide {
+    width: 1250px;
+    /* Adjust width as needed */
     margin: 0 auto;
     padding-bottom: 40px;
-  }
-  .splide__slide {
+}
+
+.splide__slide {
     /* margin: auto; */
     padding-left: 25px;
     padding-right: 25px;
-  }
-  .splide__slide img {
-    width: 400px; /* Images will fill the slide width */
+}
+
+.splide__slide img {
+    width: 400px;
+    /* Images will fill the slide width */
     height: 400px;
-    object-fit: cover; /* Crop images to fit with aspect ratio preserved */
+    object-fit: cover;
+    /* Crop images to fit with aspect ratio preserved */
     /* margin: auto; */
     border-radius: 10px;
-  }
-
+}
 
 .vtuber-item {
     width: 100%;
@@ -460,12 +467,15 @@ section h1 {
 .company a {
     color: white;
 }
+
 .company a:hover {
     color: #0b90ef;
 }
+
 .management a {
     color: white;
 }
+
 .management a:hover {
     color: #ef5b0b;
 }
@@ -517,6 +527,7 @@ section h1 {
     display: inline-block;
     color: #cacaca;
 }
+
 .act-card>div>span {
     width: 100%;
     text-align: start;
@@ -964,10 +975,11 @@ form>button {
 
 @media (max-width: 576px) {
     .splide {
-        width: 300px; /* Adjust width as needed */
+        width: 300px;
+        /* Adjust width as needed */
         margin: 0 auto;
         padding-bottom: 40px;
-      }
+    }
     .partner-logo>div {
         display: grid;
         grid-template-columns: 150px 150px;
@@ -1000,15 +1012,17 @@ form>button {
         /* max-width: 412px; */
     }
     .splide {
-        width: 300px; /* Adjust width as needed */
+        width: 300px;
+        /* Adjust width as needed */
         margin: 0 auto;
         padding-bottom: 40px;
-      }
-
-      .splide__slide img {
-        width: 100%; /* Images will fill the slide width */
-        object-fit: cover; /* Crop images to fit with aspect ratio preserved */
-      }
+    }
+    .splide__slide img {
+        width: 100%;
+        /* Images will fill the slide width */
+        object-fit: cover;
+        /* Crop images to fit with aspect ratio preserved */
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -1025,6 +1039,15 @@ form>button {
     }
 }
 
+@media only screen and (min-width: 1024px) {
+    .splide {
+        width: 900px;
+        /* Adjust width as needed */
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+}
+
 @media only screen and (min-width: 1440px) {
     .act-card {
         width: 100%;
@@ -1036,6 +1059,12 @@ form>button {
         grid-template-columns: 388px 388px 388px;
         gap: 2rem;
         row-gap: 2rem;
+    }
+    .splide {
+        width: 1250px;
+        /* Adjust width as needed */
+        margin: 0 auto;
+        padding-bottom: 40px;
     }
     /* .activity-cards {
         padding-left: 70px;
