@@ -104,7 +104,7 @@
                     // {
                     //     html += '<span> </span>';
                     // }
-                html += '<span>' + element.title + '</span>';
+                html += '<span class="description">' + element.title + '</span>';
                 html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">READ MORE</a>';
                 html += '</div>';
                 html += '</div>';
