@@ -104,7 +104,6 @@
                 return response.json();
             })
             .then(function(data) {
-                console.log(data.data[0].title)
                 document.getElementById("resultDate").innerHTML = data.data[0].created_at;
                 // const spanDescription1 = document.getElementById("resultTitle");
                 const spanDescription = document.getElementById("resultTitle2");

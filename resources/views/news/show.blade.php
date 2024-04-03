@@ -113,7 +113,6 @@
         Description.innerHTML
         const urlParams = new URLSearchParams(window.location.search);
         const view = urlParams.get("view");
-        console.log('views', view);
         function formatDateToCustomFormat(isoDateString) {
             const date = new Date(isoDateString);
             const options = {
@@ -128,12 +127,9 @@
                 return response.json();
             })
             .then(function(data) {
-                console.log(data.data);
                 document.getElementById("resultDate").innerHTML = data.data[0].created_at;
                 const spanDescription1 = document.getElementById("resultTitle");
                 const spanDescription = document.getElementById("resultTitle2");
-
-                console.log(currentLanguage);
 
                 if (currentLanguage == 'eng') {
                     spanDescription1.innerHTML = data.data[0].title_en || data.data[0].title;

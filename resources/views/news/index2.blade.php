@@ -201,7 +201,6 @@
          } else {
            spanDescription.innerHTML =  data.data[0].title;
          }
-         console.log(data.data[0].image);
 
        document.getElementById("resultImages").src = data.data[0].image;
        document.getElementById("resultDetail").innerHTML = data.data[0].short_detail;

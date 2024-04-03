@@ -205,7 +205,6 @@ function loadApiData(searchText) {
 
         },
         success: function(data) {
-           console.log(data.data);
            var modalBody = $('#modalBody');
             modalBody.empty(); // Clear existing content if any
             var itemsToDisplay = 5; // Set the limit here
