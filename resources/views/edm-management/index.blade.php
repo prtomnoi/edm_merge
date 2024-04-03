@@ -15,9 +15,11 @@
 
         <img src="assets/img/edm-logo-2.png" alt="" />
         <p class="header-des">
-            Upgrade your business with innovation and professional consultants. To make your work easier and save your time more than ever.
+            {{-- Upgrade your business with innovation and professional consultants. To make your work easier and save your time more than ever. --}}
+            อัปเกรดธุรกิจของคุณด้วยนวัตกรรมและที่ปรึกษามืออาชีพเพื่อให้งานของคุณง่ายขึ้นและประหยัดเวลามากขึ้นกว่าเดิม
             <br/><br/>
-            We focus on reults. For us,It's all abount what adds value for you and your business. above all, we work with you and lead you to success.
+            {{-- We focus on reults. For us,It's all abount what adds value for you and your business. above all, we work with you and lead you to success. --}}
+            เรามุ่งเน้นที่ผลลัพธ์ สำหรับเราสิ่งสำคัญคือสิ่งที่เพิ่มมูลค่าให้กับคุณและธุรกิจของคุณ และเหนือสิ่งอื่นใดเราอยากทำงานร่วมกับคุณและนำคุณไปสู่ความสำเร็จ
         </p>
     </section>
 
@@ -49,9 +51,11 @@
     <section class="our-work">
         <h1>Our Work</h1>
         <p>
-            Today, EDM works with more than 60 clients with needs for technology,
+            {{-- Today, EDM works with more than 60 clients with needs for technology,
             internet, media and innovation, reaching more than 20 million gamers
-            through 80 projects and events.
+            through 80 projects and events. --}}
+            ปัจจุบัน EDM ทำงานร่วมกับลูกค้ามากกว่า 60 รายที่มีความต้องการเทคโนโลยี อินเทอร์เน็ต
+            สื่อ และนวัตกรรม เข้าถึงเกมเมอร์มากกว่า 20 ล้านคนผ่าน 80 โปรเจ็กต์และกิจกรรมต่างๆ
         </p>
 
         <div class="works-container">

@@ -34,7 +34,7 @@
             <div class="lang-change-btns">
                 <a href="" class="active" id="thaiBtn"><img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" width="20"
                         alt="" /> TH</a>
-                <a href="" id="engBtn"><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" /> ENG</a>
+                {{-- <a href="" id="engBtn"><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" /> ENG</a> --}}
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
                         <div class="nav-dropdown-menu">
                             <a href=""><img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" width="20" alt="" id="thaiBtn2" />
                                 TH</a>
-                            <a href=""><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" id="engBtn2" /> ENG</a>
+                            {{-- <a href=""><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" id="engBtn2" /> ENG</a> --}}
                         </div>
                     </div>
                 </div>

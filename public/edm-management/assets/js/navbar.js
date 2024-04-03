@@ -87,9 +87,9 @@ if (currentLanguage === null) {
 
 // Add click event listeners to language change buttons
 thaiBtn.addEventListener("click", () => changeLanguage("th"));
-engBtn.addEventListener("click", () => changeLanguage("eng"));
+// engBtn.addEventListener("click", () => changeLanguage("eng"));
 thaiBtn2.addEventListener("click", () => changeLanguage("th"));
-engBtn2.addEventListener("click", () => changeLanguage("eng"));
+// engBtn2.addEventListener("click", () => changeLanguage("eng"));
 
 // Function to change language
 function changeLanguage(language) {

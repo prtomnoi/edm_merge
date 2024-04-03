@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('assets/css/base-style.css?v=' . filemtime(public_path('assets/css/base-style.css'))) }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/index.css?v='  . filemtime(public_path('assets/css/index.css'))) }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/navbar_style.css?v=' . filemtime(public_path('assets/css/navbar_style.css'))) }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
     </head>
 
 <body>

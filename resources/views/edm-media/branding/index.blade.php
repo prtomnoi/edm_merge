@@ -38,10 +38,13 @@
             <div class="solution-title">
                 <h1>Our Services</h1>
                 <p>
-                    Because we are expert in media platform and influencer. We think
+                    {{-- Because we are expert in media platform and influencer. We think
                     about your brand and value proposition as priority, so every problem
                     about influencer and digital innovation can be solved with our
-                    hands.
+                    hands. --}}
+                    เพราะเราคือผู้เชี่ยวชาญด้านสื่อออนไลน์แพลตฟอร์ฒต่างๆ และ อินฟลูเอนเซอร์
+                    เราถือว่าแบรนด์และการนำเสนอคุณค่าของแบรนด์คุณเป็นสิ่งสำคัญ
+                    ดังนั้นทุกปัญหาเกี่ยวกับอินฟลูเอนเซอร์และนวัตกรรมดิจิทัลสามารถแก้ไขได้ด้วยมือของเรา
                 </p>
             </div>
 
@@ -54,7 +57,7 @@
                 <div class="solu-items">
                     <lottie-player src="{{ asset('assets/img/animated-icons/branding-icons/credit_bereau.json') }}"
                         background="transparent" speed="1" hover loop="true"></lottie-player>
-                    <span>Content Production</span>
+                    <span>Content Creator</span>
                 </div>
                 <div class="solu-items">
                     <lottie-player src="{{ asset('assets/img/animated-icons/branding-icons/avatar.json') }}"
@@ -151,9 +154,11 @@
         <section class="partfolio-sec">
             <h1>Our Work</h1>
             <p>
-                Today, EDM works with more than 60 clients with needs for technology,
+                {{-- Today, EDM works with more than 60 clients with needs for technology,
                 internet, media and innovation, reaching more than 20 million gamers
-                through 80 projects and events.
+                through 80 projects and events. --}}
+                ปัจจุบัน EDM ทำงานร่วมกับลูกค้ามากกว่า 60 รายที่มีความต้องการเทคโนโลยี อินเทอร์เน็ต
+                สื่อ และนวัตกรรม เราสามารถเข้าถึงเกมเมอร์มากกว่า 20 ล้านคนผ่าน 80 โปรเจ็กต์และกิจกรรมต่างๆ
             </p>
             <div class="tabs-container">
                 <ul class="nav nav-pills" id="portfolio-tab" role="tablist">
@@ -333,15 +338,19 @@
             <div class="partner-header">
                 <h1>Our Trusted Partner</h1>
                 <p>
-                    EDM Media ทำงานร่วมกับแบรนด์ชั้นนำมากมาย
+                    {{-- EDM Media ทำงานร่วมกับแบรนด์ชั้นนำมากมาย
                     และคอยช่วยให้คำแนะนำการทำแคมเปญ การตลาดโดยใช้อินฟลูเอนเซอร์
                     เพื่อตอบโจทย์แบรนด์ สื่อสารได้ตรงกลุ่มเป้าหมาย
-                    และมีประสิทธิภาพมากที่สุด
+                    และมีประสิทธิภาพมากที่สุด --}}
+                    EDM Media คือ มืออาชีพด้านการดูแลบริหารจัดการครีเอเตอร์ในประเทศไทย
+                    โดยทีมงานผู้มีประสบการณ์กว่า 10 ปี ที่จะเข้ามาช่วยให้คุณสามารถสร้างสรรค์คอนเทนต์ได้อย่างสบายใจ
+                    ไม่ต้องห่วงปัญหา เพราะเรามีทั้งพาร์ทเนอร์ และผู้เชี่ยวชาญ ที่สามารถดูแล และให้คำปรึกษาอย่างมืออาชีพ
                 </p>
                 <p>
-                    เราเป็นเอเจนซี่มีความสัมพันธ์ใกล้ชิดและรู้จักกลุ่มคนดูของอินฟลูเอนเซอร์เป็นอย่างดี
+                    {{-- เราเป็นเอเจนซี่มีความสัมพันธ์ใกล้ชิดและรู้จักกลุ่มคนดูของอินฟลูเอนเซอร์เป็นอย่างดี
                     ทำให้เราทำงานด้วยความรวดเร็ว และช่วยวิเคราะห์ข้อมูล
-                    เลือกใช้อินฟลูเอนเซอร์ได้เหมาะสมกับสินค้า
+                    เลือกใช้อินฟลูเอนเซอร์ได้เหมาะสมกับสินค้า --}}
+                    ด้วยบริการที่ทำให้คุณมั่นใจ เพื่อให้คุณสามารถสร้างสรรค์ และบริหารจัดการช่องของคุณได้อย่างสบายใจ
                 </p>
             </div>
             {{ view('../partner-logo') }}

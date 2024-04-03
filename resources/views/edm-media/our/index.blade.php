@@ -4,6 +4,25 @@
 
 @section('content')
     <style>
+        .inputSearch {
+            padding: 0.5rem 1rem;
+            background: #0e0e0e;
+            border: 2px solid #343434;
+            border-radius: 0.3rem 0 0 0.3rem;
+            color: white;
+        }
+
+        .buttonSearch {
+            border: none;
+            background: #343434;
+            padding: 0.5rem;
+            border-radius: 0 0.3rem 0.3rem 0;
+        }
+
+        .form-div {
+            display: flex;
+        }
+
         .paginationjs {
             margin: auto;
             padding-bottom: 20px;
@@ -48,12 +67,12 @@
                     </div>
                 </div>
                 <div class="sub-search">
-                    <form action="">
-                        <input type="search" placeholder="SEARCH" />
-                        <button type="submit">
+                    <div class="form-div">
+                        <input class="inputSearch"  type="search" placeholder="SEARCH" name="search" id="search" class="" />
+                        <button type="submit" class="buttonSearch" onclick="searchInputPortfolios()">
                             <img src="{{ asset('assets/img/icon_search.svg') }}" alt="" />
                         </button>
-                    </form>
+                    <div>
                 </div>
             </div>
         </section>
@@ -90,101 +109,222 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
     <script src="https://pagination.js.org/dist/2.6.0/pagination.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const queryString = window.location.search;
-            const params = new URLSearchParams(queryString);
-            const paramsSearch = params.get('search');
-            const campaignApiUrl = 'https://edmcompany.co.th/api/campaigns';
-
-            function template(data) {
-                var html = '';
-                data.forEach(element => {
-                    console.log((element.created_at ? element.created_at : ''));
-                    html += '<div class="act-card">';
-                    html += '<span>' + (element.created_at ? element.created_at : '') + '</span>';
-                    html += '<a href="our-campaign/' + element.id + '?view=' + element.id + '">';
-                    html += '<img src="' + element.image + '" alt="">';
-                    html += '</a>';
-                    html += '<div>';
-                    html += '<span>' + element.title + '</span>'
-                    // if(element.signature)
-                    // {
-                    //     html += '<span>'+ element.signature  +'</span>';
-                    // } else
-                    // {
-                    //     html += '<span> </span>';
-                    // }
-                    html += '<span> </span>';
-                    html += '<span>' + element.title + '</span>';
-                    html += '<a href="our-campaign/' + element.id + '?view=' + element.id +
-                        '">READ MORE</a>';
-                    html += '</div>';
-                    html += '</div>';
+        const queryString = window.location.search;
+        const params = new URLSearchParams(queryString);
+        const paramsSearch = params.get('search');
+        const newsApiUrlFetch = 'https://edmcompany.co.th/api/portfolios';
+        function template(data) {
+            var html = '';
+            data.forEach(element => {
+                html += '<div class="act-card company">';
+                html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">';
+                html += '<img src="' + element.image + '" alt="">';
+                html += '</a>';
+                html += '<div>';
+                html += '<span class="description">' + element.title + '</span>';
+                html += '<a href="'+element.link+'" target="_black">READ MORE</a>';
+                html += '</div>';
+                html += '</div>';
+            });
+            return html;
+        }
+        async function fetchPortfolios() {
+            try {
+                const response = await fetch(newsApiUrlFetch);
+                const newsData = await response.json();
+                const activityCards = document.getElementById('campaign-cards');
+                $('#demo').pagination({
+                    dataSource: newsData.data,
+                    pageSize: 6,
+                    showPrevious: true,
+                    showNext: true,
+                    callback: function(data, pagination) {
+                        // template method of yourself
+                        var html = template(data)
+                        activityCards.innerHTML = html;
+                    }
                 });
-
-                return html;
+            } catch (error) {
+                console.error('Error fetching news:', error);
             }
-
-            async function fetchCampaigns() {
+        }
+        function searchInputPortfolios() {
+            const search = document.getElementById('search').value;
+            const paramSearch = encodeURIComponent(paramsSearch);
+            const newsApiUrl = 'https://edmcompany.co.th/api/portfolios?search=' + search || paramSearch || '';
+            async function fetchPortfoliosSearch() {
                 try {
-                    const response = await fetch(campaignApiUrl);
-                    const campaignData = await response.json();
-                    console.log(campaignData.data);
-                    const campaignCards = document.getElementById('campaign-cards');
+                    const response = await fetch(newsApiUrl);
+                    const newsData = await response.json();
+                    const activityCards = document.getElementById('campaign-cards');
+                    const demo = document.getElementById('demo');
+                    demo.innerHTML = '';
+                    activityCards.innerHTML = '';
                     $('#demo').pagination({
-                        dataSource: campaignData.data,
-                        pageSize: 3,
+                        dataSource: newsData.data,
+                        pageSize: 6,
                         showPrevious: true,
                         showNext: true,
                         callback: function(data, pagination) {
                             // template method of yourself
                             var html = template(data)
-                            campaignCards.innerHTML = html;
+                            activityCards.innerHTML = html;
                         }
-                    });
-                    // campaignData.data.forEach(campaignItem => {
-                    //     const actCard = document.createElement('div');
-                    //     actCard.classList.add('act-card');
+                    })
+                    // newsData.data.forEach(newsItem => {
+                    //     const isTitleNull = currentLanguage == 'eng' ? newsItem.title_en == null : newsItem
+                    //         .title ==
+                    //         null;
+                    //     if (!isTitleNull) {
+                    //         const actCard = document.createElement('div');
+                    //         actCard.classList.add('act-card');
 
-                    //     const spanDate = document.createElement('span');
-                    //     spanDate.textContent = campaignItem.created_at;
+                    //         const dateSpan = document.createElement('span');
+                    //         dateSpan.textContent = newsItem.created_at;
 
-                    //     const img = document.createElement('img');
-                    //     img.src = campaignItem.image;
-                    //     img.alt = '';
+                    //         const img = document.createElement('img');
+                    //         img.src = newsItem.image;
+                    //         img.alt = '';
 
-                    //     const divContent = document.createElement('div');
+                    //         const divContent = document.createElement('div');
+                    //         const typeSpan = document.createElement('span');
+                    //         typeSpan.textContent = newsItem.type;
 
-                    //     const spanTitle = document.createElement('span');
-                    //     spanTitle.textContent = campaignItem.title;
+                    //         const authorSpan = document.createElement('span');
+                    //         authorSpan.textContent = `By ${newsItem.signature}`;
 
-                    //     const spanAuthor = document.createElement('span');
-                    //     spanAuthor.textContent = `By ${campaignItem.signature}`;
+                    //         // Display the appropriate title based on the selected language
+                    //         const titleSpan = document.createElement('span');
+                    //         if (currentLanguage == 'eng') {
+                    //             titleSpan.textContent = newsItem.title_en || newsItem.title;
+                    //         } else {
+                    //             titleSpan.textContent = newsItem.title;
+                    //         }
 
-                    //     const spanDescription = document.createElement('span');
-                    //     spanDescription.textContent = campaignItem.title;
+                    //         const readMoreLink = document.createElement('a');
+                    //         readMoreLink.href = 'news-activity/' + newsItem.id + '?view=' + newsItem.id;
+                    //         readMoreLink.textContent = 'READ MORE';
 
-                    //     const aReadMore = document.createElement('a');
-                    //     aReadMore.href = 'campaign-detail.html?view=' + campaignItem.id;
-                    //     aReadMore.textContent = 'READ MORE';
+                    //         divContent.appendChild(typeSpan);
+                    //         divContent.appendChild(authorSpan);
+                    //         divContent.appendChild(titleSpan);
+                    //         divContent.appendChild(readMoreLink);
 
-                    //     divContent.appendChild(spanTitle);
-                    //     divContent.appendChild(spanAuthor);
-                    //     divContent.appendChild(spanDescription);
-                    //     divContent.appendChild(aReadMore);
+                    //         actCard.appendChild(dateSpan);
+                    //         actCard.appendChild(img);
+                    //         actCard.appendChild(divContent);
 
-                    //     actCard.appendChild(spanDate);
-                    //     actCard.appendChild(img);
-                    //     actCard.appendChild(divContent);
-
-                    //     campaignCards.appendChild(actCard);
+                    //         activityCards.appendChild(actCard);
+                    //     }
                     // });
+                    // const paginations = document.getElementById('demo');
+
                 } catch (error) {
-                    console.error('Error fetching campaigns:', error);
+                    console.error('Error fetching news:', error);
                 }
             }
-            fetchCampaigns();
-            const hash = window.location.hash; // Get the hash part of the URL
+            fetchPortfoliosSearch()
+        }
+        if (paramsSearch) {
+            searchInputPortfolios()
+        } else {
+            fetchPortfolios()
+        }
+        // document.addEventListener('DOMContentLoaded', () => {
+        //     const queryString = window.location.search;
+        //     const params = new URLSearchParams(queryString);
+        //     const paramsSearch = params.get('search');
+        //     const campaignApiUrl = 'https://edmcompany.co.th/api/campaigns';
+
+            // function template(data) {
+            //     var html = '';
+            //     data.forEach(element => {
+            //         console.log((element.created_at ? element.created_at : ''));
+            //         html += '<div class="act-card">';
+            //         html += '<span>' + (element.created_at ? element.created_at : '') + '</span>';
+            //         html += '<a href="our-campaign/' + element.id + '?view=' + element.id + '">';
+            //         html += '<img src="' + element.image + '" alt="">';
+            //         html += '</a>';
+            //         html += '<div>';
+            //         html += '<span>' + element.title + '</span>'
+            //         // if(element.signature)
+            //         // {
+            //         //     html += '<span>'+ element.signature  +'</span>';
+            //         // } else
+            //         // {
+            //         //     html += '<span> </span>';
+            //         // }
+            //         html += '<span> </span>';
+            //         html += '<span>' + element.title + '</span>';
+            //         html += '<a href="our-campaign/' + element.id + '?view=' + element.id +
+            //             '">READ MORE</a>';
+            //         html += '</div>';
+            //         html += '</div>';
+            //     });
+
+            //     return html;
+            // }
+
+            // async function fetchCampaigns() {
+            //     try {
+            //         const response = await fetch(campaignApiUrl);
+            //         const campaignData = await response.json();
+            //         console.log(campaignData.data);
+            //         const campaignCards = document.getElementById('campaign-cards');
+            //         $('#demo').pagination({
+            //             dataSource: campaignData.data,
+            //             pageSize: 3,
+            //             showPrevious: true,
+            //             showNext: true,
+            //             callback: function(data, pagination) {
+            //                 // template method of yourself
+            //                 var html = template(data)
+            //                 campaignCards.innerHTML = html;
+            //             }
+            //         });
+            //         // campaignData.data.forEach(campaignItem => {
+            //         //     const actCard = document.createElement('div');
+            //         //     actCard.classList.add('act-card');
+
+            //         //     const spanDate = document.createElement('span');
+            //         //     spanDate.textContent = campaignItem.created_at;
+
+            //         //     const img = document.createElement('img');
+            //         //     img.src = campaignItem.image;
+            //         //     img.alt = '';
+
+            //         //     const divContent = document.createElement('div');
+
+            //         //     const spanTitle = document.createElement('span');
+            //         //     spanTitle.textContent = campaignItem.title;
+
+            //         //     const spanAuthor = document.createElement('span');
+            //         //     spanAuthor.textContent = `By ${campaignItem.signature}`;
+
+            //         //     const spanDescription = document.createElement('span');
+            //         //     spanDescription.textContent = campaignItem.title;
+
+            //         //     const aReadMore = document.createElement('a');
+            //         //     aReadMore.href = 'campaign-detail.html?view=' + campaignItem.id;
+            //         //     aReadMore.textContent = 'READ MORE';
+
+            //         //     divContent.appendChild(spanTitle);
+            //         //     divContent.appendChild(spanAuthor);
+            //         //     divContent.appendChild(spanDescription);
+            //         //     divContent.appendChild(aReadMore);
+
+            //         //     actCard.appendChild(spanDate);
+            //         //     actCard.appendChild(img);
+            //         //     actCard.appendChild(divContent);
+
+            //         //     campaignCards.appendChild(actCard);
+            //         // });
+            //     } catch (error) {
+            //         console.error('Error fetching campaigns:', error);
+            //     }
+            // }
+            // fetchCampaigns();
+            // const hash = window.location.hash; // Get the hash part of the URL
 
             // Check if hash includes #contactSection
             // if (hash.includes('#contactSection')) {
@@ -195,7 +335,7 @@
             //     });
             //     }
             // }
-        });
+        // });
 
         // fetch("https://edmcompany.co.th/api/campaigns-limit/1")
         //     .then(function(response) {

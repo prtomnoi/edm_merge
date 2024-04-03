@@ -24,31 +24,36 @@
         }
 
         .paginationjs {
-            margin: auto;
             padding-bottom: 20px;
         }
 
+        .first-last-pagination {
+            padding-bottom: 20px;
+            border-radius: 0 3px 3px 0;
+            border: 1px solid black;
+        }
+
         /*
-                                    .pagination {
-                                        display: inline-block;
-                                        text-align: center;
-                                    }
+                                            .pagination {
+                                                display: inline-block;
+                                                text-align: center;
+                                            }
 
-                                    .pagination a {
-                                        color: white;
-                                        float: left;
-                                        padding: 8px 16px;
-                                        text-decoration: none;
-                                    }
+                                            .pagination a {
+                                                color: white;
+                                                float: left;
+                                                padding: 8px 16px;
+                                                text-decoration: none;
+                                            }
 
-                                    .pagination a.active {
-                                        background-color: #4CAF50;
-                                        color: white;
-                                    }
+                                            .pagination a.active {
+                                                background-color: #4CAF50;
+                                                color: white;
+                                            }
 
-                                    .pagination a:hover:not(.active) {
-                                        background-color: #ddd;
-                                    } */
+                                            .pagination a:hover:not(.active) {
+                                                background-color: #ddd;
+                                            } */
     </style>
     <link rel="stylesheet" href="{{ asset('edm-management/assets/css/subpage-base-style.css?v=3') }}" />
     <div class="main">
@@ -107,19 +112,27 @@
         <div class="campaign-cards" id="activity-cards">
 
         </div>
-        <div class="d-flex align-content-center align-items-lg-center w-100" id="demo">
+
+        <div class="d-flex align-content-center align-items-lg-center w-100 justify-content-center">
+            {{-- <li class="pagination-first-page first-last-pagination btn paginationjs"><a><<</a></li> --}}
+            <div id="demo"></div>
+            {{-- <div class="paginationjs pagination-last-page first-last-pagination btn">
+                <li>>></li>
+            </div> --}}
+
         </div>
     </div>
 @endsection
 
 @section('scripts')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
-    <script src="https://pagination.js.org/dist/2.6.0/pagination.js"></script>
+    <script src="{{ asset('assets/js/pagination.js') }}"></script>
     <script>
         const newsApiUrl = 'https://edmcompany.co.th/api/portfolio-items';
         const queryString = window.location.search;
         const params = new URLSearchParams(queryString);
         const paramsSearch = params.get('search');
+
         function template(data) {
             var html = '';
             data.forEach(element => {
@@ -144,6 +157,7 @@
                 const response = await fetch(newsApiUrl);
                 const newsData = await response.json();
                 const activityCards = document.getElementById('activity-cards');
+                let totalPage = 1;
                 $('#demo').pagination({
                     dataSource: newsData.data,
                     pageSize: 6,
@@ -154,7 +168,8 @@
                         var html = template(data);
                         activityCards.innerHTML = html;
                     }
-                })
+                });
+
                 // newsData.data.forEach(newsItem => {
                 //     const isTitleNull = currentLanguage == 'eng' ? newsItem.title_en == null : newsItem
                 //         .title ==
@@ -210,12 +225,18 @@
                 console.error('Error fetching news:', error);
             }
         }
-        if(paramsSearch)
-        {
+        if (paramsSearch) {
             searchInput()
-        } else
-        {
+        } else {
             fetchNews()
+            $('.pagination-first-page').click(() => {
+                console.log('hi first');
+                $('#demo').pagination('go', 1);
+            });
+            $('.pagination-last-page').click(() => {
+                const totalPages = $('#demo').pagination('getTotalPage');
+                $('#demo').pagination('go', totalPages);
+            });
         }
 
 
