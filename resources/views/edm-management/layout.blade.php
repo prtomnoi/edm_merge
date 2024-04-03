@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/management-style.css?v='  . filemtime(public_path('edm-management/assets/css/management-style.css')))}}" />
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/article-style.css?v='  . filemtime(public_path('edm-management/assets/css/article-style.css')))}}" />
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/contact-us.css?v=' . filemtime(public_path('edm-management/assets/css/contact-us.css')))}}" />
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <link rel="shotcut icon" type="image/svg+xml" href="{{ asset('assets/img/edm_logo_com.svg') }}">
 </head>
 
 <body>

@@ -22,7 +22,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/yt-slider.css?v=3') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=' . filemtime(public_path('assets/css/article-style.css'))) }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <link rel="shotcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
     <style>
         .video-iframe {
             width: 100%;
