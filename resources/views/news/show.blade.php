@@ -81,27 +81,32 @@
                 </div>
             </div>
         </section>
+        <div class="row">
 
-        <section class="article-detail">
-            <div class="article-header">
-                <span id="resultDate">loading ..</span>
-                <img id="resultImage" src="" alt="" />
-                <div class="article-h-text">
-                    <!-- <span>Gameplay</span>
-                      <span>By KillMax Trone</span> -->
-                    <span id="resultTitle2">loading ..</span>
-                </div>
+            <div class="col-md-12 col-lg-8 col-xl-8">
+                <section class="article-detail">
+                    <div class="article-header">
+                        <span id="resultDate">loading ..</span>
+                        <img id="resultImage" src="" alt="" />
+                        <div class="article-h-text">
+                            <span id="resultTitle2">loading ..</span>
+                        </div>
+                    </div>
+                    <div class="article-body">
+                        <div class="article-textfield" id="resultDetail"></div>
+                    </div>
+                </section>
             </div>
-            <div class="article-body">
-                <div class="article-textfield" id="resultDetail"></div>
-                <div class="top-recents">
-                    <h2 class="top-recents">Top Recent</h2>
-                    <div class="activity-cards" id="top-recent-cards">
+            <div class="col-md-12 col-lg-4 col-xl-4">
+                <div class="top-recen">
+                    <h2 class="text-center">Top Recent</h2>
+                    <div class="d-flex w-100 justify-content-center" id="top-recent-cards">
                     </div>
                 </div>
             </div>
+        </div>
 
-        </section>
+
 
 
     </div>
@@ -113,6 +118,7 @@
         Description.innerHTML
         const urlParams = new URLSearchParams(window.location.search);
         const view = urlParams.get("view");
+
         function formatDateToCustomFormat(isoDateString) {
             const date = new Date(isoDateString);
             const options = {
