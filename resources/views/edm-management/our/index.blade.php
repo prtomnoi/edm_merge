@@ -229,14 +229,6 @@
             searchInput()
         } else {
             fetchNews()
-            $('.pagination-first-page').click(() => {
-                console.log('hi first');
-                $('#demo').pagination('go', 1);
-            });
-            $('.pagination-last-page').click(() => {
-                const totalPages = $('#demo').pagination('getTotalPage');
-                $('#demo').pagination('go', totalPages);
-            });
         }
 
 

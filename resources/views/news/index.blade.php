@@ -87,7 +87,6 @@
         const newsApiUrl = 'https://edmcompany.co.th/api/news';
 
         function template(data) {
-            console.log(data);
             var html = '';
             data.forEach(element => {
                 html += '<div class="act-card company">';
