@@ -62,26 +62,35 @@
       /></a>
 
     </div> --}}
-            <div class="title">
-                <div class="sub-text">
-                    <h1>New And Activity</h1>
-                    <div class="sub-breadcrumb">
-                        <a href="{{ url('/') }}">Home</a>
-                        <a href="{{ route('news-activity.index') }}">New And Activity</a>
-                        <a href="#" id="resultTitle"></a>
-                    </div>
-                </div>
-                <div class="sub-search">
-                    <form action="">
-                        <input type="search" placeholder="SEARCH" />
-                        <button type="submit">
-                            <img src="{{ asset('assets/img/icon_search.svg') }}" alt="" />
-                        </button>
-                    </form>
-                </div>
-            </div>
+
         </section>
         <div class="container">
+            <div class="">
+                <div class="row">
+                    <div class="col-md-12 col-lg-9 col-xl-9">
+                        <div class="sub-text">
+                            <h1>New And Activity</h1>
+                            <div class="sub-breadcrumb">
+                                <a href="{{ url('/') }}">Home</a>
+                                <a href="{{ route('news-activity.index') }}">New And Activity</a>
+                                <a href="#" id="resultTitle"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-3 col-xl-3 d-flex justify-content-center align-items-center mt-2">
+                        <div class="sub-search" >
+                            <form action="">
+                                <input type="search" placeholder="SEARCH" />
+                                <button type="submit">
+                                    <img src="{{ asset('assets/img/icon_search.svg') }}" alt="" />
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
             <div class="row">
                 <div class="col-md-12 col-lg-8 col-xl-8">
                     <section class="article-detail">
@@ -97,7 +106,7 @@
                         </div>
                     </section>
                 </div>
-                <div class="col-md-12 col-lg-4 col-xl-4">
+                <div class="col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
                     <div class="top-recen">
                         <h2 class="text-center">Top Recent</h2>
                         <div class="d-flex w-100 justify-content-center" id="top-recent-cards">

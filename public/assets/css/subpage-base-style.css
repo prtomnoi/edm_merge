@@ -220,7 +220,9 @@
     background: #1d1d1d;
     margin-top: 6rem;
     padding-top: 1rem;
-    margin-right: 3rem;
+    height: 565px;
+    width: 100%;
+    /* margin-right: 3rem; */
 }
 
 .article-textfield>img {
@@ -279,6 +281,14 @@
 @media (min-width: 1920px) {
     .gadget-menu {
         display: flex;
+    }
+}
+
+@media (max-width: 1024px) {
+    .top-recen {
+        background: #1d1d1d;
+        margin-top: 3rem;
+        padding-top: 1rem;
     }
 }
 
