@@ -167,10 +167,10 @@
                         showNext: true,
                         callback: function(data, pagination) {
                             // template method of yourself
-                            var html = template(data)
+                            var html = template(data);
                             activityCards.innerHTML = html;
                         }
-                    })
+                    });
                     // newsData.data.forEach(newsItem => {
                     //     const isTitleNull = currentLanguage == 'eng' ? newsItem.title_en == null : newsItem
                     //         .title ==

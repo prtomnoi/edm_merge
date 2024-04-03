@@ -15,7 +15,7 @@ class PortfolioController extends Controller
     public function index()
     {
         $portfolio = Portfolio::when(request()->has('search'), function ($query) {
-            $query->where('title', 'like', '%' . request('search') . '%');
+            $query->where('name', 'like', '%' . request('search') . '%');
         })->where('status', 'published')->orderByDesc('created_at')->get();
         return new PortfolioCollection($portfolio);
     }
