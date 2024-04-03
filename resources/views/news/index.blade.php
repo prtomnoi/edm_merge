@@ -79,7 +79,7 @@
 
 @section('scripts')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
-    <script src="https://pagination.js.org/dist/2.6.0/pagination.js"></script>
+    <script src="{{asset('assets/js/pagination.js')}}"></script>
     <script>
         const queryString = window.location.search;
         const params = new URLSearchParams(queryString);
