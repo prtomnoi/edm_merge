@@ -117,12 +117,12 @@
             var html = '';
             data.forEach(element => {
                 html += '<div class="act-card company">';
-                html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">';
+                html += '<a href="'+element.link+'" target="_blank">';
                 html += '<img src="' + element.image + '" alt="">';
                 html += '</a>';
                 html += '<div>';
                 html += '<span class="description">' + element.title + '</span>';
-                html += '<a href="'+element.link+'" target="_black">READ MORE</a>';
+                html += '<a href="'+element.link+'" target="_blank">READ MORE</a>';
                 html += '</div>';
                 html += '</div>';
             });

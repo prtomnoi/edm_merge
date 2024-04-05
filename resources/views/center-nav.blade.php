@@ -1,7 +1,7 @@
 <div class="top-collapse-wrapper" collapse-content="company">
     <div class="top-sec">
         <div class="top-link-item">
-            <a href="{{ url('edm-management/index') }}"><img src="{{ asset('assets/img/edm-logo-2.png') }}"
+            <a href="{{ url('edm-management/index') }}" target="_black" rel="noopener noreferrer"><img src="{{ asset('assets/img/edm-logo-2.png') }}"
                     alt="" /></a>
             <ul>
                 <li>Network Solution</li>
@@ -11,7 +11,7 @@
             </ul>
         </div>
         <div class="top-link-item">
-            <a href="{{ url('edm-media/index') }}"><img src="{{ asset('assets/img/edm-logo.png') }}"
+            <a href="{{ url('edm-media/index') }}" target="_black" rel="noopener noreferrer"><img src="{{ asset('assets/img/edm-logo.png') }}"
                     alt="" /></a>
             <ul>
                 <li>KOLs</li>

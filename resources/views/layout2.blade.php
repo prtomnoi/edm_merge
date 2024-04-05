@@ -283,6 +283,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
+    <!-- Google tag (gtag.js) --> <script async src="[https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H](https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BD0DNRZH9H'); </script>
     <script>
         const settingApiUrl = 'https://edmcompany.co.th/api/settings/3';
         async function fetchSetting() {

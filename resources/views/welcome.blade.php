@@ -136,7 +136,7 @@
         <div class="links-sec">
             <div class="link-item orange" data-dropdown>
                 <h1 data-dropdown-button><a href="{{ url('edm-management/index') }}"
-                        style="color: inherit">MANAGEMENT</a></h1>
+                        style="color: inherit" target="_black" rel="noopener noreferrer">MANAGEMENT</a></h1>
                 <div class="links-wrapper">
                     <ul>
                         <li><a href="#"> Network Solution </a></li>
@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="link-item blue">
-                <h1><a href="{{ url('edm-media/index') }}" style="color: inherit">MEDIA</a></h1>
+                <h1><a href="{{ url('edm-media/index') }}" style="color: inherit" target="_black" rel="noopener noreferrer">MEDIA</a></h1>
                 <div class="links-wrapper">
                     <ul>
                         <li><a href="#">KOLs</a></li>

@@ -171,6 +171,7 @@
         });
     </script> --}}
     @yield('scripts')
+    <!-- Google tag (gtag.js) --> <script async src="[https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H](https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BD0DNRZH9H'); </script>
     <script>
          const settingApiUrl = 'https://edmcompany.co.th/api/settings/2';
         async function fetchSetting() {
