@@ -8,7 +8,7 @@ class TableSettingController extends Controller
 {
     public function index()
     {
-        $tableSetting = TableSetting::first();
+        $tableSetting = TableSetting::all();
         return view('Backend.table-settings.index', compact('tableSetting'));
     }
 
