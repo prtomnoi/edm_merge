@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=' . filemtime(public_path('assets/css/article-style.css'))) }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
     <link rel="shotcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
-    
+
     <style>
         .video-iframe {
             width: 100%;
@@ -284,13 +284,14 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
     <script>
-        const settingApiUrl = 'https://edmcompany.co.th/api/settings';
+        const settingApiUrl = 'https://edmcompany.co.th/api/settings/3';
         async function fetchSetting() {
             try {
                 const response = await fetch(settingApiUrl);
                 const newsData = await response.json();
                 const gadGet = document.getElementById('gadget-menu');
                 const anchorTags = gadGet.querySelectorAll('.gadget-menu a');
+                console.log(newsData);
                 const a_array = [...anchorTags]; // convert node to array
                 // if (anchorTags.length != 0) {
 
@@ -303,11 +304,11 @@
                 a_array.forEach(function(event) {
                     const eventId = event.getAttribute('id');
                     if (eventId == 'facebook') {
-                        event.setAttribute('href', newsData[0].facebook);
+                        event.setAttribute('href', newsData.facebook || '#');
                     } else if (eventId == 'youtube') {
-                        event.setAttribute('href', newsData[0].youtube);
+                        event.setAttribute('href', newsData.youtube || '#');
                     } else if (eventId == 'url') {
-                        event.setAttribute('href', newsData[0].url);
+                        event.setAttribute('href', newsData.url || '#');
                     }
                     // else if (eventId == 'contact') {
                     //     event.setAttribute('href', newsData[0].contact);

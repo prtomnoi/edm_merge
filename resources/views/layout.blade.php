@@ -182,7 +182,7 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
     <script>
-        const newsApiUrl = 'https://edmcompany.co.th/api/settings';
+        const newsApiUrl = 'https://edmcompany.co.th/api/settings/1';
         async function fetchNews() {
             try {
                 const response = await fetch(newsApiUrl);
@@ -201,11 +201,11 @@
                 a_array.forEach(function(event) {
                     const eventId = event.getAttribute('id');
                     if (eventId == 'facebook') {
-                        event.setAttribute('href', newsData[0].facebook);
+                        event.setAttribute('href', newsData.facebook || '#');
                     } else if (eventId == 'youtube') {
-                        event.setAttribute('href', newsData[0].youtube);
+                        event.setAttribute('href', newsData.youtube || '#');
                     } else if (eventId == 'url') {
-                        event.setAttribute('href', newsData[0].url);
+                        event.setAttribute('href', newsData.url || '#');
                     }
                     // else if (eventId == 'contact') {
                     //     event.setAttribute('href', newsData[0].contact);
