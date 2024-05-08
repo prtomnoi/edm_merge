@@ -93,7 +93,7 @@
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'DELETE',
-                    url: `/{{$folder}}/${id}`,
+                    url: `/admin/{{$folder}}/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },
