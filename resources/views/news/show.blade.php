@@ -166,8 +166,9 @@
                 $("img").removeAttr("style");
                 $("img").addClass("img-fluid");
                 $("img:first").removeClass("img-fluid");
-                $("iframe").removeAttr("height");
-                $("iframe").removeAttr("width");
+                // $("iframe").removeAttr("height");
+                // $("iframe").removeAttr("width");
+                // $("iframe").attr('sandbox', 'allow-scripts allow-same-origin');
                 $("iframe").addClass("responsive-iframe");
                 $("iframe:last").removeClass("responsive-iframe");
                 $("iframe:last").addClass("responsive-iframe2");
