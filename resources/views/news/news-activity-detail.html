@@ -181,12 +181,12 @@
                         return response.json();
                     })
                     .then(function(data) {
-                        console.log(data.data);
+                        // console.log(data.data);
                         document.getElementById("resultDate").innerHTML = data.data[0].created_at;
                         const spanDescription1 = document.getElementById("resultTitle");
                         const spanDescription = document.getElementById("resultTitle2");
 
-                        console.log(currentLanguage);
+                        // console.log(currentLanguage);
 
                         if (currentLanguage == 'eng') {
                             spanDescription1.innerHTML = data.data[0].title_en || data.data[0].title;

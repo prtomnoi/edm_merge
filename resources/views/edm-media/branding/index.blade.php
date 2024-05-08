@@ -160,8 +160,8 @@
                 ปัจจุบัน EDM ทำงานร่วมกับลูกค้ามากกว่า 60 รายที่มีความต้องการเทคโนโลยี อินเทอร์เน็ต
                 สื่อ และนวัตกรรม เราสามารถเข้าถึงเกมเมอร์มากกว่า 20 ล้านคนผ่าน 80 โปรเจ็กต์และกิจกรรมต่างๆ
             </p>
-            <div class="tabs-container">
-                <ul class="nav nav-pills" id="portfolio-tab" role="tablist">
+            <div class="tabs-container" id="tabs-containe">
+                {{-- <ul class="nav nav-pills" id="portfolio-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-youTube-tab" data-bs-toggle="pill"
                             data-bs-target="#pills-youTube" type="button" role="tab" aria-controls="pills-youTube"
@@ -219,7 +219,7 @@
                         tabindex="0">
                         <div class="activity-cards" id="campaign-cards-5"></div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             {{-- <div class="tabs-container">
                 <ul class="nav nav-pills" id="portfolio-tab" role="tablist">
@@ -626,9 +626,64 @@
                 });
         }
         fetchNews();
-        loadData(1);
+        group();
+        // loadData(1);
         fetchImages();
       });
+      function templateGroup(data)
+      {
+        let html = "";
+        let html2 = "";
+        html += `<ul class="nav nav-pills" id="portfolio-tab" role="tablist">`;
+        html2 += `<div class="tab-content" id="portfolio-tabContent">`;
+        data.forEach((element, index) => {
+            if(index == 0)
+            {
+                html += `<li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-${element.title}-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-${element.title}" type="button" role="tab" aria-controls="pills-${element.title}"
+                            aria-selected="true"
+                            onclick="loadData(${element.id})">
+                            ${element.title}
+                        </button>
+                    </li>`;
+            html2 += `<div class="tab-pane fade show active" id="pills-${element.title}" role="tabpanel"
+                        aria-labelledby="pills-${element.title}-tab" tabindex="0">
+                        <div class="activity-cards" id="campaign-cards-${element.id}"></div>
+                    </div>`;
+            } else {
+                html += `<li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-${element.title}-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-${element.title}" type="button" role="tab" aria-controls="pills-${element.title}"
+                            aria-selected="true"
+                            onclick="loadData(${element.id})">
+                            ${element.title}
+                        </button>
+                    </li>`;
+            html2 += `<div class="tab-pane fade" id="pills-${element.title}" role="tabpanel"
+                        aria-labelledby="pills-${element.title}-tab" tabindex="0">
+                        <div class="activity-cards" id="campaign-cards-${element.id}"></div>
+                    </div>`;
+            }
+
+        });
+        html += `</ul>`;
+        html2 += `</div>`;
+        return html + html2;
+      }
+      async function group()
+      {
+        const response = await fetch("https://edmcompany.co.th/api/groups");
+        const result = await response.json();
+        const tabGroup = document.getElementById("tabs-containe");
+        tabGroup.innerHTML = templateGroup(result.data)
+        if(result.data)
+        {
+            // console.log(result.data[0].id)
+            await loadData(result.data[0].id)
+        }
+
+      }
       async function loadData(id) {
         const portUrl = "https://edmcompany.co.th/api/portfolios-group/" + id;
         try {
