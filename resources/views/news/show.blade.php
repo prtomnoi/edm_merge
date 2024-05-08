@@ -138,7 +138,7 @@
             };
             return date.toLocaleDateString("en-US", options);
         }
-        fetch("/api/news/" + view)
+        fetch("https://edmcompany.co.th/api/news/" + view)
             .then(function(response) {
                 return response.json();
             })
