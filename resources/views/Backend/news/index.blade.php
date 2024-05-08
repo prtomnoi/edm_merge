@@ -10,7 +10,7 @@
 
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">News Mangement</h5>
+                        <h5 class="card-title fw-semibold mb-4">News Management</h5>
                         @if(session('success'))
                         <div class="alert alert-success alert-dismissible fade show my-2" role="alert">
                             {{ session('success') }}
