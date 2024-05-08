@@ -131,14 +131,14 @@
         CKEDITOR.replace('editor', {
             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
-            extraPlugins: 'youtube',
+            // extraPlugins: 'youtube',
 
         });
 
         CKEDITOR.replace('editor2', {
             filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
             filebrowserUploadMethod: 'form',
-            extraPlugins: 'youtube',
+            // extraPlugins: 'youtube',
         });
 
         function readURL01(input) {
