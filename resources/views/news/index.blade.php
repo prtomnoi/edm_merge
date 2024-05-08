@@ -118,7 +118,7 @@
                 const activityCards = document.getElementById('activity-cards');
                 $('#demo').pagination({
                     dataSource: newsData.data,
-                    pageSize: 3,
+                    pageSize: 15,
                     showPrevious: true,
                     showNext: true,
                     callback: function(data, pagination) {

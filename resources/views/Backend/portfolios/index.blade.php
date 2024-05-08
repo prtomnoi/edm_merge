@@ -17,7 +17,7 @@
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Mangement</h5>
+                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Management</h5>
                         @if(session('success'))
                         <div class="alert alert-success alert-dismissible fade show my-2" role="alert">
                             {{ session('success') }}

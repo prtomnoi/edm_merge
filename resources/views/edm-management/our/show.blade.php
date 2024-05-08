@@ -67,10 +67,11 @@
             </div>
             <div class="article-body">
                 <div class="container">
-                    <div id="resultImages" class="row">
+                  
+                    <div class="article-textfield" id="resultDetail">
 
                     </div>
-                    <div class="article-textfield" id="resultDetail">
+                    <div id="resultImages" class="row">
 
                     </div>
                 </div>

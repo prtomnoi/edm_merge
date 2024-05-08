@@ -9,7 +9,7 @@
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Mangement</h5>
+                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Management</h5>
                         <a href="{{ route("$folder.create") }}" class="btn btn-primary mb-3"> <i class="ti ti-plus"></i> Add
                             data</a>
                             @if(session('success'))
