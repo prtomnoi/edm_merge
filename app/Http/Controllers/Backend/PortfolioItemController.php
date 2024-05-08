@@ -16,7 +16,8 @@ class PortfolioItemController extends Controller
      */
 
      protected $namePage = 'portfolio-items';
-     protected $folder = 'portfolio-items';
+    //  protected $folder = 'portfolio-items';
+    protected $folder = 'portfolio-items';
 
     public function index()
     {
@@ -138,7 +139,7 @@ class PortfolioItemController extends Controller
                     }
                 }
                 $upImage = Helper::upload_image($request->file('image'), 'portfolio', 412, null);
-                $data['image'] = $upImage['image'];
+                $validatedData['image'] = $upImage['image'];
             }
             $portfolioItem->update($validatedData);
 

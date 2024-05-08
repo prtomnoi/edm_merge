@@ -41,15 +41,17 @@ class LoginController extends Controller
             }
             else
             {
-                return redirect('/admin')->with(['error' => 'ชื่อผู้ใช้งาน หรือรหัสผ่านผิด !']);
+                return back()->with(['error' => 'ชื่อผู้ใช้งาน หรือรหัสผ่านผิด !']);
+                // return redirect('/admin')->with(['error' => 'ชื่อผู้ใช้งาน หรือรหัสผ่านผิด !']);
             }
         }catch (\Exception $e) {
             $error_log = $e->getMessage();
             $error_line = $e->getLine();
             $type_log = 'backend';
             $error_url = url()->current();
-            dd($e);
-            return redirect('/admin')->with(['error' => 'เกิดข้อผิดพลาด !']);
+            // dd($e);
+            return back()->with(['error' => 'เกิดข้อผิดพลาด !']);
+            // return redirect('/admin')->with(['error' => 'เกิดข้อผิดพลาด !']);
         }
     }
 

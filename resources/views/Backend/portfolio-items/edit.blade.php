@@ -112,7 +112,7 @@
                                 <h6 for="exampleInputEmail3">รูปภาพเพิ่มเติม</h6>
                                 @foreach($row->images as $image)
                                  <div class="show-img">
-                                      <img src="{{ asset($image->image) }}" alt="">
+                                      <img src="{{ asset("backend/$image->image") }}" alt="">
                                       <a class="remove-image" onclick="delete_images({{$image->id}})" style="display: inline; cursor: pointer;">&#215;</a>
                                  </div>
                                  @endforeach
@@ -176,7 +176,7 @@ CKEDITOR.config.allowedContent = true;
             if (result.isConfirmed) {
                 $.ajax({
                     type: 'GET',
-                    url: `/{{$folder}}-image/${id}`,
+                    url: `/admin/{{$folder}}-image/${id}`,
                     data: {
                       _token: '{{ csrf_token() }}',
                     },

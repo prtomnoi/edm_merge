@@ -46,6 +46,12 @@
                                     </div>
                                     <button class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">Sign In</button>
                                 </form>
+                                {{-- {{print_r($errors)}} --}}
+                                @if(session('error'))
+                                <div class="alert alert-danger">
+                                    {{ session('error') }}
+                                </div>
+                                @endif
                                 @if($errors->any())
                                     <div class="alert alert-danger">
                                         <ul>

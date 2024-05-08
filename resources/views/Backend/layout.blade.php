@@ -24,7 +24,7 @@
             <!-- Sidebar scroll-->
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-center">
-                    <a href="#" class="text-nowrap logo-img">
+                    <a href="/admin" class="text-nowrap logo-img">
                         <img src="{{ URL::asset('backend/assets/images/logos/logo-edm.png') }}" width="180"
                             alt="" />
                     </a>
