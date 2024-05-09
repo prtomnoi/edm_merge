@@ -3,6 +3,28 @@
 @section('title', 'News And Activity')
 
 @section('content')
+<style>
+    .responsive-iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+    }
+    .image-container {
+          position: relative;
+          width: 100%; /* Adjust width as needed */
+          padding-top: 56.25%; /* 9/16 = 0.5625 */
+          overflow: hidden;
+      }
+
+      .image-container img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; 
+      }
+</style>
     <div class="main">
         {{-- <nav>
     <!-- Nav Hamberger menu -->
@@ -96,7 +118,9 @@
                     <section class="article-detail">
                         <div class="article-header">
                             <span id="resultDate">loading ..</span>
-                            <img id="resultImage" src="" alt="" />
+                            <div class="image-container">
+                                <img id="resultImage" src="" alt="" />
+                            </div>
                             <div class="article-h-text">
                                 <span id="resultTitle2">loading ..</span>
                             </div>
@@ -163,15 +187,8 @@
                 } else {
                     Description.innerHTML = data.data[0].detail;
                 }
-                $("img").removeAttr("style");
-                $("img").addClass("img-fluid");
-                $("img:first").removeClass("img-fluid");
-                // $("iframe").removeAttr("height");
-                // $("iframe").removeAttr("width");
-                // $("iframe").attr('sandbox', 'allow-scripts allow-same-origin');
-                $("iframe").addClass("responsive-iframe");
-                $("iframe:last").removeClass("responsive-iframe");
-                $("iframe:last").addClass("responsive-iframe2");
+                updateDOMElements();
+           
             })
             .catch(function(e) {
                 console.log(e);
@@ -238,5 +255,15 @@
 
             fetchTopRecentActivities();
         });
+        
+
+
+      function updateDOMElements() {
+        $("img").removeAttr("style").addClass("img-fluid");
+        $("img:first").removeClass("img-fluid");
+        $("iframe").removeAttr("height");
+        $("iframe").removeAttr("width");
+        $("iframe").addClass("responsive-iframe");
+}
     </script>
 @endsection

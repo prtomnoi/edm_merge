@@ -33,27 +33,21 @@
             border: 1px solid black;
         }
 
-        /*
-                                            .pagination {
-                                                display: inline-block;
-                                                text-align: center;
-                                            }
+        .image-container {
+          position: relative;
+          width: 100%; /* Adjust width as needed */
+          padding-top: 56.25%; /* 9/16 = 0.5625 */
+          overflow: hidden;
+      }
 
-                                            .pagination a {
-                                                color: white;
-                                                float: left;
-                                                padding: 8px 16px;
-                                                text-decoration: none;
-                                            }
-
-                                            .pagination a.active {
-                                                background-color: #4CAF50;
-                                                color: white;
-                                            }
-
-                                            .pagination a:hover:not(.active) {
-                                                background-color: #ddd;
-                                            } */
+      .image-container img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; 
+      }
     </style>
     <link rel="stylesheet" href="{{ asset('edm-management/assets/css/subpage-base-style.css?v=3') }}" />
     <div class="main">
@@ -139,7 +133,7 @@
                 html += '<div class="act-card management">';
                 html += '<span>' + element.created_at + '</span>';
                 html += '<a href="our-work/' + element.id + '">';
-                html += '<img src="' + element.image + '" alt="">';
+                html += '<div class="image-container"><img src="' + element.image + '" alt=""></div>';
                 html += '</a>';
                 html += '<div>';
                 html += '<span></span>';

@@ -26,6 +26,21 @@
             margin: auto;
             padding-bottom: 20px;
         }
+        .image-container {
+          position: relative;
+          width: 100%; /* Adjust width as needed */
+          padding-top: 56.25%; /* 9/16 = 0.5625 */
+          overflow: hidden;
+      }
+
+      .image-container img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover; 
+      }
     </style>
     <section class="header-sec">
 
@@ -50,11 +65,13 @@
         </div>
     </section>
 
-    {{-- <section class="campaign" style="text-align: left;">
+    <section class="campaign" style="text-align: left;">
         <div class="campaign-header">
             <span id="resultDate">loading ..</span>
             <div class="campaign-thumbnail">
+              <div class="image-container">
                 <img id="resultImages" src="{{ asset('assets/img/article-thumb.jpg') }}" alt="" />
+              </div>
             </div>
             <div class="campaign-h-des">
                 <div>
@@ -69,7 +86,7 @@
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
     <div class="campaign-cards" id="activity-cards">
     </div>
@@ -92,7 +109,7 @@
                 html += '<div class="act-card company">';
                 html += '<span>' + element.created_at + '</span>';
                 html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">';
-                html += '<img src="' + element.image + '" alt="">';
+                html += '<div class="image-container"><img src="' + element.image + '" alt=""></div>';
                 html += '</a>';
                 html += '<div>';
                 // html += '<span>' + element.type + '</span>'
@@ -183,33 +200,33 @@
         }
 
 
-        // fetch("https://edmcompany.co.th/api/news-limit/1")
-        //     .then(function(response) {
-        //         return response.json();
-        //     })
-        //     .then(function(data) {
-        //         document.getElementById("resultDate").innerHTML = data.data[0].created_at;
+        fetch("https://edmcompany.co.th/api/news-limit/1")
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                document.getElementById("resultDate").innerHTML = data.data[0].created_at;
 
-        //         const spanDescription = document.getElementById("resultTitle2");
-
-
-        //         if (currentLanguage == 'eng') {
-        //             spanDescription.innerHTML = data.data[0].title_en || data.data[0].title;
-        //         } else {
-        //             spanDescription.innerHTML = data.data[0].title;
-        //         }
-        //         console.log(data.data[0].image);
-
-        //         document.getElementById("resultImages").src = data.data[0].image;
-        //         document.getElementById("resultDetail").innerHTML = data.data[0].short_detail;
-        //         document.getElementById("resultLink").href = "/news-activity/" + data.data[0].id + "?view=" + data.data[
-        //             0].id;
+                const spanDescription = document.getElementById("resultTitle2");
 
 
-        //     })
-        //     .catch(function(e) {
-        //         console.log(e);
-        //     });
+                if (currentLanguage == 'eng') {
+                    spanDescription.innerHTML = data.data[0].title_en || data.data[0].title;
+                } else {
+                    spanDescription.innerHTML = data.data[0].title;
+                }
+                console.log(data.data[0].image);
+
+                document.getElementById("resultImages").src = data.data[0].image;
+                document.getElementById("resultDetail").innerHTML = data.data[0].short_detail;
+                document.getElementById("resultLink").href = "/news-activity/" + data.data[0].id + "?view=" + data.data[
+                    0].id;
+
+
+            })
+            .catch(function(e) {
+                console.log(e);
+            });
 
         function searchInput() {
             const search = document.getElementById('search').value;
