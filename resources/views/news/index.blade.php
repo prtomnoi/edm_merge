@@ -69,8 +69,8 @@
         <div class="campaign-header">
             <span id="resultDate">loading ..</span>
             <div class="campaign-thumbnail">
-              <div class="image-container">
-                <img id="resultImages" src="{{ asset('assets/img/article-thumb.jpg') }}" alt="" />
+              <div class="image-container" id="imagetop">
+                <!-- <img id="resultImages" src="" alt="" /> -->
               </div>
             </div>
             <div class="campaign-h-des">
@@ -215,9 +215,12 @@
                 } else {
                     spanDescription.innerHTML = data.data[0].title;
                 }
-                console.log(data.data[0].image);
-
-                document.getElementById("resultImages").src = data.data[0].image;
+                // console.log(data.data[0].image);
+                
+                let img = document.createElement("img");
+                img.src = data.data[0].image;
+                imagetop = document.getElementById("imagetop").appendChild(img);
+                // document.getElementById("resultImages").src = data.data[0].image;
                 document.getElementById("resultDetail").innerHTML = data.data[0].short_detail;
                 document.getElementById("resultLink").href = "/news-activity/" + data.data[0].id + "?view=" + data.data[
                     0].id;
@@ -514,8 +517,10 @@
             } else {
               spanDescription.innerHTML =  data.data[0].title;
             }
-            console.log(data.data[0].image);
-
+            // console.log(data.data[0].image);
+            let img = document.createElement("img");
+                img.src = data.data[0].image;
+                imagetop = document.getElementById("imagetop").appendChild(img);
           document.getElementById("resultImages").src = data.data[0].image;
           document.getElementById("resultDetail").innerHTML = data.data[0].short_detail;
           document.getElementById("resultLink").href = "news-activity-detail.html?view="+data.data[0].id;

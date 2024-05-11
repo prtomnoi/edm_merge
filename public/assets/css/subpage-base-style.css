@@ -221,7 +221,13 @@
     margin-top: 6rem;
     padding-top: 1rem;
     height: 565px;
-    width: 100%;
+    /* max-height: 565px; */
+    /* height: auto; */
+    /* display: grid;
+    grid-template-columns: 400px;
+    justify-content: center;
+    margin-top: 0;
+    width: 100%; */
     /* margin-right: 3rem; */
 }
 
@@ -289,6 +295,7 @@
         background: #1d1d1d;
         margin-top: 3rem;
         padding-top: 1rem;
+        height: auto;
     }
 }
 
@@ -299,5 +306,6 @@
         margin-right: 3rem;
         margin-left: 3rem;
         margin-bottom: 3rem;
+        height: auto;
     }
 }

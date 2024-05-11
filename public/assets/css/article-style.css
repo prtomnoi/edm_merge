@@ -7,6 +7,8 @@
 
 .act-card {
     max-width: 353px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .act-card>div {
