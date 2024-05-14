@@ -86,9 +86,9 @@ if (currentLanguage === null) {
 }
 
 // Add click event listeners to language change buttons
-thaiBtn.addEventListener("click", () => changeLanguage("th"));
+// thaiBtn.addEventListener("click", () => changeLanguage("th"));
 // engBtn.addEventListener("click", () => changeLanguage("eng"));
-thaiBtn2.addEventListener("click", () => changeLanguage("th"));
+// thaiBtn2.addEventListener("click", () => changeLanguage("th"));
 // engBtn2.addEventListener("click", () => changeLanguage("eng"));
 
 // Function to change language
@@ -121,4 +121,8 @@ linksUnderline.forEach(function(item) {
     } else {
         item.classList.remove('active')
     }
+});
+window.addEventListener("scroll", () => {
+    const navBar = document.querySelector("nav");
+    navBar.classList.toggle("sticky", window.scrollY > 0);
 });

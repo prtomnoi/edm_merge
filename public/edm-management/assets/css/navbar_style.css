@@ -36,6 +36,13 @@
   height: fit-content;
 }
 
+nav.sticky {
+    position: fixed;
+    top: 0;
+    /* background: #000000e3; */
+    background: #000000;
+  }
+
 nav {
   display: flex;
   align-items: center;
@@ -46,6 +53,7 @@ nav {
   justify-content: start;
   padding: 1rem 1.8rem;
   color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-menu {

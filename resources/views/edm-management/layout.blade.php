@@ -40,7 +40,7 @@
     </div>
 
     <div class="main">
-        <nav>
+        <nav class="">
             <!-- Nav Hamberger menu -->
             <div class="nav-menu">
                 <img src="{{asset('edm-management/assets/img/menu.svg')}}" alt="" />
