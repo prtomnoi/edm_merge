@@ -58,20 +58,20 @@ document.addEventListener("click", (e) => {
 // Dropdown Functions
 
 // document.addEventListener("mouseover", (e) => {
-//   const isDropdownButton = e.target.matches("[data-dropdown-button]");
+//   const isDropdownButton = e.target.matches("[menus-dropdown-btn]");
 
-//   if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
+//   if (!isDropdownButton && e.target.closest("[menus-dropdown]") != null) return;
 
 //   let currentDropdown;
 //   if (isDropdownButton) {
-//     currentDropdown = e.target.closest("[data-dropdown]");
+//     currentDropdown = e.target.closest("[menus-dropdown]");
 //     currentDropdown.classList.toggle("active");
 //   }
 
-// //   document.querySelectorAll("[data-dropdown].active").forEach((dropdown) => {
-// //     if (dropdown === currentDropdown) return;
-// //     dropdown.classList.remove("active");
-// //   });
+//   document.querySelectorAll("[menus-dropdown].active").forEach((dropdown) => {
+//     if (dropdown === currentDropdown) return;
+//     dropdown.classList.remove("active");
+//   });
 // });
 
 document.addEventListener("click", (e) => {

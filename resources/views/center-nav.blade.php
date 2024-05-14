@@ -1,4 +1,4 @@
-<div class="top-collapse-wrapper" collapse-content="company">
+<div class="top-collapse-wrapper-other" collapse-content="company">
     <div class="top-sec">
         <div class="top-link-item">
             <a href="{{ url('edm-management/index') }}" target="_black" rel="noopener noreferrer"><img src="{{ asset('assets/img/edm-logo-2.png') }}"
@@ -28,7 +28,7 @@
   </div> --}}
     </div>
 </div>
-<div class="top-collapse-wrapper" collapse-content="contact">
+{{-- <div class="top-collapse-wrapper-other" collapse-content="contact">
     <div class="top-sec">
         <div class="contact-us-header">
             <p>Have Question?</p>
@@ -36,8 +36,6 @@
             <div>
                 <img src="{{ asset('assets/img/google-map-icon.png') }}" alt="" />
                 <p>
-                    {{-- 250/48 Sammakorn Soi 42 Ramkhamhaeng 112, Saphansung
-                    Sub-district, Saphansung District, Bangkok Thailand 10240 --}}
                     250/48 Ramkhamhaeng 112 Ramkhamhaeng rd.
                     Saphansung, Saphansung, Bangkok Thailand 10240
                 </p>
@@ -59,4 +57,4 @@
             <button type="submit">SEND</button>
         </form>
     </div>
-</div>
+</div> --}}

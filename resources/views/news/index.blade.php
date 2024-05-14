@@ -26,21 +26,24 @@
             margin: auto;
             padding-bottom: 20px;
         }
-        .image-container {
-          position: relative;
-          width: 100%; /* Adjust width as needed */
-          padding-top: 56.25%; /* 9/16 = 0.5625 */
-          overflow: hidden;
-      }
 
-      .image-container img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover; 
-      }
+        .image-container {
+            position: relative;
+            width: 100%;
+            /* Adjust width as needed */
+            padding-top: 56.25%;
+            /* 9/16 = 0.5625 */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
     <section class="header-sec">
 
@@ -55,23 +58,24 @@
             <div class="sub-search">
                 {{-- <div class="form-div"> --}}
                 <div class="form-div">
-                    <input class="inputSearch"  type="search" placeholder="SEARCH" name="search" id="search" class="" />
+                    <input class="inputSearch" type="search" placeholder="SEARCH" name="search" id="search"
+                        class="" />
                     <button type="submit" class="buttonSearch" onclick="searchInput()">
                         <img src="{{ asset('assets/img/icon_search.svg') }}" alt="" />
                     </button>
-                <div>
-                {{-- </div> --}}
-            </div>
-        </div>
+                    <div>
+                        {{-- </div> --}}
+                    </div>
+                </div>
     </section>
 
     <section class="campaign" style="text-align: left;">
         <div class="campaign-header">
             <span id="resultDate">loading ..</span>
             <div class="campaign-thumbnail">
-              <div class="image-container" id="imagetop">
-                <!-- <img id="resultImages" src="" alt="" /> -->
-              </div>
+                <div class="image-container" id="imagetop">
+                    <!-- <img id="resultImages" src="" alt="" /> -->
+                </div>
             </div>
             <div class="campaign-h-des">
                 <div>
@@ -92,11 +96,30 @@
     </div>
     <div class="d-flex align-content-center align-items-lg-center w-100" id="demo">
     </div>
+    <section class="contact-us">
+        <hr class="section-line" />
+        <div class="contact-us-form">
+            <div id="contactSectionMedia">
+                <p>Have Question?</p>
+                <h2>CONTACT US</h2>
+                <p>
+                    Got doubts? Reach out to us and we will help you out with your
+                    queries. You can ask us anything, we are available for you.
+                </p>
+            </div>
+            <form action="">
+                <input type="text" placeholder="Enter Your Name" />
+                <input type="email" placeholder="Enter Your Email" />
+                <textarea name="" id="" cols="30" rows="10" placeholder="Enter Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 @endsection
 
 @section('scripts')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.5/pagination.css">
-    <script src="{{asset('assets/js/pagination.js')}}"></script>
+    <script src="{{ asset('assets/js/pagination.js') }}"></script>
     <script>
         const queryString = window.location.search;
         const params = new URLSearchParams(queryString);
@@ -113,13 +136,13 @@
                 html += '</a>';
                 html += '<div>';
                 // html += '<span>' + element.type + '</span>'
-                    // if(element.signature)
-                    // {
-                    //     html += '<span>'+ element.signature  +'</span>';
-                    // } else
-                    // {
-                    //     html += '<span> </span>';
-                    // }
+                // if(element.signature)
+                // {
+                //     html += '<span>'+ element.signature  +'</span>';
+                // } else
+                // {
+                //     html += '<span> </span>';
+                // }
                 html += '<span class="description">' + element.title + '</span>';
                 html += '<a href="news-activity/' + element.id + '?view=' + element.id + '">READ MORE</a>';
                 html += '</div>';
@@ -144,6 +167,15 @@
                         activityCards.innerHTML = html;
                     }
                 });
+                const hash = window.location.hash; // Get the hash part of the URL
+                const targetSection = document.getElementById(
+                'contactSectionMedia'); // Get the element with the id "contactSection"
+
+                if (hash === '#contactSectionMedia' && targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth' // Add smooth scrolling for better user experience
+                    });
+                }
                 // newsData.data.forEach(newsItem => {
                 //     const isTitleNull = currentLanguage == 'eng' ? newsItem.title_en == null : newsItem.title ==
                 //         null;
@@ -216,7 +248,7 @@
                     spanDescription.innerHTML = data.data[0].title;
                 }
                 // console.log(data.data[0].image);
-                
+
                 let img = document.createElement("img");
                 img.src = data.data[0].image;
                 imagetop = document.getElementById("imagetop").appendChild(img);
@@ -254,6 +286,15 @@
                             activityCards.innerHTML = html;
                         }
                     })
+                    const hash = window.location.hash; // Get the hash part of the URL
+                    const targetSection = document.getElementById(
+                        'contactSectionMedia'); // Get the element with the id "contactSection"
+
+                    if (hash === '#contactSectionMedia' && targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth' // Add smooth scrolling for better user experience
+                        });
+                    }
                     // newsData.data.forEach(newsItem => {
                     //     const isTitleNull = currentLanguage == 'eng' ? newsItem.title_en == null : newsItem
                     //         .title ==

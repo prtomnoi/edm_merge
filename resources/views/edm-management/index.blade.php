@@ -161,7 +161,21 @@
 <script>
     const apiUrl = 'https://edmcompany.co.th/api/portfolio-items-limit/5'; // Replace with your API URL
     const worksContainer = document.querySelector('.works-container');
-
+    function templateWorkImgs(data, id) {
+        let html = "";
+        html += ``;
+        data.forEach((element, index) => {
+            if(index > 2)
+            {
+                return false;
+            }
+            html += `<a href="our-work/${id}?view=${id}">
+                <img src="${element.image}" alt="img">
+                </a>
+            `;
+        });
+        return html;
+    }
     // Fetch data from the API and populate the HTML structure
     fetch(apiUrl)
       .then(response => {
@@ -176,19 +190,22 @@
           workItem.classList.add('work-item');
 
           const workImgs = document.createElement('div');
+          const workImgsA = document.createElement('a');
           workImgs.classList.add('work-imgs');
-          for (let i = 0; i < Math.min(item.images.length, 3); i++) {
-            const img = document.createElement('img');
-            img.src = item.images[i].image;
-            img.alt = 'Work Image';
-            workImgs.appendChild(img);
-          }
+        //   for (let i = 0; i < Math.min(item.images.length, 3); i++) {
+        //     const img = document.createElement('img');
+        //     img.src = item.images[i].image;
+        //     img.alt = 'Work Image';
+        //     // workImgs.appendChild(img);
+        //     workImgsA.appendChild(img);
+        //   }
+          workImgs.innerHTML = templateWorkImgs(item.images, item.id);
 
 
           const workTxt = document.createElement('div');
           workTxt.classList.add('work-txt');
           workTxt.innerHTML = `
-            <h3>${item.title}</h3>
+            <a href="our-work/${item.id}?view=${item.id}"><h3>${item.title}</h3></a>
             <p>${item.short_detail_en}</p>
             <div class="morebtn">
               <a href="our-work/${item.id}?view=${item.id}">Read More</a>

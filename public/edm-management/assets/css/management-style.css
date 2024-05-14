@@ -15,7 +15,7 @@ a {
     background: none;
 }
 
-.work-imgs>img {
+.work-imgs > a > img {
     object-fit: cover;
     object-position: center;
     border-radius: 1rem;
@@ -51,14 +51,20 @@ a {
     max-width: 556px;
 }
 
-.work-imgs>img {
-    width: 45%;
+.work-imgs > a >img {
+    width: 100%;
     max-width: 260px;
     height: 260px;
     border: none;
 }
 
-.work-imgs>img:first-of-type {
+.work-imgs > a:first-of-type {
+    width: 100%;
+    max-width: 556px;
+    height: 304px;
+}
+
+.work-imgs > a:first-of-type > img {
     width: 100%;
     max-width: 556px;
     height: 304px;
@@ -69,11 +75,15 @@ a {
     text-align: start;
 }
 
-.work-txt>h3 {
+.work-txt > a {
+    color: white;
+}
+
+.work-txt > a > h3 {
     margin: 0 0 2rem 0;
 }
 
-.work-txt>h3::after {
+.work-txt > a > h3::after {
     content: "";
     margin: 1.5rem 0 0 0;
     display: block;
@@ -126,7 +136,7 @@ a {
 @media (min-width: 1200px) {}
 
 @media (min-width: 1400px) {
-    .work-txt>h3 {
+    .work-txt> a > h3 {
         font-size: 30px;
         font-weight: 700;
     }

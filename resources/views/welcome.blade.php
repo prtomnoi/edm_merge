@@ -52,9 +52,80 @@
                 <a href="{{ url('/') }}"><img src="{{ asset('assets/img/edm-company-logo.png') }}"
                         alt="" /></a>
                 <div class="nav-btns-wrapper">
-                    <a href="#" collapse-button="company">COMPANY AND SERVICES</a>
+                    <ul class="menu">
+                        <a href="#" collapse-button="company">COMPANY AND SERVICES</a>
+                        <ul>
+                            <div class="top-collapse-wrapper" collapse-content="company">
+                                <div class="top-sec">
+                                    <div class="top-link-item">
+                                        <a href="{{ url('edm-management/index') }}" target="_black" rel="noopener noreferrer"><img src="{{ asset('assets/img/edm-logo-2.png') }}"
+                                                alt="" /></a>
+                                        <ul>
+                                            <li>Network Solution</li>
+                                            <li>Network Comsulting</li>
+                                            <li>Event</li>
+                                            <li>Live Steam Broadcast</li>
+                                        </ul>
+                                    </div>
+                                    <div class="top-link-item">
+                                        <a href="{{ url('edm-media/index') }}" target="_black" rel="noopener noreferrer"><img src="{{ asset('assets/img/edm-logo.png') }}"
+                                                alt="" /></a>
+                                        <ul>
+                                            <li>KOLs</li>
+                                            <li>Media Reach</li>
+                                            <li>Marketing Consulting</li>
+                                        </ul>
+                                    </div>
+                                    {{-- <div class="top-link-item">
+                                <img src="{{asset('assets/img/edm-innovation.png')}}" alt="" />
+                                <ul>
+                                  <li><a href="#"> Virtual Reality </a></li>
+                                  <li><a href="#"> Software Development </a></li>
+                                </ul>
+                              </div> --}}
+                                </div>
+                            </div>
+                        </ul>
+                    </ul>
                     <a href="{{ route('news-activity.index') }}" class="underline">NEWS</a>
-                    <a href="#" collapse-button="contact">CONTACT US</a>
+                    <ul class="contact-us-ul">
+                        <a href="#" collapse-button="contact">CONTACT US</a>
+                        <ul>
+                            <div class="top-collapse-wrapper" collapse-content="contact">
+                                <div class="top-sec">
+                                    <div class="contact-us-header">
+                                        <p>Have Question?</p>
+                                        <h1>CONTACT US</h1>
+                                        <div>
+                                            <img src="{{ asset('assets/img/google-map-icon.png') }}" alt="" />
+                                            <p>
+                                                {{-- 250/48 Sammakorn Soi 42 Ramkhamhaeng 112, Saphansung
+                                                Sub-district, Saphansung District, Bangkok Thailand 10240 --}}
+                                                250/48 Ramkhamhaeng 112 Ramkhamhaeng rd.
+                                                Saphansung, Saphansung, Bangkok Thailand 10240
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <form class="main-contact-us-form" id="contact-us-form">
+                                        @csrf
+                                        <div>
+                                            <input type="text" name="company" value="CENTER" hidden>
+                                            <input type="text" title="name" placeholder="Enter Your Name" name="name" />
+                                            <input type="tel" title="phone" placeholder="Enter Your Phone Number" name="phone" />
+                                        </div>
+                                        <div>
+                                            <input type="email" title="email" placeholder="Enter Your Email" name="email" />
+                                            <input type="text" title="company" placeholder="Enter Your Company"
+                                                name="user_company" />
+                                        </div>
+                                        <textarea name="message" id="" rows="4" placeholder="Enter your message"></textarea>
+                                        <button type="submit">SEND</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </ul>
+                    </ul>
+
                     {{-- <div class="nav-dropdown" menus-dropdown>
                         <button class="nav-dropdown-btn" menus-dropdown-btn>
                             <img src="{{ asset('assets/img/thai-lang-icon.png') }}" alt="" />
@@ -72,7 +143,7 @@
                 </div>
             </div>
         </nav>
-        {{ view('center-nav') }}
+        {{-- {{ view('center-nav') }} --}}
         {{-- <div class="top-collapse-wrapper" collapse-content="company">
             <div class="top-sec">
                 <div class="top-link-item">
@@ -159,7 +230,7 @@
         </div>
     </main>
 
-    <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
+    {{-- <script src="{{ asset('assets/js/navbarindex.js?v=6') }}"></script> --}}
     <script>
         const instaForm = document.getElementById("contact-us-form");
         instaForm.addEventListener("submit", (event) => {

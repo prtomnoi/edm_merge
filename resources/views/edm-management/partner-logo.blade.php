@@ -1,6 +1,58 @@
 <div class="partner-logo">
     <div>
-        <img src="{{ asset('assets/img/partners-icons/11_Bandai-Namco-New-Logo.png') }}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/1-garena.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/2-nexon.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/3-ow.png')}}" />
+        <img src="{{asset('assets/img/manage-partner-icons/4-blizzard.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/5-Riot_Games_logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/6-valorant-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/7-tencent.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/8-shopee-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/9-google-play-icon.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/10-ubisoft.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/11-Youtube-Logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/12-mvp.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/13-tgs.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/14-os.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/15-nbct.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/16-BYG.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/17-tesf.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/18-ptt.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/19-toyota-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/20-true-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/21-ais.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/22-paragon.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/23-true-icon.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/24-bts.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/25-aov.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/26-rov.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/27-pubg-m.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/28-pubg.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/29-logitech.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/30-samsung.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/31-intel.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/32-wd-black-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/33-fifa-4.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/34-fifa.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/35-ea.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/36-ps.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/37-facebook-icon.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/38-acer-predator-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/39-synnex.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/40-Set-logo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/41-bitkub.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/42-assawinasset.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/43-krungsri.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/44-lenovo.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/45-legion.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/46-infocomm.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/47-edtex.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/48-line.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/49-bett.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/50-gg-invitation.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/51-hat.png')}}" alt="" />
+        <img src="{{asset('assets/img/manage-partner-icons/52-ti_logo.png')}}" alt="" />
+        {{-- <img src="{{ asset('assets/img/partners-icons/11_Bandai-Namco-New-Logo.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/ea.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/[CITYPNG.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/1069296.png') }}" alt="" />
@@ -38,7 +90,7 @@
         <img src="{{ asset('assets/img/partners-icons/juawei.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/Realme.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/CORSAIRLogo.png') }}" alt="" />
-        <img src="{{ asset('assets/img/partners-icons/razer.png') }}" alt="" />
+        <img src="{{ asset('assets/img/partners-icons/razer.png') }}" alt="" /> --}}
     </div>
 </div>
 <!-- Client 1 - Bootstrap Brain Component -->

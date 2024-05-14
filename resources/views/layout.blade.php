@@ -77,7 +77,7 @@
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" />
                     TH</a>
-                {{-- <a href="#" id="engBtn"><img src="{{ asset('assets/img/UK.png') }}" alt="" /> ENG</a> --}}
+                <a href="#" id="engBtn"><img src="{{ asset('assets/img/UK.png') }}" alt="" /> ENG</a>
             </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
                 {{-- <a href="{{ route('news-activity.index') }}">NEWS</a> --}}
                 {{-- <a href="{{ route('contact-us.index') }}" class="underline">CONTACT US</a> --}}
                 <a href="#contactSectionMedia" class="underline">CONTACT US</a>
-                <div class="nav-dropdown" menus-dropdown>
+                {{-- <div class="nav-dropdown" menus-dropdown>
                     <button class="nav-dropdown-btn" menus-dropdown-btn>
                         <img src="{{ asset('assets/img/thai-lang-icon.png') }}" alt="" />
                         <span>TH</span>
@@ -125,10 +125,10 @@
                         <a href="#"><img src="{{ asset('assets/img/thai-lang-icon.png') }}" id="thaiBtn2"
                                 alt="" />
                             TH</a>
-                        {{-- <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
-                                alt="" /> ENG</a> --}}
+                        <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
+                                alt="" /> ENG</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </nav>

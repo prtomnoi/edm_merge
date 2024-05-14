@@ -52,7 +52,7 @@
                     <a href="{{route('our-work.index')}}" class="underline-our">OUR WORK</a>
                     <a href="#serviceSection" class="underline">SERVICE</a>
                     <a href="#contactSectionManagement" class="underline">CONTACT US</a>
-                    <div class="nav-dropdown" data-dropdown>
+                    {{-- <div class="nav-dropdown" data-dropdown>
                         <button class="nav-dropdown-btn" data-dropdown-button>
                             <img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" alt="" /> TH
                             <img src="{{asset('edm-management/assets/img/expand.svg')}}" alt="" />
@@ -60,9 +60,9 @@
                         <div class="nav-dropdown-menu">
                             <a href=""><img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" width="20" alt="" id="thaiBtn2" />
                                 TH</a>
-                            {{-- <a href=""><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" id="engBtn2" /> ENG</a> --}}
+                            <a href=""><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" id="engBtn2" /> ENG</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </nav>

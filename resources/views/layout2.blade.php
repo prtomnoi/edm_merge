@@ -134,8 +134,8 @@
             <div class="nav-btns-wrapper">
                 <a href="#" collapse-button="company">COMPANY AND SERVICES</a>
                 <a href="{{ route('news-activity.index') }}" class="underline">NEWS</a>
-                <a href="#" collapse-button="contact">CONTACT US</a>
-                <div class="nav-dropdown" menus-dropdown>
+                <a href="#contactSectionMedia">CONTACT US</a>
+                {{-- <div class="nav-dropdown" menus-dropdown>
                     <button class="nav-dropdown-btn" menus-dropdown-btn>
                         <img src="{{ asset('assets/img/thai-lang-icon.png') }}" alt="" />
                         <span>TH</span>
@@ -145,10 +145,10 @@
                         <a href="#"><img src="{{ asset('assets/img/thai-lang-icon.png') }}" id="thaiBtn2"
                                 alt="" />
                             TH</a>
-                        {{-- <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
-                                alt="" /> ENG</a> --}}
+                        <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
+                                alt="" /> ENG</a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </nav>
@@ -292,7 +292,6 @@
                 const newsData = await response.json();
                 const gadGet = document.getElementById('gadget-menu');
                 const anchorTags = gadGet.querySelectorAll('.gadget-menu a');
-                console.log(newsData);
                 const a_array = [...anchorTags]; // convert node to array
                 // if (anchorTags.length != 0) {
 
