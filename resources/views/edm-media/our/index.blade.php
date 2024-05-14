@@ -135,7 +135,7 @@
                 const activityCards = document.getElementById('campaign-cards');
                 $('#demo').pagination({
                     dataSource: newsData.data,
-                    pageSize: 6,
+                    pageSize: 15,
                     showPrevious: true,
                     showNext: true,
                     callback: function(data, pagination) {

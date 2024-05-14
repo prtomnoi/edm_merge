@@ -300,24 +300,24 @@
                 <ul class="vtuber-slider" id="vtuber-slider"></ul>
             </div> --}}
         </section>
-        <div class="slider-gallery">
-            <div class="flex justify-content-around">
-                <div id="image-slider" class="splide">
-                    <div class="splide__track">
-                        <ul class="splide__list" id="vtuber-slider">
-                            {{-- <li class="splide__slide">
-                                <img src="{{asset('assets/img/activity_img_1.png')}}">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="{{asset('assets/img/activity_img_1.png')}}">
-                            </li>
-                            <li class="splide__slide">
-                                <img src="{{asset('assets/img/activity_img_1.png')}}">
-                            </li> --}}
-                        </ul>
+            <div class="slider-gallery">
+                <div class="flex justify-content-around">
+                    <div id="image-slider" class="splide">
+                        <div class="splide__track">
+                            <ul class="splide__list" id="vtuber-slider">
+                                {{-- <li class="splide__slide">
+                                    <img src="{{asset('assets/img/activity_img_1.png')}}" data-ngsrc="/assets/img/activity_img_1.png" data-nanogallery2-lightbox = '{ "viewerToolbar": { "display": false } }'>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="{{asset('assets/img/activity_img_1.png')}}" data-ngsrc="/assets/img/activity_img_1.png" data-nanogallery2-lightbox>
+                                </li>
+                                <li class="splide__slide">
+                                    <img src="{{asset('assets/img/activity_img_1.png')}}" data-ngsrc="/assets/img/activity_img_1.png" data-nanogallery2-lightbox>
+                                </li> --}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
 
@@ -441,7 +441,10 @@
 
 @section('scripts')
     <link rel="stylesheet" href="{{asset('assets/css/splide.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/nanogallery2.min.css')}}">
     <script src="{{asset('assets/js/splide.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('assets/js/jquery.nanogallery2.min.js')}}"></script> --}}
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const apiUrl = "https://edmcompany.co.th/api/branding-gallery";
@@ -460,12 +463,13 @@
                 vtuberItem.classList.add("splide__slide");
                 const img = document.createElement("img");
                 img.src = imageUrl.image;
-
+                img.setAttribute("data-nanogallery2-lightbox", "");
+                img.setAttribute("data-ngsrc", imageUrl.image);
               vtuberItem.appendChild(img);
               vtuberSlider.appendChild(vtuberItem);
             });
-            var splide = new Splide('#image-slider', {
-            type: 'loop',
+            var splide = new Splide('.splide', {
+            type: 'slide',
             perPage: 3,
             gap: 10,
             arrows: true,
@@ -477,19 +481,29 @@
                 perPage: 2, // Show only 1 image per slide on mobile
                 arrows: false,
                 rewind: true,
-                type: 'loop',
+                type: 'slide',
                 },
                 940: { // Target screens below 640px
                 perPage: 1, // Show only 1 image per slide on mobile
                 arrows: false,
                 rewind: true,
-                type: 'loop',
+                type: 'slide',
                 pagination: false,
                 },
             }
             });
 
             splide.mount();
+            console.log($('#vtuber-slider img'))
+            let imgBlog = document.querySelectorAll('#vtuber-slider img');
+
+            function load_js() {
+                        var head = document.getElementsByTagName('head')[0];
+                        var script = document.createElement('script');
+                        script.src = '/assets/js/jquery.nanogallery2.min.js';
+                        head.appendChild(script);
+                    }
+            load_js();
 
             // setTimeout(() => {
             //   // Initialize the Slick slider
@@ -531,7 +545,7 @@
 
               const dateSpan = document.createElement("span");
               dateSpan.textContent = newsItem.created_at;
-
+              const readMoreLinkImg = document.createElement("a");
               const img = document.createElement("img");
               img.src = newsItem.image;
               img.alt = "";
@@ -551,8 +565,9 @@
               const readMoreLink = document.createElement("a");
               var url = `{{route('news-activity.show', ['news_activity' => 'newsItem.id', 'view' => 'newsItem.id'])}}`;
               readMoreLink.href = url.replaceAll('newsItem.id', newsItem.id);
+              readMoreLinkImg.href = url.replaceAll('newsItem.id', newsItem.id);
                 // "news-activity/"+newsItem.id+"?view=" + newsItem.id;
-              readMoreLink.textContent = "READ MORE";
+              readMoreLink.textContent = "Read More";
 
                 //   divContent.appendChild(typeSpan);
                 //   divContent.appendChild(authorSpan);
@@ -560,7 +575,8 @@
               divContent.appendChild(readMoreLink);
 
               actCard.appendChild(dateSpan);
-              actCard.appendChild(img);
+              actCard.appendChild(readMoreLinkImg);
+              readMoreLinkImg.appendChild(img);
               actCard.appendChild(divContent);
 
               activityCards.appendChild(actCard);
@@ -701,6 +717,9 @@
             dateSpan.textContent = campaignItem.created_at;
 
             const img = document.createElement("img");
+            const readMoreLinkImg = document.createElement("a");
+            readMoreLinkImg.href = campaignItem.link;
+            readMoreLinkImg.target = "_blank";
             img.src = campaignItem.image;
             img.alt = "";
 
@@ -717,7 +736,7 @@
 
             const readMoreLink = document.createElement("a");
             readMoreLink.href = campaignItem.link;
-            readMoreLink.textContent = "READ MORE";
+            readMoreLink.textContent = "Read More";
             readMoreLink.target = "_blank";
 
             // divContent.appendChild(typeSpan);
@@ -726,7 +745,8 @@
             divContent.appendChild(readMoreLink);
 
             campaignCard.appendChild(dateSpan);
-            campaignCard.appendChild(img);
+            campaignCard.appendChild(readMoreLinkImg);
+            readMoreLinkImg.appendChild(img);
             campaignCard.appendChild(divContent);
 
             campaignCards.appendChild(campaignCard);

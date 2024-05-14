@@ -55,7 +55,7 @@
                     <a href="#" collapse-button="company">COMPANY AND SERVICES</a>
                     <a href="{{ route('news-activity.index') }}" class="underline">NEWS</a>
                     <a href="#" collapse-button="contact">CONTACT US</a>
-                    <div class="nav-dropdown" menus-dropdown>
+                    {{-- <div class="nav-dropdown" menus-dropdown>
                         <button class="nav-dropdown-btn" menus-dropdown-btn>
                             <img src="{{ asset('assets/img/thai-lang-icon.png') }}" alt="" />
                             <span>TH</span>
@@ -65,10 +65,10 @@
                             <a href="#"><img src="{{ asset('assets/img/thai-lang-icon.png') }}" id="thaiBtn2"
                                     alt="" />
                                 TH</a>
-                            {{-- <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
-                                    alt="" /> ENG</a> --}}
+                            <a href="#"><img src="{{ asset('assets/img/UK.png') }}" id="engBtn2"
+                                    alt="" /> ENG</a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </nav>
@@ -135,8 +135,8 @@
         </div> --}}
         <div class="links-sec">
             <div class="link-item orange" data-dropdown>
-                <h1 data-dropdown-button><a href="{{ url('edm-management/index') }}"
-                        style="color: inherit" target="_black" rel="noopener noreferrer">MANAGEMENT</a></h1>
+                <a href="{{ url('edm-management/index') }}"
+                        style="color: inherit" target="_black" rel="noopener noreferrer"><h1>MANAGEMENT</h1></a>
                 <div class="links-wrapper">
                     <ul>
                         <li><a href="#"> Network Solution </a></li>
@@ -147,7 +147,7 @@
                 </div>
             </div>
             <div class="link-item blue">
-                <h1><a href="{{ url('edm-media/index') }}" style="color: inherit" target="_black" rel="noopener noreferrer">MEDIA</a></h1>
+                <a href="{{ url('edm-media/index') }}" style="color: inherit" target="_black" rel="noopener noreferrer"><h1>MEDIA</h1></a>
                 <div class="links-wrapper">
                     <ul>
                         <li><a href="#">KOLs</a></li>

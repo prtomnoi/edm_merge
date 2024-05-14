@@ -36,8 +36,10 @@
             <div>
                 <img src="{{ asset('assets/img/google-map-icon.png') }}" alt="" />
                 <p>
-                    250/48 Sammakorn Soi 42 Ramkhamhaeng 112, Saphansung
-                    Sub-district, Saphansung District, Bangkok Thailand 10240
+                    {{-- 250/48 Sammakorn Soi 42 Ramkhamhaeng 112, Saphansung
+                    Sub-district, Saphansung District, Bangkok Thailand 10240 --}}
+                    250/48 Ramkhamhaeng 112 Ramkhamhaeng rd.
+                    Saphansung, Saphansung, Bangkok Thailand 10240
                 </p>
             </div>
         </div>

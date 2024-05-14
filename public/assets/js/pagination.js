@@ -737,6 +737,7 @@
                     self.go(pageNumber);
 
                     self.callHook('afterPageOnClick', event, pageNumber);
+                    window.scrollTo({top: 0})
 
                     if (!attributes.pageLink) return false;
                 });
@@ -753,6 +754,7 @@
                     self.go(pageNumber);
 
                     self.callHook('afterPreviousOnClick', event, pageNumber);
+                    window.scrollTo({top: 0})
 
                     if (!attributes.pageLink) return false;
                 });
@@ -769,6 +771,7 @@
                     self.go(pageNumber);
 
                     self.callHook('afterNextOnClick', event, pageNumber);
+                    window.scrollTo({top: 0})
 
                     if (!attributes.pageLink) return false;
                 });
@@ -791,6 +794,7 @@
                     container.trigger(eventPrefix + 'go', pageNumber);
 
                     self.callHook('afterGoButtonOnClick', event, pageNumber);
+                    window.scrollTo({top: 0})
                 });
                 el.on('click', '.J-paginationjs-last-button', function(event) {
                     var pageNumber = self.getTotalPage();
@@ -801,6 +805,7 @@
                     container.trigger(eventPrefix + 'go', pageNumber);
 
                     self.callHook('afterGoButtonOnClick', event, pageNumber);
+                    window.scrollTo({top: 0})
                 });
 
                 // go input enter keyup listener

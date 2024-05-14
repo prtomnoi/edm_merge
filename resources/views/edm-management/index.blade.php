@@ -73,7 +73,7 @@
                 สำหรับงานอีเว้นท์และสถานที่ต่าง ๆ เพื่อให้เกิดประสิทธิภาพมากที่สุด
             </p>
         </div>
-        {{view('partner-logo')}}
+        {{view('edm-management.partner-logo')}}
         {{-- <div class="partner-logo">
             <div>
                 <img src="assets/img/manage-partner-icons/1-garena.png" alt="" />
@@ -191,7 +191,7 @@
             <h3>${item.title}</h3>
             <p>${item.short_detail_en}</p>
             <div class="morebtn">
-              <a href="our-work/${item.id}?view=${item.id}">LOAD MORE</a>
+              <a href="our-work/${item.id}?view=${item.id}">Read More</a>
             </div>
           `;
 

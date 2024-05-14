@@ -52,7 +52,11 @@ body {
   --color: #12adf7;
 }
 
-.link-item > h1 {
+.link-item > a {
+    width: 100%;
+}
+
+.link-item > a > h1 {
   background-color: black;
   color: white;
   border-radius: 999px;
