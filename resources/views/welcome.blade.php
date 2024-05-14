@@ -230,7 +230,7 @@
         </div>
     </main>
 
-    {{-- <script src="{{ asset('assets/js/navbarindex.js?v=6') }}"></script> --}}
+    <script src="{{ asset('assets/js/navbarindex.js?v=6') }}"></script>
     <script>
         const instaForm = document.getElementById("contact-us-form");
         instaForm.addEventListener("submit", (event) => {
