@@ -20,6 +20,15 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=5') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
     <link rel="shotcut icon"  href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BD0DNRZH9H');
+    </script>
     <style>
         .video-iframe {
             width: 100%;
@@ -67,7 +76,7 @@
                 <div class="collapse" id="forBrand">
                     <div class="card card-body">
                         <a href="{{ route('branding.index') }}">Service</a>
-                        <a href="">Campaign</a>
+                        <a href="{{ route('our-campaign.index') }}">Campaign</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +191,7 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
 
-    <!-- Google tag (gtag.js) --> <script async src="[https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H](https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BD0DNRZH9H'); </script><script>
+   <script>
         const newsApiUrl = 'https://edmcompany.co.th/api/settings/1';
         async function fetchNews() {
             try {

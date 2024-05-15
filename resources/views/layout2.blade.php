@@ -23,6 +23,15 @@
     <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=' . filemtime(public_path('assets/css/article-style.css'))) }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
     <link rel="shotcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BD0DNRZH9H');
+    </script>
 
     <style>
         .video-iframe {
@@ -283,7 +292,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
-    <!-- Google tag (gtag.js) --> <script async src="[https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H](https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BD0DNRZH9H'); </script>
+   
     <script>
         const settingApiUrl = 'https://edmcompany.co.th/api/settings/3';
         async function fetchSetting() {

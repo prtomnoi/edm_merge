@@ -16,6 +16,15 @@
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/article-style.css?v='  . filemtime(public_path('edm-management/assets/css/article-style.css')))}}" />
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/contact-us.css?v=' . filemtime(public_path('edm-management/assets/css/contact-us.css')))}}" />
     <link rel="shotcut icon" type="image/svg+xml" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BD0DNRZH9H');
+        </script>
 </head>
 
 <body>
@@ -26,7 +35,7 @@
         </svg>
 
         <div class="side-btn-section">
-            <a href="index.html" class="side-btn"><img src="{{asset('edm-management/assets/img/edm-logo.png')}}" alt="" /></a>
+            <a href="{{ url('edm-management/index') }}" class="side-btn"><img src="{{asset('edm-management/assets/img/edm-logo.png')}}" alt="" /></a>
 
             <a href="{{route('our-work.index')}}" class="side-btn">OUR WORK</a>
             <a href="#serviceSection" class="side-btn">SERVICE</a>
@@ -171,7 +180,7 @@
         });
     </script> --}}
     @yield('scripts')
-    <!-- Google tag (gtag.js) --> <script async src="[https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H](https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H)"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-BD0DNRZH9H'); </script>
+    
     <script>
          const settingApiUrl = 'https://edmcompany.co.th/api/settings/2';
         async function fetchSetting() {
