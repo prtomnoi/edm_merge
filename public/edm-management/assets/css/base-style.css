@@ -431,10 +431,12 @@ section h1 {
 
 .act-card>img {
     width: 100%;
-    max-width: 412px;
-    max-height: 300px;
+    /* max-width: 412px; */
+    /* max-height: 300px; */
     object-fit: cover;
     object-position: center;
+    height: 320px;
+    aspect-ratio: 16 / 9;
 }
 
 .activity-item-h>h1 {
@@ -453,6 +455,7 @@ section h1 {
     background: #171313;
     padding: 1rem;
     gap: 0.5rem;
+    flex-direction: column;
 }
 
 .act-card>span,

@@ -22,7 +22,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover; 
+          object-fit: cover;
       }
 </style>
     <div class="main">
@@ -188,7 +188,7 @@
                     Description.innerHTML = data.data[0].detail;
                 }
                 updateDOMElements();
-           
+
             })
             .catch(function(e) {
                 console.log(e);
@@ -255,7 +255,7 @@
 
             fetchTopRecentActivities();
         });
-        
+
 
 
       function updateDOMElements() {

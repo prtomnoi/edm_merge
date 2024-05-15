@@ -159,21 +159,22 @@
 
 @section('scripts')
 <script>
+    // const apiUrl = 'https://edmcompany.co.th/api/portfolio-items-limit/5'; // Replace with your API URL
     const apiUrl = 'https://edmcompany.co.th/api/portfolio-items-limit/5'; // Replace with your API URL
     const worksContainer = document.querySelector('.works-container');
     function templateWorkImgs(data, id) {
         let html = "";
         html += ``;
-        data.forEach((element, index) => {
-            if(index > 2)
-            {
-                return false;
-            }
+        // data.forEach((element, index) => {
+            // if(index > 2)
+            // {
+            //     return false;
+            // }
             html += `<a href="our-work/${id}?view=${id}">
-                <img src="${element.image}" alt="img">
+                <img src="${data}" alt="img">
                 </a>
             `;
-        });
+        // });
         return html;
     }
     // Fetch data from the API and populate the HTML structure
@@ -199,7 +200,7 @@
         //     // workImgs.appendChild(img);
         //     workImgsA.appendChild(img);
         //   }
-          workImgs.innerHTML = templateWorkImgs(item.images, item.id);
+          workImgs.innerHTML = templateWorkImgs(item.image, item.id);
 
 
           const workTxt = document.createElement('div');
