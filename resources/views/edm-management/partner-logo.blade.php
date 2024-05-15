@@ -41,7 +41,7 @@
         <img src="{{asset('assets/img/manage-partner-icons/39-synnex.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/40-Set-logo.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/41-bitkub.png')}}" alt="" />
-        <img src="{{asset('assets/img/manage-partner-icons/42-assawinasset.png')}}" alt="" />
+        {{-- <img src="{{asset('assets/img/manage-partner-icons/42-assawinasset.png')}}" alt="" /> --}}
         <img src="{{asset('assets/img/manage-partner-icons/43-krungsri.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/44-lenovo.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/45-legion.png')}}" alt="" />
@@ -50,7 +50,7 @@
         <img src="{{asset('assets/img/manage-partner-icons/48-line.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/49-bett.png')}}" alt="" />
         <img src="{{asset('assets/img/manage-partner-icons/50-gg-invitation.png')}}" alt="" />
-        <img src="{{asset('assets/img/manage-partner-icons/51-hat.png')}}" alt="" />
+        {{-- <img src="{{asset('assets/img/manage-partner-icons/51-hat.png')}}" alt="" /> --}}
         <img src="{{asset('assets/img/manage-partner-icons/52-ti_logo.png')}}" alt="" />
         {{-- <img src="{{ asset('assets/img/partners-icons/11_Bandai-Namco-New-Logo.png') }}" alt="" />
         <img src="{{ asset('assets/img/partners-icons/ea.png') }}" alt="" />
