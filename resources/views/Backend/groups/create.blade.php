@@ -32,9 +32,13 @@
   @endsection
 
   @section('scripts')
-  <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+  {{-- <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script> --}}
+  <script src="{{ URL::asset('backend/assets/libs/ckeditor/ckeditor.js') }}"></script>
   <script>
       CKEDITOR.config.allowedContent = true;
+      CKEDITOR.config.iframe_attributes = {
+            sandbox: 'allow-scripts allow-same-origin'
+      }
       CKEDITOR.replace('editor', {
           filebrowserUploadUrl: "{{ route('upload', ['_token' => csrf_token()]) }}",
           filebrowserUploadMethod: 'form',

@@ -65,7 +65,8 @@
 @endsection
 
 @section('scripts')
-    <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script>
+    {{-- <script src="//cdn.ckeditor.com/4.22.1/full/ckeditor.js"></script> --}}
+    <script src="{{ URL::asset('backend/assets/libs/ckeditor/ckeditor.js') }}"></script>
     <script>
     function checkValue() {
         var name = $('#name').val();
