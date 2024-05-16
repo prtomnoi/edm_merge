@@ -82,12 +82,12 @@
             </div>
             {{-- <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a> --}}
             <a href="#contactSectionMedia" class="side-btn">CONTACT US</a>
-            <div class="lang-change-btns">
+            {{-- <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" />
                     TH</a>
                 <a href="#" id="engBtn"><img src="{{ asset('assets/img/UK.png') }}" alt="" /> ENG</a>
-            </div>
+            </div> --}}
         </div>
     </div>
     <nav class="">

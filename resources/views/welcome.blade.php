@@ -29,11 +29,11 @@
             <a href="{{ route('news-activity.index') }}" class="side-btn">News</a>
             <a href="{{ route('contact-us.index') }}" class="side-btn">CONTACT US</a>
 
-            <div class="lang-change-btns">
+            {{-- <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" /> TH</a>
-                {{-- <a href="#" id="engBtn"><img src="assets/img/UK.png" alt="" /> ENG</a> --}}
-            </div>
+                <a href="#" id="engBtn"><img src="assets/img/UK.png" alt="" /> ENG</a>
+            </div> --}}
         </div>
     </div>
 

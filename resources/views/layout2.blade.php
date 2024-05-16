@@ -87,12 +87,12 @@
             </div>
             <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a>
             <a href="{{ route('contact-us.index') }}" class="side-btn">CONTACT US</a>
-            <div class="lang-change-btns">
+            {{-- <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
                         alt="" />
                     TH</a>
                 <a href="#" id="engBtn"><img src="{{ asset('assets/img/UK.png') }}" alt="" /> ENG</a>
-            </div>
+            </div> --}}
         </div>
     </div>
     {{-- <nav class="">
@@ -292,7 +292,7 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
-   
+
     <script>
         const settingApiUrl = 'https://edmcompany.co.th/api/settings/3';
         async function fetchSetting() {

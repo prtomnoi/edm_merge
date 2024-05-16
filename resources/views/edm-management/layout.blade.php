@@ -40,11 +40,11 @@
             <a href="{{route('our-work.index')}}" class="side-btn">OUR WORK</a>
             <a href="#serviceSection" class="side-btn">SERVICE</a>
             <a href="#contactSectionManagement" class="side-btn">CONTACT US</a>
-            <div class="lang-change-btns">
+            {{-- <div class="lang-change-btns">
                 <a href="" class="active" id="thaiBtn"><img src="{{asset('edm-management/assets/img/thai-lang-icon.png')}}" width="20"
                         alt="" /> TH</a>
-                {{-- <a href="" id="engBtn"><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" /> ENG</a> --}}
-            </div>
+                <a href="" id="engBtn"><img src="{{asset('edm-management/assets/img/UK.png')}}" width="20" alt="" /> ENG</a>
+            </div> --}}
         </div>
     </div>
 
@@ -180,7 +180,7 @@
         });
     </script> --}}
     @yield('scripts')
-    
+
     <script>
          const settingApiUrl = 'https://edmcompany.co.th/api/settings/2';
         async function fetchSetting() {
