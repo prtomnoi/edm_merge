@@ -965,7 +965,21 @@ form>button {
     height: 450px;
     object-fit: contain;
 }
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25% !important; /* 9/16 = 0.5625 */
+    overflow: hidden;
+}
 
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 @media (min-width: 1600px) {
     .slick-center .vtuber-item {
         transform: scale(1.1);
@@ -1022,9 +1036,14 @@ form>button {
         object-fit: cover;
         /* Crop images to fit with aspect ratio preserved */
     }
+    .campaign-h-des{
+        margin: 10px;
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 769px) {
+  
     .act-card {
         width: 100%;
         max-width: 388px;

@@ -118,7 +118,7 @@
             data.forEach(element => {
                 html += '<div class="act-card company">';
                 html += '<a href="'+element.link+'" target="_blank">';
-                html += '<img src="' + element.image + '" alt="">';
+                html += '<div class="image-container"><img src="' + element.image + '" alt=""></div>';
                 html += '</a>';
                 html += '<div>';
                 html += '<span class="description">' + element.title + '</span>';

@@ -546,6 +546,9 @@
               const dateSpan = document.createElement("span");
               dateSpan.textContent = newsItem.created_at;
               const readMoreLinkImg = document.createElement("a");
+
+              const imgContainer = document.createElement('div');
+              imgContainer.classList.add('image-container');
               const img = document.createElement("img");
               img.src = newsItem.image;
               img.alt = "";
@@ -576,7 +579,8 @@
 
               actCard.appendChild(dateSpan);
               actCard.appendChild(readMoreLinkImg);
-              readMoreLinkImg.appendChild(img);
+              readMoreLinkImg.appendChild(imgContainer);
+              imgContainer.appendChild(img);
               actCard.appendChild(divContent);
 
               activityCards.appendChild(actCard);
@@ -715,7 +719,8 @@
 
             const dateSpan = document.createElement("span");
             dateSpan.textContent = campaignItem.created_at;
-
+            const imgContainer = document.createElement('div');
+            imgContainer.classList.add('image-container');
             const img = document.createElement("img");
             const readMoreLinkImg = document.createElement("a");
             readMoreLinkImg.href = campaignItem.link;
@@ -746,7 +751,8 @@
 
             campaignCard.appendChild(dateSpan);
             campaignCard.appendChild(readMoreLinkImg);
-            readMoreLinkImg.appendChild(img);
+            readMoreLinkImg.appendChild(imgContainer);
+            imgContainer.appendChild(img);
             campaignCard.appendChild(divContent);
 
             campaignCards.appendChild(campaignCard);

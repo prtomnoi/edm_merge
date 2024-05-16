@@ -22,6 +22,11 @@
         .form-div {
             display: flex;
         }
+        .responsive-iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+    }
     </style>
     <link rel="stylesheet" href="{{ asset('edm-management/assets/css/subpage-base-style.css?v=3') }}" />
     <div class="main">
@@ -298,15 +303,12 @@
                 fetchTopRecentActivities();
             });
             function updateDOMElements() {
-                $("img").removeAttr("style");
-            $("img").addClass("img-fluid");
-            $("img:first").removeClass("img-fluid");
-            $("iframe").removeAttr("height");
-            $("iframe").removeAttr("width");
-            $("iframe").addClass("responsive-iframe");
-            $("iframe:last").removeClass("responsive-iframe");
-            $("iframe:last").addClass("responsive-iframe2");
-}
+                $("img").removeAttr("style").addClass("img-fluid");
+                $("img:first").removeClass("img-fluid");
+                $("iframe").removeAttr("height");
+                $("iframe").removeAttr("width");
+                $("iframe").addClass("responsive-iframe");
+         }
             // $("img").removeAttr("style");
             // $("img").addClass("img-fluid");
             // $("img:first").removeClass("img-fluid");

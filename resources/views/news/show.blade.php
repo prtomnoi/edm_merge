@@ -11,8 +11,8 @@
     }
     .image-container {
           position: relative;
-          width: 100%; /* Adjust width as needed */
-          padding-top: 56.25%; /* 9/16 = 0.5625 */
+          width: 100%;
+          padding-top: 56.25% !important; /* 9/16 = 0.5625 */
           overflow: hidden;
       }
 
@@ -213,6 +213,8 @@
                         const spanDate = document.createElement('span');
                         spanDate.textContent = activityItem.created_at;
 
+                        const imgContainer = document.createElement('div');
+                        imgContainer.classList.add('image-container');
                         const img = document.createElement('img');
                         img.src = activityItem.image;
                         img.alt = '';
@@ -243,7 +245,8 @@
                         divContent.appendChild(aReadMore);
 
                         actCard.appendChild(spanDate);
-                        actCard.appendChild(img);
+                        actCard.appendChild(imgContainer);
+                        imgContainer.appendChild(img);
                         actCard.appendChild(divContent);
 
                         topRecentCards.appendChild(actCard);

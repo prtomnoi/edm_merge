@@ -302,9 +302,9 @@
 @media (max-width: 768px) {
     .top-recen {
         background: #1d1d1d;
-        padding-top: 1rem;
-        margin-right: 3rem;
-        margin-left: 3rem;
+        padding: 10px;
+        margin-right: 1rem;
+        margin-left: 1rem;
         margin-bottom: 3rem;
         height: auto;
     }
