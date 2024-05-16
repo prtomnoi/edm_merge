@@ -27,6 +27,7 @@ class PortfolioItem extends Model
         'created_by',
         'updated_by',
         'deleted_by',
+        'top',
     ];
     public function images()
     {

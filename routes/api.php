@@ -74,6 +74,7 @@ Route::get('/groups', [GroupController::class, 'index']);
 Route::get('/portfolio-items', [PortfolioItemController::class, 'index']);
 Route::get('/portfolio-items/{id}', [PortfolioItemController::class, 'show']);
 Route::get('/portfolio-items-limit/{limit}', [PortfolioItemController::class, 'indexLimit']);
+Route::get('/portfolio-items-top', [PortfolioItemController::class, 'top']);
 
 Route::get('/settings', [TableSettingsController::class, 'index']);
 Route::get('/settings/{id}', [TableSettingsController::class, 'show']);

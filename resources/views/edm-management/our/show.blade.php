@@ -100,11 +100,8 @@
                 <div class="col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
                     <div class="top-recen">
                         <h2 class="text-center">Top Recent</h2>
-                        {{-- <div class="d-flex w-100 justify-content-center" style="flex-wrap: wrap; background: #1d1d1d;" id="top-recent-cards">
-                        </div> --}}
                         <div class="d-flex w-100 justify-content-center" style="flex-wrap: wrap; background: #1d1d1d;" id="top-recent-cards">
-                            <div class="act-card"><span>May 09 2024</span><img src="https://edmcompany.co.th/backend/uploads/news/news09052024-663cba8609a87.jpg" alt="" class="img-fluid"><div><span>ติดตาม RoV Pro League 2024 Summer รอบชิงแชมป์แบบติดขอบสนาม!  พร้อมร่วมกิจกรรมลุ้นรับรางวัลจาก RoV ในวันที่ 6 - 7 เม.ย.นี้ ที่ไบเทค บางนา Hall 98</span><a href="/news-activity/22?view=22">READ MORE</a></div></div><div class="act-card"><span>May 09 2024</span><img src="https://edmcompany.co.th/backend/uploads/news/news09052024-663c65ef21d54.jpg" alt="" class="img-fluid"><div><span>เตรียมพบการแข่งขัน RoV ระดับนานาชาติ Arena of Valor Premier League 2024 ในเดือนมิถุนายนนี้ พร้อมรูปแบบการแข่งขันใหม่ Swiss Stage</span><a href="/news-activity/17?view=17">READ MORE</a></div></div></div>
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -238,7 +235,68 @@
                 const search = document.getElementById("searchInput").value;
                 window.location.href = `{{ route('our-work.index') }}?search=${search}`;
             }
+                document.addEventListener('DOMContentLoaded', () => {
+                    // https://edmcompany.co.th
+                const newsApiUrl = 'https://edmcompany.co.th/api/portfolio-items-top';
+                const maxActivities = 3; // Set the maximum number of recent activities to display
 
+                async function fetchTopRecentActivities() {
+                    try {
+                        const response = await fetch(newsApiUrl);
+                        const activityData = await response.json();
+                        const topRecentCards = document.getElementById('top-recent-cards');
+
+                        for (let i = 0; i < Math.min(activityData.data.length, maxActivities); i++) {
+                            const activityItem = activityData.data[i];
+
+                            const actCard = document.createElement('div');
+                            actCard.classList.add('act-card');
+
+                            const spanDate = document.createElement('span');
+                            spanDate.textContent = activityItem.created_at;
+
+                            const img = document.createElement('img');
+                            img.src = activityItem.image;
+                            img.alt = '';
+
+                            const divContent = document.createElement('div');
+
+                            const spanTitle = document.createElement('span');
+                            spanTitle.textContent = activityItem.type;
+
+                            const spanAuthor = document.createElement('span');
+                            spanAuthor.textContent = `By ${activityItem.signature}`;
+
+                            const spanDescription = document.createElement('span');
+                            if (currentLanguage == 'eng') {
+                                spanDescription.textContent = activityItem.title_en || activityItem.title;
+                            } else {
+                                spanDescription.textContent = activityItem.title;
+                            }
+
+
+                            const aReadMore = document.createElement('a');
+                            aReadMore.href = '/edm-management/our-work/' + activityItem.id + '?view=' + activityItem.id;
+                            aReadMore.textContent = 'Read More';
+
+                            // divContent.appendChild(spanTitle);
+                            // divContent.appendChild(spanAuthor);
+                            divContent.appendChild(spanDescription);
+                            divContent.appendChild(aReadMore);
+
+                            actCard.appendChild(spanDate);
+                            actCard.appendChild(img);
+                            actCard.appendChild(divContent);
+
+                            topRecentCards.appendChild(actCard);
+                        }
+                    } catch (error) {
+                        console.error('Error fetching top recent activities:', error);
+                    }
+                }
+
+                fetchTopRecentActivities();
+            });
             function updateDOMElements() {
                 $("img").removeAttr("style");
             $("img").addClass("img-fluid");

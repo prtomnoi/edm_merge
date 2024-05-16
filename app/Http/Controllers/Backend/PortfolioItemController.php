@@ -127,8 +127,13 @@ class PortfolioItemController extends Controller
                 'status' => 'in:draft,published',
                 'created_by' => 'nullable|exists:users,id',
                 'updated_by' => 'nullable|exists:users,id',
+                'top' => 'sometimes|in:on',
             ]);
-
+            // dd($validatedData);
+            $transformedData = [
+                'top' => isset($validatedData['top']) ? '1' : '0',
+            ];
+            $validatedData = array_merge($validatedData, $transformedData);
 
             // Upload the image and save its path in the database
             if ($request->hasFile('image')) {

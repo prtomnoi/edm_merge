@@ -123,6 +123,15 @@
 
                               <div class="input-images-1" style="padding-top: .5rem;"></div>
                             </div>
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" {{ $row->top == 1 ? 'checked' : '' }}
+                                            role="switch" name="top" id="flexSwitchCheckDefault">
+                                        <label class="form-check-label" for="flexSwitchCheckDefault">Top Recent</label>
+                                    </div>
+                                </div>
+                            </div>
 
 
 

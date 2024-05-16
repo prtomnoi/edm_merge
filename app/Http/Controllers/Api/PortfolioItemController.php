@@ -63,4 +63,10 @@ class PortfolioItemController extends Controller
     {
         //
     }
+
+    public function top()
+    {
+        $data = PortfolioItem::where('status', 'published')->where('top', '1')->orderByDesc('created_at')->get();
+        return new PortfolioItemCollection($data);
+    }
 }
