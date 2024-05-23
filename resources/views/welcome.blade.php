@@ -13,6 +13,10 @@
         <link rel="stylesheet" href="{{ asset('assets/css/index.css?v='  . filemtime(public_path('assets/css/index.css'))) }}" />
         <link rel="stylesheet" href="{{ asset('assets/css/navbar_style.css?v=' . filemtime(public_path('assets/css/navbar_style.css'))) }}" />
     <link rel="shortcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <meta property="og:title" content="Edm company">
+    <meta property="og:url" content="https://edmcompany.co.th/">
+    <meta property="og:image" content="https://edmcompany.co.th/backend/uploads/news/news09052024-663c65ef21d54.jpg">
+    <meta property="og:description" content="บริษัท ที่มีวิสัยทัศน์ มุ่งมั่นสร้างสรรค์เพื่อนำเสนอเทคโนโลยีใหม่ ให้กับลูกค้าและพาร์ทเนอร์  และเป็นผู้เชี่ยวชาญด้านการตลาดสื่อสังคมออนไลน์ แพลตฟอร์มโซเชียลมีเดีย">
     </head>
 
 <body>

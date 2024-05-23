@@ -20,6 +20,10 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=5') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
     <link rel="shotcut icon"  href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <meta property="og:title" content="Edm company">
+    <meta property="og:url" content="https://edmcompany.co.th/">
+    <meta property="og:image" content="https://edmcompany.co.th/backend/uploads/news/news09052024-663c65ef21d54.jpg">
+    <meta property="og:description" content="บริษัท ที่มีวิสัยทัศน์ มุ่งมั่นสร้างสรรค์เพื่อนำเสนอเทคโนโลยีใหม่ ให้กับลูกค้าและพาร์ทเนอร์  และเป็นผู้เชี่ยวชาญด้านการตลาดสื่อสังคมออนไลน์ แพลตฟอร์มโซเชียลมีเดีย">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
     <script>
