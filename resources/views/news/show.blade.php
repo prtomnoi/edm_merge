@@ -188,6 +188,7 @@
                     Description.innerHTML = data.data[0].detail;
                 }
                 updateDOMElements();
+                updateOG(data.data[0]);
 
             })
             .catch(function(e) {
@@ -260,7 +261,17 @@
         });
 
 
-
+        function updateOG(data){
+            const metas = Array.from(document.getElementsByTagName('meta'))
+            const metaTitle = metas.find((m) => m.attributes[0].nodeValue === 'og:title')
+            metaTitle.attributes[1].nodeValue = data.title
+            const metaUrl = metas.find((m) => m.attributes[0].nodeValue === 'og:url')
+            metaUrl.attributes[1].nodeValue = window.location.href
+            const metaImage = metas.find((m) => m.attributes[0].nodeValue === 'og:image')
+            metaImage.attributes[1].nodeValue = data.image
+            const metaDescription = metas.find((m) => m.attributes[0].nodeValue === 'og:description')
+            metaDescription.attributes[1].nodeValue = data.detail
+        }
       function updateDOMElements() {
         $("img").removeAttr("style").addClass("img-fluid");
         $("img:first").removeClass("img-fluid");

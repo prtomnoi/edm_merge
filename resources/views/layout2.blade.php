@@ -22,7 +22,7 @@
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/yt-slider.css?v=3') }}" /> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=' . filemtime(public_path('assets/css/article-style.css'))) }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
-    <link rel="shotcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <link rel="shotcut icon" href="{{ asset('favicon.jpg') }}">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
     <script>
@@ -51,6 +51,11 @@
             font-size: 1rem;
         } */
     </style>
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="" />
 </head>
 
 <body>
