@@ -3,28 +3,30 @@
 @section('title', 'News And Activity')
 
 @section('content')
-<style>
-    .responsive-iframe {
-        width: 100%;
-        height: 450px;
-        border: none;
-    }
-    .image-container {
-          position: relative;
-          width: 100%;
-          padding-top: 56.25% !important; /* 9/16 = 0.5625 */
-          overflow: hidden;
-      }
+    <style>
+        .responsive-iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+        }
 
-      .image-container img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-      }
-</style>
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25% !important;
+            /* 9/16 = 0.5625 */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
     <div class="main">
         {{-- <nav>
     <!-- Nav Hamberger menu -->
@@ -100,7 +102,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 col-lg-3 col-xl-3 d-flex justify-content-center align-items-center mt-2">
-                        <div class="sub-search" >
+                        <div class="sub-search">
                             <form action="">
                                 <input type="search" placeholder="SEARCH" />
                                 <button type="submit">
@@ -133,7 +135,8 @@
                 <div class="col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
                     <div class="top-recen">
                         <h2 class="text-center">Top Recent</h2>
-                        <div class="d-flex w-100 justify-content-center" style="flex-wrap: wrap; background: #1d1d1d;" id="top-recent-cards">
+                        <div class="d-flex w-100 justify-content-center" style="flex-wrap: wrap; background: #1d1d1d;"
+                            id="top-recent-cards">
                         </div>
                     </div>
                 </div>
@@ -148,57 +151,55 @@
 
 @section('scripts')
     <script>
-        const Description = document.getElementById("resultDetail");
-        Description.innerHTML
-        const urlParams = new URLSearchParams(window.location.search);
-        const view = urlParams.get("view");
-
-        function formatDateToCustomFormat(isoDateString) {
-            const date = new Date(isoDateString);
-            const options = {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
-            };
-            return date.toLocaleDateString("en-US", options);
-        }
-        fetch("https://edmcompany.co.th/api/news/" + view)
-            .then(function(response) {
-                return response.json();
-            })
-            .then(function(data) {
-                // console.log(data.data[0])
-                document.getElementById("resultDate").innerHTML = data.data[0].created_at;
-                const spanDescription1 = document.getElementById("resultTitle");
-                const spanDescription = document.getElementById("resultTitle2");
-
-                if (currentLanguage == 'eng') {
-                    spanDescription1.innerHTML = data.data[0].title_en || data.data[0].title;
-                    spanDescription.innerHTML = data.data[0].title_en || data.data[0].title;
-                } else {
-                    spanDescription1.innerHTML = data.data[0].title;
-                    spanDescription.innerHTML = data.data[0].title;
-                }
-
-                document.getElementById("resultImage").src = data.data[0].image;
-                const Description = document.getElementById("resultDetail");
-                if (currentLanguage == 'eng') {
-                    Description.innerHTML = data.data[0].detail_en || data.data[0].detail;
-                } else {
-                    Description.innerHTML = data.data[0].detail;
-                }
-                updateDOMElements();
-                updateOG(data.data[0]);
-
-            })
-            .catch(function(e) {
-                console.log(e);
-            });
-
         document.addEventListener('DOMContentLoaded', () => {
             const newsApiUrl = 'https://edmcompany.co.th/api/news-top';
             const maxActivities = 3; // Set the maximum number of recent activities to display
+            const Description = document.getElementById("resultDetail");
+            Description.innerHTML
+            const urlParams = new URLSearchParams(window.location.search);
+            const view = urlParams.get("view");
 
+            function formatDateToCustomFormat(isoDateString) {
+                const date = new Date(isoDateString);
+                const options = {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric"
+                };
+                return date.toLocaleDateString("en-US", options);
+            }
+            fetch("https://edmcompany.co.th/api/news/" + view)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    // console.log(data.data[0])
+                    document.getElementById("resultDate").innerHTML = data.data[0].created_at;
+                    const spanDescription1 = document.getElementById("resultTitle");
+                    const spanDescription = document.getElementById("resultTitle2");
+
+                    if (currentLanguage == 'eng') {
+                        spanDescription1.innerHTML = data.data[0].title_en || data.data[0].title;
+                        spanDescription.innerHTML = data.data[0].title_en || data.data[0].title;
+                    } else {
+                        spanDescription1.innerHTML = data.data[0].title;
+                        spanDescription.innerHTML = data.data[0].title;
+                    }
+
+                    document.getElementById("resultImage").src = data.data[0].image;
+                    const Description = document.getElementById("resultDetail");
+                    if (currentLanguage == 'eng') {
+                        Description.innerHTML = data.data[0].detail_en || data.data[0].detail;
+                    } else {
+                        Description.innerHTML = data.data[0].detail;
+                    }
+                    updateDOMElements();
+                    updateOG(data.data[0]);
+
+                })
+                .catch(function(e) {
+                    console.log(e);
+                });
             async function fetchTopRecentActivities() {
                 try {
                     const response = await fetch(newsApiUrl);
@@ -256,12 +257,7 @@
                     console.error('Error fetching top recent activities:', error);
                 }
             }
-
-            fetchTopRecentActivities();
-        });
-
-
-        function updateOG(data){
+            function updateOG(data) {
             const metas = Array.from(document.getElementsByTagName('meta'))
             const metaTitle = metas.find((m) => m.attributes[0].nodeValue === 'og:title')
             metaTitle.attributes[1].nodeValue = data.title
@@ -280,12 +276,18 @@
             const metaTwitterDescription = metas.find((m) => m.attributes[0].nodeValue === 'twitter:description')
             metaTwitterDescription.attributes[1].nodeValue = data.detail
         }
-      function updateDOMElements() {
-        $("img").removeAttr("style").addClass("img-fluid");
-        $("img:first").removeClass("img-fluid");
-        $("iframe").removeAttr("height");
-        $("iframe").removeAttr("width");
-        $("iframe").addClass("responsive-iframe");
-}
+            fetchTopRecentActivities();
+        });
+
+
+
+
+        function updateDOMElements() {
+            $("img").removeAttr("style").addClass("img-fluid");
+            $("img:first").removeClass("img-fluid");
+            $("iframe").removeAttr("height");
+            $("iframe").removeAttr("width");
+            $("iframe").addClass("responsive-iframe");
+        }
     </script>
 @endsection
