@@ -271,6 +271,14 @@
             metaImage.attributes[1].nodeValue = data.image
             const metaDescription = metas.find((m) => m.attributes[0].nodeValue === 'og:description')
             metaDescription.attributes[1].nodeValue = data.detail
+            const metaTwitterTitle = metas.find((m) => m.attributes[0].nodeValue === 'twitter:title')
+            metaTwitterTitle.attributes[1].nodeValue = data.title
+            const metaTwitterUrl = metas.find((m) => m.attributes[0].nodeValue === 'twitter:url')
+            metaTwitterUrl.attributes[1].nodeValue = window.location.href
+            const metaTwiiterImage = metas.find((m) => m.attributes[0].nodeValue === 'twitter:image')
+            metaTwiiterImage.attributes[1].nodeValue = data.image
+            const metaTwitterDescription = metas.find((m) => m.attributes[0].nodeValue === 'twitter:description')
+            metaTwitterDescription.attributes[1].nodeValue = data.detail
         }
       function updateDOMElements() {
         $("img").removeAttr("style").addClass("img-fluid");
