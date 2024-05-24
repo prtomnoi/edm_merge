@@ -312,9 +312,9 @@
 
 @media (max-width: 576px) {
     .article-textfield {
-        max-width: 300px;
+        max-width: 315px;
     }
     .article-textfield img {
-        max-width: 300px;
+        max-width: 315px;
     }
 }

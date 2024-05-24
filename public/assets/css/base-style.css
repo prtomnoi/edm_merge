@@ -152,6 +152,7 @@ section {
     align-items: center;
     text-align: center;
     padding: 1rem 1rem;
+    
 }
 
 section * {
@@ -196,6 +197,7 @@ section h1 {
     gap: 3rem;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .solu-items {

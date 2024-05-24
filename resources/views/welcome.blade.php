@@ -30,7 +30,7 @@
             <a href="{{ url('/') }}" class="side-btn"><img src="{{ asset('assets/img/edm-company-logo.png') }}"
                     alt="" /></a>
             <a href="{{ route('news-activity.index') }}" class="side-btn">COMPANY AND SERVICES</a>
-            <a href="{{ route('news-activity.index') }}" class="side-btn">News</a>
+            <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a>
             <a href="{{ route('contact-us.index') }}" class="side-btn">CONTACT US</a>
 
             {{-- <div class="lang-change-btns">
@@ -43,7 +43,7 @@
 
     <main>
         <video autoplay muted loop id="map-bg">
-            <source src="{{ asset('assets/img/map-bg.mp4') }}" type="video/mp4"  />
+            <source src="{{ asset('assets/img/bg-video.mp4') }}" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
         <nav class="">

@@ -104,7 +104,7 @@
                 </div>
                 <div class="col-md-12 col-lg-4 col-xl-4 d-flex justify-content-center">
                     <div class="top-recen">
-                        <h2 class="text-center">Top Recent</h2>
+                        <h2 class="text-center">Latest Event</h2>
                         <div class="d-flex w-100 justify-content-center" style="flex-wrap: wrap; background: #1d1d1d;" id="top-recent-cards">
                         </div>
                 </div>

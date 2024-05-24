@@ -68,39 +68,17 @@
             <path fill="#ffff"
                 d="M12.45 38.7 9.3 35.55 20.85 24 9.3 12.5l3.15-3.2L24 20.8 35.55 9.3l3.15 3.2L27.2 24l11.5 11.55-3.15 3.15L24 27.2Z" />
         </svg>
-
         <div class="side-btn-section">
             <a href="{{ url('/') }}" class="side-btn"><img src="{{ asset('assets/img/edm-company-logo.png') }}"
                     alt="" /></a>
-            <a href="{{ url('/') }}" class="side-btn">ABOUT US</a>
-            {{-- <div class="side-collapse">
-                <a href="#forCreator" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                    aria-controls="forCreator">FOR CREATOR</a>
-                <div class="collapse" id="forCreator">
-                    <div class="card card-body">
-                        <a href="{{ route('benefit.index') }}">Solutions</a>
-                        <a href="{{ route('influencer.index') }}">Creator</a>
-                        <a href="{{ route('vtuber-community.index') }}">VTuber</a>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="side-collapse">
-                <a href="#forBrand" class="side-btn" data-bs-toggle="collapse" role="button" aria-expanded="false"
-                    aria-controls="forBrand">FOR BRAND</a>
-                <div class="collapse" id="forBrand">
-                    <div class="card card-body">
-                        <a href="{{ route('branding.index') }}">Service</a>
-                        <a href="">Campaign</a>
-                    </div>
-                </div>
-            </div>
+            <a href="{{ route('news-activity.index') }}" class="side-btn">COMPANY AND SERVICES</a>
             <a href="{{ route('news-activity.index') }}" class="side-btn">NEWS</a>
             <a href="{{ route('contact-us.index') }}" class="side-btn">CONTACT US</a>
+
             {{-- <div class="lang-change-btns">
                 <a href="#" class="active" id="thaiBtn"><img src="{{ asset('assets/img/THAILAND.png') }}"
-                        alt="" />
-                    TH</a>
-                <a href="#" id="engBtn"><img src="{{ asset('assets/img/UK.png') }}" alt="" /> ENG</a>
+                        alt="" /> TH</a>
+                <a href="#" id="engBtn"><img src="assets/img/UK.png" alt="" /> ENG</a>
             </div> --}}
         </div>
     </div>
