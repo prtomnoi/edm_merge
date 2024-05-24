@@ -42,7 +42,7 @@
     </div>
 
     <main>
-        <video autoplay muted loop id="map-bg">
+        <video autoplay loop muted playsinline id="map-bg">
             <source src="{{ asset('assets/img/bg-video.mp4') }}" type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
