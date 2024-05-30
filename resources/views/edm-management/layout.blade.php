@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/article-style.css?v='  . filemtime(public_path('edm-management/assets/css/article-style.css')))}}" />
     <link rel="stylesheet" href="{{asset('edm-management/assets/css/contact-us.css?v=' . filemtime(public_path('edm-management/assets/css/contact-us.css')))}}" />
     <link rel="shotcut icon" type="image/svg+xml" href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <meta property="og:title" content="Edm Managment">
+    <meta property="og:url" content="https://edmcompany.co.th/edm-management/index">
+    <meta property="og:image" content="https://edmcompany.co.th/edm-management/assets/img/edm-managment-og.jpg">
+    <meta property="og:description"
+        content="ทีมงานมืออาชีพด้าน Network และเทคโนโลยี เราสามารถอัปเกรดธุรกิจของคุณด้วยนวัตกรรม และให้คำปรึกษาอย่างมืออาชีพเพื่อให้งานของคุณง่ายขึ้น">
     <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
         <script>

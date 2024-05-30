@@ -8,30 +8,44 @@
     <link rel="stylesheet" href="{{ asset('assets/fonts/fonts.css?v=3') }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{{ asset('assets/css/base-style.css?v=' . filemtime(public_path('assets/css/base-style.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/slick-theme.css?v=' . filemtime(public_path('assets/css/slick-theme.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/slick.css?v=' . filemtime(public_path('assets/css/slick.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/index.css?v='  . filemtime(public_path('assets/css/index.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/navbar_style.css?v=' . filemtime(public_path('assets/css/navbar_style.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/particle-anim.css?v=' . filemtime(public_path('assets/css/particle-anim.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/benefit-style.css?v=' . filemtime(public_path('assets/css/benefit-style.css'))) }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/vtuber-style.css?v=' . filemtime(public_path('assets/css/vtuber-style.css')))  }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/yt-slider.css?v=' . filemtime(public_path('assets/css/yt-slider.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/base-style.css?v=' . filemtime(public_path('assets/css/base-style.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/slick-theme.css?v=' . filemtime(public_path('assets/css/slick-theme.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/slick.css?v=' . filemtime(public_path('assets/css/slick.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/index.css?v=' . filemtime(public_path('assets/css/index.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/navbar_style.css?v=' . filemtime(public_path('assets/css/navbar_style.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/particle-anim.css?v=' . filemtime(public_path('assets/css/particle-anim.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/benefit-style.css?v=' . filemtime(public_path('assets/css/benefit-style.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/vtuber-style.css?v=' . filemtime(public_path('assets/css/vtuber-style.css'))) }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/yt-slider.css?v=' . filemtime(public_path('assets/css/yt-slider.css'))) }}" />
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/article-style.css?v=5') }}" /> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
-    <link rel="shotcut icon"  href="{{ asset('assets/img/edm_logo_com.svg') }}">
+    <link rel="stylesheet"
+        href="{{ asset('assets/css/contact-us.css?v=' . filemtime(public_path('assets/css/contact-us.css'))) }}" />
+    <link rel="shotcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
     <meta property="og:title" content="Edm company">
     <meta property="og:url" content="https://edmcompany.co.th/">
-    <meta property="og:image" content="https://edmcompany.co.th/backend/uploads/news/news09052024-663c65ef21d54.jpg">
-    <meta property="og:description" content="บริษัท ที่มีวิสัยทัศน์ มุ่งมั่นสร้างสรรค์เพื่อนำเสนอเทคโนโลยีใหม่ ให้กับลูกค้าและพาร์ทเนอร์  และเป็นผู้เชี่ยวชาญด้านการตลาดสื่อสังคมออนไลน์ แพลตฟอร์มโซเชียลมีเดีย">
+    <meta property="og:image" content="https://edmcompany.co.th/assets/img/edm-media-og.jpg">
+    <meta property="og:description"
+        content="บริษัท ที่มีวิสัยทัศน์ มุ่งมั่นสร้างสรรค์เพื่อนำเสนอเทคโนโลยีใหม่ ให้กับลูกค้าและพาร์ทเนอร์  และเป็นผู้เชี่ยวชาญด้านการตลาดสื่อสังคมออนไลน์ แพลตฟอร์มโซเชียลมีเดีย">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BD0DNRZH9H"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'G-BD0DNRZH9H');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BD0DNRZH9H');
     </script>
     <style>
         .video-iframe {
@@ -195,7 +209,19 @@
     <script src="{{ asset('assets/js/navbar.js?v=6') }}"></script>
     @yield('scripts')
 
-   <script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateOG();
+
+            function updateOG() {
+                const metas = Array.from(document.getElementsByTagName('meta'));
+                console.log('metas : ',metas)
+                const metaImage = metas.find((m) => m.attributes[0].nodeValue === 'og:image');
+                metaImage.attributes[1].nodeValue = 'assets/img/edm-company-og.jpg';
+                const metaTwiiterImage = metas.find((m) => m.attributes[0].nodeValue === 'twitter:image');
+                metaTwiiterImage.attributes[1].nodeValue = 'assets/img/edm-company-og.jpg';
+            }
+        });
         const newsApiUrl = 'https://edmcompany.co.th/api/settings/1';
         async function fetchNews() {
             try {
@@ -237,15 +263,16 @@
         for (let index = 0; index < section.length; index++) {
             section[index].addEventListener('click', function(event) {
                 const targetSection = document.getElementById('contactSectionMedia');
-            if (window.location.pathname != "/branding" || window.location.pathname != "/branding#contactSectionMedia") {
-                window.location.href = "branding#contactSectionMedia";
-            }
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
+                if (window.location.pathname != "/branding" || window.location.pathname !=
+                    "/branding#contactSectionMedia") {
+                    window.location.href = "branding#contactSectionMedia";
+                }
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         }
     </script>
 </body>

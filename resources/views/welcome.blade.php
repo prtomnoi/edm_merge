@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="{{ asset('assets/img/edm_logo_com.svg') }}">
     <meta property="og:title" content="Edm company">
     <meta property="og:url" content="https://edmcompany.co.th/">
-    <meta property="og:image" content="https://edmcompany.co.th/backend/uploads/news/news09052024-663c65ef21d54.jpg">
+    <meta property="og:image" content="https://edmcompany.co.th/assets/img/edm-company-og.jpg">
     <meta property="og:description" content="บริษัท ที่มีวิสัยทัศน์ มุ่งมั่นสร้างสรรค์เพื่อนำเสนอเทคโนโลยีใหม่ ให้กับลูกค้าและพาร์ทเนอร์  และเป็นผู้เชี่ยวชาญด้านการตลาดสื่อสังคมออนไลน์ แพลตฟอร์มโซเชียลมีเดีย">
     </head>
 
@@ -236,6 +236,18 @@
 
     <script src="{{ asset('assets/js/navbarindex.js?v=6') }}"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateOG();
+
+            function updateOG() {
+                // const metas = Array.from(document.getElementsByTagName('meta'));
+                // console.log('metas : ',metas)
+                // const metaImage = metas.find((m) => m.attributes[0].nodeValue === 'og:image');
+                // metaImage.attributes[1].nodeValue = "{{asset('assets/img/edm-company-og.jpg')}}";
+                // const metaTwiiterImage = metas.find((m) => m.attributes[0].nodeValue === 'twitter:image');
+                // metaTwiiterImage.attributes[1].nodeValue = "{{asset('assets/img/edm-company-og.jpg')}}";
+            }
+        });
         const instaForm = document.getElementById("contact-us-form");
         instaForm.addEventListener("submit", (event) => {
             event.preventDefault();
