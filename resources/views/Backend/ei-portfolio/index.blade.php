@@ -1,23 +1,15 @@
 @extends('Backend.layout')
 
-@section('title', 'Campaigns')
+@section('title', 'Ei Portfolio')
 
 @section('content')
-<style>
-    .limited-text {
-    max-width: 250px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-</style>
     <div class="container-fluid">
         <div class="row">
 
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Eternity intelligent</h5>
+                        <h5 class="card-title fw-semibold mb-4">{{@$name_page}} Management</h5>
                         @if(session('success'))
                         <div class="alert alert-success alert-dismissible fade show my-2" role="alert">
                             {{ session('success') }}
@@ -40,9 +32,6 @@
                                             <h6 class="fw-semibold mb-0">Title</h6>
                                         </th>
                                         <th class="border-bottom-0">
-                                            <h6 class="fw-semibold mb-0">Link</h6>
-                                        </th>
-                                        <th class="border-bottom-0">
                                             <h6 class="fw-semibold mb-0">Created</h6>
                                         </th>
                                         <th class="border-bottom-0">
@@ -61,10 +50,9 @@
                                       <tr>
 
                                           <td style="width:5%;">{{$key+1}}</td>
-                                          <td ><a href="{{asset('backend/' . $item->image)}}" target="_blank"><img src="{{asset('backend/' . $item->image)}}" alt="" style="width:100%;"></a></td>
-                                          <td style="width:10%;">{{$item->name}}</td>
-                                          <td class="limited-text"><a href="{{$item->link}}" target="_blank">{{$item->link}}</a></td>
-                                          <td >{{ Helper::dateThai($item->created_at) }}</td>
+                                          <td style="width:10%;"><a href="{{asset('backend/' . $item->image)}}" target="_blank"><img src="{{asset('backend/' . $item->image)}}" alt="" style="width:100%;"></a></td>
+                                          <td style="width:50%;">{{$item->title}}</td>
+                                          <td style="width:15%;">{{ Helper::dateThai($item->created_at) }}</td>
                                           <td style="width:10%;">
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" onclick="status('{{$item->id}}');" @if($item->status == "published") checked @endif>
