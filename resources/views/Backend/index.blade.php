@@ -29,6 +29,7 @@
                   </div>
                 </div>
              </div> --}}
+             @if(auth('Admin')?->user()?->provider_id == 0 || auth('Admin')?->user()?->provider_id == 1)
              <div class="col-md-4">
                 <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="color:black; background: rgb(239,178,185);
                 background: linear-gradient(111deg, rgba(239,178,185,1) 0%, rgba(241,215,144,1) 95%);git">
@@ -56,6 +57,18 @@
                   </div>
                 </div>
              </div>
+             @endif
+             @if(auth('Admin')?->user()?->provider_id == 0 || auth('Admin')?->user()?->provider_id == 2)
+             <div class="col-md-4">
+                <div class="card shadow-lg p-3 mb-5 bg-body rounded" style="color:black; background: rgb(239,178,185);
+                background: linear-gradient(111deg, rgba(239,178,185,1) 0%, rgba(241,215,144,1) 95%);">
+                  <div class="card-body">
+                    <h5 class="card-title"><i class="ti ti-crown"></i>Manage Portfoilo</h5>
+                    <a href="{{route('portfolio-items.index')}}" class="btn btn-primary">Go</a>
+                  </div>
+                </div>
+             </div>
+             @endif
            </div>
       </div>
 

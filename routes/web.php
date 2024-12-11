@@ -103,4 +103,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['Admin']], function () {
       Route::get('/portfolio-items/status/{id}', [Backend\PortfolioItemController::class, 'status'])->where(['id' => '[0-9]+']);
       Route::get('portfolio-items-image/{id}', [Backend\PortfolioItemController::class , 'delete_image'])->where(['id' => '[0-9]+']);
 
+      Route::resource('ei-portfolio', Backend\EiPortfolioController::class);
+      Route::get('/ei-portfolio/status/{id}', [Backend\EiPortfolioController::class, 'status'])->where(['id' => '[0-9]+']);
+      Route::get('ei-portfolio-image/{id}', [Backend\EiPortfolioController::class , 'delete_image'])->where(['id' => '[0-9]+']);
+
 });

@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\CampaignController;
 use App\Http\Controllers\Api\InfluencerController;
 use App\Http\Controllers\Api\VtuberGalleryController;
 use App\Http\Controllers\Api\BrandingGalleryController;
+use App\Http\Controllers\Api\EiPortfolioController;
 use App\Http\Controllers\Api\VtuberVideoController;
 use App\Http\Controllers\Api\InfluencerVideoController;
 use App\Http\Controllers\Api\PortfolioController;
@@ -78,4 +79,8 @@ Route::get('/portfolio-items-top', [PortfolioItemController::class, 'top']);
 
 Route::get('/settings', [TableSettingsController::class, 'index']);
 Route::get('/settings/{id}', [TableSettingsController::class, 'show']);
+
+Route::get('/ei-portfolio', [EiPortfolioController::class, 'index']);
+Route::get('/ei-portfolio/{id}', [EiPortfolioController::class, 'show']);
+Route::get('/ei-portfolio-limit/{limit}', [EiPortfolioController::class, 'indexLimit']);
 

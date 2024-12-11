@@ -44,6 +44,7 @@
                                 <span class="hide-menu">Index</span>
                             </a>
                         </li>
+                        @if(auth('Admin')?->user()?->provider_id == 0 || auth('Admin')?->user()?->provider_id == 1)
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">EDM MEDIA</span>
@@ -125,8 +126,8 @@
                             </a>
                         </li>
                         --}}
-
-
+                        @endif
+                        @if(auth('Admin')?->user()?->provider_id == 0 || auth('Admin')?->user()?->provider_id == 2)
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">EDM MANAGEMENT</span>
@@ -139,6 +140,22 @@
                                 <span class="hide-menu">Portfolio</span>
                             </a>
                         </li>
+                        @endif
+                        @if(auth('Admin')?->user()?->provider_id == 0 || auth('Admin')?->user()?->provider_id == 4)
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">ETERNITY INTELLIGENT</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="{{ route('ei-portfolio.index') }}" aria-expanded="false">
+                                <span>
+                                    <i class="ti ti-crown"></i>
+                                </span>
+                                <span class="hide-menu">Portfolio</span>
+                            </a>
+                        </li>
+                        @endif
+                        @if(auth('Admin')?->user()?->provider_id == 0)
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">Other</span>
@@ -159,6 +176,7 @@
                                 <span class="hide-menu">Account</span>
                             </a>
                         </li>
+                        @endif
                         <li class="sidebar-item">
                             <a class="sidebar-link" href="{{route('logOut')}}" aria-expanded="false">
                                 <span>
