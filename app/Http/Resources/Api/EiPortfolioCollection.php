@@ -29,6 +29,7 @@ class EiPortfolioCollection extends ResourceCollection
                 'signature' => $portfolio->signature,
                 'created_at' => $portfolio->created_at->format('M d Y'),
                 'images' => PortfolioItemImageResource::collection($portfolio->images),
+                'type' => $portfolio->type
             ];
         });
     }

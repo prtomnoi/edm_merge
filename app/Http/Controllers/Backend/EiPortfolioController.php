@@ -47,6 +47,7 @@ class EiPortfolioController extends Controller
             'status' => 'in:draft,published',
             'created_by' => 'nullable|exists:users,id',
             'updated_by' => 'nullable|exists:users,id',
+            'type' => 'nullable|in:website,app,graphic',
         ]);
         $validatedData['date'] = $request->event_date;
         if ($request->hasFile('image')) {
@@ -104,6 +105,7 @@ class EiPortfolioController extends Controller
                 'status' => 'in:draft,published',
                 'created_by' => 'nullable|exists:users,id',
                 'updated_by' => 'nullable|exists:users,id',
+                'type' => 'nullable|in:website,app,graphic',
             ]);
             $validatedData['date'] = $request->event_date;
             // Upload the image and save its path in the database

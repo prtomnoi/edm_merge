@@ -9,12 +9,17 @@ use App\Http\Resources as Resources;
 
 class EiPortfolioController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         try {
+            $paginate = $request->has('paginate') ? $request->paginate : 15;
             $portfolioitems = Models\EiPortfolio::when(request()->has('search'), function ($query) {
                 $query->where('title', 'like', '%' . request('search') . '%')->orWhere('title_en', 'like', '%' . request('search') . '%');
-            })->where('status', 'published')->orderBy('created_at', 'desc')->get();
+            })
+            ->when(request()->has('type'), function($query){
+                $query->where('type', request('type'));
+            })
+            ->where('status', 'published')->orderBy('created_at', 'desc')->paginate($paginate);
             // $portfolioitems->pages = new \stdClass;
             // $portfolioitems->pages->start = $portfolioitems->perPage() * $portfolioitems->currentPage() - $portfolioitems->perPage();
             return new Resources\Api\EiPortfolioCollection($portfolioitems);

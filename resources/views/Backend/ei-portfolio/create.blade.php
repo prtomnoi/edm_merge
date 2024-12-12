@@ -61,7 +61,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group mb-2">
-                                        <label for="">Event date</label>
+                                        <label for="">date</label>
                                         <input type="date" class="form-control" name="event_date" placeholder="">
                                         </div>
                                  </div>
@@ -75,7 +75,18 @@
                                      </div>
                                 </div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group mb-2">
+                                        <label for="">Type</label>
+                                        <select name="type" class="form-control">
+                                          <option value="website">Website</option>
+                                          <option value="app">Application</option>
+                                          <option value="graphic">Graphic</option>
+                                      </select>
+                                      </div>
+                                 </div>
+                            </div>
 
                             <label for="exampleInputEmail3">More pictures (You can upload more than 1 photo at a time)</label>
                             <div class="input-field">

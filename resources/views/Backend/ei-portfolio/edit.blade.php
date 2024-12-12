@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group mb-2">
-                                        <label for="">Event date</label>
+                                        <label for="">date</label>
                                         <input type="date" class="form-control" name="event_date" value="{{ $row->date }}" placeholder="">
                                         </div>
                                  </div>
@@ -107,6 +107,18 @@
                                         </select>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group mb-2">
+                                        <label for="">Type</label>
+                                        <select name="type" class="form-control">
+                                          <option value="website" @if($row->type == 'website') selected @endif>Website</option>
+                                          <option value="app" @if($row->type == 'app') selected @endif>Application</option>
+                                          <option value="graphic" @if($row->type == 'graphic') selected @endif>Graphic</option>
+                                      </select>
+                                      </div>
+                                 </div>
                             </div>
                             <div class="col-md-12 mt-4">
                                 <h6 for="exampleInputEmail3">รูปภาพเพิ่มเติม</h6>

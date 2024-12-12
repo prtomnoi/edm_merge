@@ -27,7 +27,8 @@ class EiPortfolio extends Model
         'updated_by',
         'updated_at',
         'delete_by',
-        'delete_at'
+        'delete_at',
+        'type'
     ];
 
     public function images() {
