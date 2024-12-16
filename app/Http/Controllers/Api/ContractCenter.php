@@ -15,6 +15,7 @@ class ContractCenter extends Controller
         try {
             $validate = $request->validate([
                 'name' => 'required|string|max:255',
+                'email' => 'required|string|max:255',
                 'phone' => 'required|string|max:20',
                 'message' => 'nullable|string|max:2048',
                 'company' => 'required|integer|max:1',
