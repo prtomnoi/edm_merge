@@ -14,15 +14,31 @@ class EiPortfolioCollection extends ResourceCollection
      */
     public function toArray(Request $request)
     {
+
         return $this->collection->map(function ($portfolio) {
+            $url = env("APP_URL", "https://edmcompany.co.th");
             return [
                 'id' => $portfolio->id,
                 'title' => $portfolio->title,
                 'title_en' => $portfolio->title_en,
                 'short_detail' => $portfolio->short_detail,
                 'short_detail_en' => $portfolio->short_detail_en,
-                'detail' => $portfolio->detail,
-                'detail_en' => $portfolio->detail_en,
+                'detail' =>  preg_replace_callback(
+                    '/src="([^"]+)"/', // ค้นหา src="..."
+                    function ($matches) use ($url) {
+                        // เพิ่ม base_url เข้าไปใน path
+                        return 'src="' . $url . $matches[1] . '"';
+                    },
+                    $portfolio->detail
+                ),
+                'detail_en' => preg_replace_callback(
+                    '/src="([^"]+)"/', // ค้นหา src="..."
+                    function ($matches) use ($url) {
+                        // เพิ่ม base_url เข้าไปใน path
+                        return 'src="' . $url . $matches[1] . '"';
+                    },
+                    $portfolio->detail_en
+                ),
                 'date' => $portfolio->date,
                 'image' => 'https://edmcompany.co.th/backend/'.$portfolio->image, // Full URL to the image
                 'status' => $portfolio->status,
