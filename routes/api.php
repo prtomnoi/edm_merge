@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\CampaignController;
 use App\Http\Controllers\Api\InfluencerController;
 use App\Http\Controllers\Api\VtuberGalleryController;
 use App\Http\Controllers\Api\BrandingGalleryController;
+use App\Http\Controllers\Api\ContractCenter;
 use App\Http\Controllers\Api\EiPortfolioController;
 use App\Http\Controllers\Api\VtuberVideoController;
 use App\Http\Controllers\Api\InfluencerVideoController;
@@ -83,4 +84,5 @@ Route::get('/settings/{id}', [TableSettingsController::class, 'show']);
 Route::get('/ei-portfolio', [EiPortfolioController::class, 'index']);
 Route::get('/ei-portfolio/{id}', [EiPortfolioController::class, 'show']);
 Route::get('/ei-portfolio-limit/{limit}', [EiPortfolioController::class, 'indexLimit']);
+Route::post('/contract/store', [ContractCenter::class, 'store']);
 
